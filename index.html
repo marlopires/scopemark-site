@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="ScopeMark — pré-análise técnica de materiais com referências FSC." />
+    <meta name="description" content="ScopeMark — pré-análise técnica por IA de materiais com referências FSC." />
     <title>ScopeMark — Pré-análise técnica FSC</title>
     <meta name="theme-color" content="#0e2c24" />
     <link rel="icon" href="logo.svg" type="image/svg+xml" />
@@ -22,26 +22,42 @@
       .toolbar { display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; margin-bottom:15px; } .roles { display:inline-flex; padding:4px; border:1px solid var(--line); border-radius:13px; background:#fff; } .roles button { border:0; border-radius:9px; padding:9px 16px; background:none; color:var(--muted); font:700 13px Manrope,Arial,sans-serif; cursor:pointer; } .roles button[aria-pressed="true"] { background:var(--forest); color:#fff; } .link-btn { border:0; background:none; color:var(--muted); font:500 12px Manrope,Arial,sans-serif; text-decoration:underline; cursor:pointer; }
       .demo-grid { display:grid; grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr); gap:15px; align-items:start; } .panel { padding:24px; border:1px solid var(--line); border-radius:16px; background:#fff; } .panel-head { display:flex; justify-content:space-between; align-items:start; gap:12px; } .panel h3 { margin:8px 0 0; font-size:18px; letter-spacing:-.04em; } .count { min-width:30px; padding:4px 9px; border-radius:20px; background:var(--soft); color:#31745b; font:500 12px "DM Mono",monospace; text-align:center; }
       .drop { position:relative; display:flex; align-items:center; gap:14px; margin-top:18px; padding:18px; border:1px dashed #9fcca6; border-radius:13px; background:var(--paper); cursor:pointer; } .drop:hover,.drop.drag { border-color:#5fa978; background:var(--soft); } .drop:focus-within { outline:2px solid #8fcf8a; outline-offset:2px; } .drop input { position:absolute; width:1px; height:1px; opacity:0; } .drop-icon { display:grid; flex:none; width:38px; height:38px; place-items:center; border-radius:11px; background:var(--soft); color:#31745b; font-weight:800; } .drop b { display:block; font-size:14px; overflow-wrap:anywhere; } .drop small { display:block; margin-top:3px; color:var(--muted); font-size:12px; }
-      .fields { display:grid; grid-template-columns:1fr 1fr; gap:0 12px; } .field { display:block; margin-top:14px; color:#3d5a4f; font-size:12px; font-weight:700; } .field input,.field select,.field textarea { display:block; width:100%; margin-top:6px; padding:11px 12px; border:1px solid var(--line); border-radius:11px; background:var(--paper); color:var(--ink); font:500 14px Manrope,Arial,sans-serif; } .field textarea { min-height:84px; resize:vertical; } .field :focus { border-color:#8fcf8a; outline:2px solid #8fcf8a; outline-offset:0; background:#fff; } .field [aria-invalid="true"] { border-color:#d59a8c; }
-      .btn { border:0; border-radius:11px; padding:13px 18px; background:var(--ink); color:#fff; font:800 14px Manrope,Arial,sans-serif; cursor:pointer; } .btn:hover { background:#1d4b3d; } .btn.ghost { border:1px solid #c9dccf; background:#fff; color:var(--ink); } .btn.ghost:hover { background:var(--paper); } .form-foot { display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-top:20px; } .msg { margin:0; color:#2b6a50; font-size:13px; line-height:1.55; } .msg.err { color:#9a3b2c; }
-      .tally { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:18px; } .tally div { padding:14px; border:1px solid var(--line); border-radius:12px; background:var(--paper); } .tally strong { display:block; font-size:26px; letter-spacing:-.04em; } .tally span { color:var(--muted); font-size:11px; } .hint { margin:16px 0 0; color:var(--muted); font-size:13px; line-height:1.65; }
-      .case { margin-top:10px; border:1px solid var(--line); border-radius:13px; background:#fff; overflow:hidden; } .case.open { border-color:#a9d3ae; box-shadow:0 0 0 3px var(--soft); } .case-head { display:grid; grid-template-columns:1fr auto; gap:5px 12px; width:100%; padding:14px 16px; border:0; background:none; color:inherit; font:inherit; text-align:left; cursor:pointer; } .case-head:hover { background:var(--paper); } .case-id { color:#4e816a; font:500 11px "DM Mono",monospace; letter-spacing:.06em; } .case-head strong { grid-column:1/-1; font-size:15px; letter-spacing:-.03em; overflow-wrap:anywhere; } .case-head small { grid-column:1/-1; color:var(--muted); font-size:12px; }
-      .badge,.st { padding:4px 9px; border-radius:20px; font:500 10px "DM Mono",monospace; letter-spacing:.05em; white-space:nowrap; } .badge { justify-self:end; } .is-pending,.st-warn { background:#f6eed6; color:#7d5c12; } .is-approved,.st-ok { background:#e3f2e2; color:#2b6a50; } .is-rejected,.st-need { background:#f6e4df; color:#8f3d2b; } .st-check,.st-review { background:#eaf0ed; color:#4f6b60; }
-      .case-body { padding:2px 16px 18px; border-top:1px solid var(--line); } .notice { margin:14px 0 0; padding:12px 14px; border-radius:11px; font-size:13px; line-height:1.6; } .n-pending { background:#fbf6e6; color:#6d5214; } .n-approved { background:#eef7ec; color:#285f47; } .n-rejected { background:#fbefeb; color:#7f3627; } .facts { display:grid; grid-template-columns:auto 1fr; gap:6px 14px; margin:14px 0 0; font-size:12px; } .facts dt { color:var(--muted); } .facts dd { margin:0; overflow-wrap:anywhere; white-space:pre-wrap; }
-      .crit { display:grid; grid-template-columns:24px 1fr auto; align-items:center; gap:4px 10px; padding:12px 0; border-bottom:1px solid var(--line); font-size:13px; font-weight:700; } .crit-n { color:#7f998d; font:10px "DM Mono",monospace; } .crit p { grid-column:2/-1; margin:0; color:var(--muted); font-size:12px; font-weight:500; line-height:1.6; } .summary { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:14px; padding:13px 15px; border-radius:11px; background:var(--forest); color:#fff; font-size:13px; font-weight:700; } .summary .mono { color:var(--mint); }
-      .opinion { margin:14px 0 0; padding:13px 15px; border-left:3px solid #8fcf8a; border-radius:0 11px 11px 0; background:var(--paper); font-size:13px; line-height:1.6; white-space:pre-wrap; } .opinion b { display:block; margin-bottom:4px; } .decide-row { display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; } .case .msg:not(:empty) { margin-top:10px; } .empty { margin-top:12px; padding:34px 18px; border:1px dashed var(--line); border-radius:13px; color:var(--muted); font-size:13px; line-height:1.6; text-align:center; }
-      @media(max-width:860px){.demo-grid{grid-template-columns:1fr}} @media(max-width:480px){.fields{grid-template-columns:1fr}.panel{padding:18px}.tally strong{font-size:22px}.summary{flex-direction:column;align-items:start}}
+      .fields { display:grid; grid-template-columns:1fr 1fr; gap:0 12px; } .field { display:block; margin-top:14px; color:#3d5a4f; font-size:12px; font-weight:700; } .field input,.field select,.field textarea,.crit-edit select,.crit-edit textarea { display:block; width:100%; margin-top:6px; padding:11px 12px; border:1px solid var(--line); border-radius:11px; background:var(--paper); color:var(--ink); font:500 14px Manrope,Arial,sans-serif; } .field textarea,.crit-edit textarea { min-height:84px; resize:vertical; } .field :focus,.crit-edit :focus { border-color:#8fcf8a; outline:2px solid #8fcf8a; outline-offset:0; background:#fff; } .field [aria-invalid="true"] { border-color:#d59a8c; }
+      .btn { border:0; border-radius:11px; padding:13px 18px; background:var(--ink); color:#fff; font:800 14px Manrope,Arial,sans-serif; cursor:pointer; } .btn:hover { background:#1d4b3d; } .btn:disabled { opacity:.6; cursor:progress; } .btn.ghost { border:1px solid #c9dccf; background:#fff; color:var(--ink); } .btn.ghost:hover { background:var(--paper); } .btn.sm { padding:10px 14px; font-size:13px; } .form-foot { display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-top:20px; } .msg { margin:0; color:#2b6a50; font-size:13px; line-height:1.55; } .msg.err { color:#9a3b2c; }
+      .engine-run { display:grid; gap:8px; margin:18px 0 0; padding:14px 16px; border-radius:12px; background:var(--forest); color:#7f9d90; font:500 11px "DM Mono",monospace; letter-spacing:.05em; list-style:none; } .engine-run li::before { content:"○"; margin-right:9px; } .engine-run li.now { color:#fff; } .engine-run li.now::before { content:"◐"; color:var(--mint); } .engine-run li.done { color:#d4e9dc; } .engine-run li.done::before { content:"●"; color:var(--mint); }
+      .tally { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:18px; } .tally div { padding:14px; border:1px solid var(--line); border-radius:12px; background:var(--paper); } .tally strong { display:block; font-size:26px; letter-spacing:-.04em; } .tally span { color:var(--muted); font-size:11px; } .hint { margin:16px 0 0; color:var(--muted); font-size:13px; line-height:1.65; }
+      .case { margin-top:10px; border:1px solid var(--line); border-radius:13px; background:#fff; overflow:hidden; } .case.open { border-color:#a9d3ae; box-shadow:0 0 0 3px var(--soft); } .case-head { display:grid; grid-template-columns:1fr auto; gap:5px 12px; width:100%; padding:14px 16px; border:0; background:none; color:inherit; font:inherit; text-align:left; cursor:pointer; } .case-head:hover { background:var(--paper); } .case-id { color:#4e816a; font:500 11px "DM Mono",monospace; letter-spacing:.06em; } .case-head strong { grid-column:1/-1; font-size:15px; letter-spacing:-.03em; overflow-wrap:anywhere; } .case-head small { grid-column:1/-1; color:var(--muted); font-size:12px; } .case-body { padding:2px 16px 18px; border-top:1px solid var(--line); }
+      .badge,.st { padding:4px 9px; border-radius:20px; font:500 10px "DM Mono",monospace; letter-spacing:.05em; white-space:nowrap; } .badge { justify-self:end; } .is-pending,.st-warn { background:#f6eed6; color:#7d5c12; } .is-emitted,.is-validated,.st-ok { background:#e3f2e2; color:#2b6a50; } .is-corrected { background:#e8edf0; color:#3f5663; } .st-info { background:#eaf0ed; color:#4f6b60; } .st-sim { border:1px dashed #b9cbc2; color:var(--muted); } .st-need { background:#f6e4df; color:#8f3d2b; } .st-fail { background:#efd2ca; color:#76261a; }
+      .notice { margin:14px 0 0; padding:12px 14px; border-radius:11px; font-size:13px; line-height:1.6; } .n-fix { background:#eef2f4; color:#34505d; } .facts { display:grid; grid-template-columns:auto 1fr; gap:6px 14px; margin:14px 0 0; font-size:12px; } .facts dt { color:var(--muted); } .facts dd { margin:0; overflow-wrap:anywhere; white-space:pre-wrap; }
+      .crit { display:grid; grid-template-columns:24px 1fr auto; align-items:center; gap:4px 10px; padding:12px 0; border-bottom:1px solid var(--line); font-size:13px; font-weight:700; } .crit-n { color:#7f998d; font:10px "DM Mono",monospace; } .crit p { grid-column:2/-1; margin:0; color:var(--muted); font-size:12px; font-weight:500; line-height:1.6; white-space:pre-wrap; } .summary { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:14px; padding:13px 15px; border-radius:11px; background:var(--forest); color:#fff; font-size:13px; font-weight:700; } .summary .mono { color:var(--mint); }
+      .report { margin-top:14px; border:1px solid var(--line); border-radius:13px; overflow:hidden; background:#fff; } .report-head { display:flex; justify-content:space-between; align-items:center; gap:14px; padding:16px; background:var(--forest); color:#fff; } .report-brand { display:flex; align-items:center; gap:10px; font-size:14px; font-weight:800; letter-spacing:-.04em; line-height:1.25; } .report-brand small { display:block; color:#9fbbae; font:400 9px "DM Mono",monospace; letter-spacing:.13em; } .report-meta { color:#c6e8bf; font:500 10px "DM Mono",monospace; letter-spacing:.06em; line-height:1.7; text-align:right; } .report-body { padding:2px 16px 16px; } .report-foot { padding:12px 16px; border-top:1px solid var(--line); background:var(--paper); color:var(--muted); font-size:11px; line-height:1.6; }
+      .crit-edit { display:grid; gap:2px; padding:12px 0; border-bottom:1px solid var(--line); } .crit-edit textarea { min-height:64px; } .crit-title { display:flex; align-items:center; gap:10px; font-size:13px; font-weight:700; } .case-actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; } .case .msg:not(:empty) { margin-top:10px; } .empty { margin-top:12px; padding:34px 18px; border:1px dashed var(--line); border-radius:13px; color:var(--muted); font-size:13px; line-height:1.6; text-align:center; }
+      .engine { color:#fff; background:linear-gradient(125deg,#123f34 0%,#0e2c24 70%); } .engine .section-label { color:var(--mint); } .engine .intro p { color:#bfd4c8; } .ai-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; } .ai { padding:22px; border:1px solid rgba(202,235,203,.26); border-radius:16px; background:rgba(255,255,255,.04); } .ai .mono { color:var(--mint); } .ai h3 { margin:14px 0 8px; font-size:16px; letter-spacing:-.04em; } .ai p { margin:0; color:#bfd4c8; font-size:13px; line-height:1.65; }
+      .flow { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-top:22px; } .flow span { padding:7px 11px; border:1px solid #739486; border-radius:20px; color:#d4e9dc; font:10px "DM Mono",monospace; letter-spacing:.1em; } .flow i { color:#739486; font-style:normal; } .govern { display:grid; grid-template-columns:auto 1fr; gap:16px; align-items:center; margin-top:22px; padding:18px 20px; border:1px solid rgba(184,230,181,.3); border-radius:14px; background:rgba(184,230,181,.08); color:#d4e9dc; font-size:13px; line-height:1.65; } .govern b { color:#fff; } .govern .icon { background:var(--mint); color:var(--forest); }
+      .plans { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; } .plan { display:flex; flex-direction:column; padding:26px; border:1px solid var(--line); border-radius:16px; background:#fff; } .plan.featured { border-color:var(--forest); box-shadow:0 0 0 1px var(--forest); } .plan-top { display:flex; justify-content:space-between; align-items:center; gap:10px; min-height:24px; } .plan-top .pill { border-color:var(--forest); background:var(--forest); color:var(--mint); } .quota { color:#31745b; } .plan h3 { margin:12px 0 4px; font-size:22px; letter-spacing:-.05em; } .plan .lead { margin:0; color:var(--muted); font-size:13px; } .price { margin:22px 0 0; font-size:26px; font-weight:800; letter-spacing:-.05em; } .plan ul { display:grid; gap:9px; margin:18px 0 24px; padding:18px 0 0; border-top:1px solid var(--line); list-style:none; font-size:13px; } .plan li { display:grid; grid-template-columns:18px 1fr; gap:6px; color:#3d5a4f; line-height:1.5; } .plan li::before { content:"✓"; color:#31745b; font-weight:800; } .plan .btn { margin-top:auto; text-align:center; text-decoration:none; }
+      @media(max-width:1000px){.ai-grid{grid-template-columns:1fr 1fr}} @media(max-width:860px){.demo-grid,.plans{grid-template-columns:1fr}} @media(max-width:560px){.ai-grid,.govern{grid-template-columns:1fr}} @media(max-width:480px){.fields{grid-template-columns:1fr}.panel{padding:18px}.tally strong{font-size:22px}.summary,.report-head{flex-direction:column;align-items:start}.report-meta{text-align:left}}
+      @media print { @page { margin:12mm; } body.printing { background:#fff; } .printing *:not(:has(.print-target)):not(.print-target):not(.print-target *) { display:none !important; } .printing *:has(.print-target) { display:block !important; width:auto !important; margin:0 !important; padding:0 !important; border:0 !important; background:none !important; box-shadow:none !important; } .print-target { margin:0; } .print-target * { -webkit-print-color-adjust:exact; print-color-adjust:exact; } }
     </style>
   </head>
   <body>
-    <header><div class="wrap nav"><div class="brand"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#b8e6b5"/><g fill="none" stroke="#0e2c24" stroke-linecap="round" stroke-linejoin="round"><path stroke-width="2.2" d="M8 12.5V8h4.5M19.5 8H24v4.5M24 19.5V24h-4.5M12.5 24H8v-4.5"/><path stroke-width="2.6" d="M11.4 16.4l3.1 3.1 6.1-6.5"/></g></svg><span>ScopeMark<br><small class="mono" style="font-weight:400;color:#9fbbae">TECHNICAL PRE-CHECK</small></span></div><div class="links"><a href="#metodo">Método</a><a href="#limites">Limites</a><a href="#consulta">Protocolos</a><a href="#consulta" class="button">Nova consulta</a></div></div></header>
+    <header><div class="wrap nav"><div class="brand"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#b8e6b5"/><g fill="none" stroke="#0e2c24" stroke-linecap="round" stroke-linejoin="round"><path stroke-width="2.2" d="M8 12.5V8h4.5M19.5 8H24v4.5M24 19.5V24h-4.5M12.5 24H8v-4.5"/><path stroke-width="2.6" d="M11.4 16.4l3.1 3.1 6.1-6.5"/></g></svg><span>ScopeMark<br><small class="mono" style="font-weight:400;color:#9fbbae">TECHNICAL PRE-CHECK</small></span></div><div class="links"><a href="#metodo">Método</a><a href="#motor">Motor de IA</a><a href="#pacotes">Pacotes</a><a href="#consulta" class="button">Nova consulta</a></div></div></header>
     <main>
-      <section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow mono"><span class="dot"></span>PRÉ-ANÁLISE TÉCNICA · BASE 2026</div><h1>Material com referência FSC pede evidência, não suposição.</h1><p>ScopeMark organiza contexto, leitura da peça, critérios técnicos e consulta pública antes da aprovação formal. Uma estrutura para times de embalagem, marketing, cadeia de custódia e operação.</p><div class="actions"><a class="primary" href="#consulta">Fazer uma consulta de teste</a><a class="secondary" href="#metodo">Ver o método</a></div></div><div class="matrix"><div class="matrix-head"><div><div class="mono" style="color:#adc8ba">ANALYSIS MATRIX</div><h2>Leitura por critério</h2></div><span class="pill">PRE-CHECK</span></div><div class="lineitem"><span class="number">01</span><span>Marca e integridade</span><span class="state">Verificado</span></div><div class="lineitem"><span class="number">02</span><span>Rótulo e alegação</span><span class="state">Ressalva</span></div><div class="lineitem"><span class="number">03</span><span>Código, escopo e status</span><span class="pending">Evidência requerida</span></div><div class="lineitem"><span class="number">04</span><span>Canal e aplicação</span><span class="state">Verificado</span></div></div></div></section>
-      <section id="metodo"><div class="wrap"><div class="intro"><div><div class="mono section-label">MÉTODO E RASTREABILIDADE</div><h2>Da arte ao dossiê, cada conclusão aponta sua base.</h2></div><p>O fluxo separa o que pode ser observado no arquivo daquilo que precisa de confirmação documental, territorial ou pública.</p></div><div class="grid"><article class="card"><div class="icon">01</div><h3>Receber e contextualizar</h3><p>Arquivo, organização, código, produto, país, canal, dimensões, alegação e uso pretendido entram na mesma consulta.</p></article><article class="card"><div class="icon">02</div><h3>Ler e confrontar</h3><p>A peça é organizada por critérios de marca, rótulo, texto, geometria, canal, perfil de licença e evidência disponível.</p></article><article class="card"><div class="icon">03</div><h3>Documentar e orientar</h3><p>O relatório apresenta conforme, ressalva, não conforme ou inconclusivo, com perguntas, recomendações e referências.</p></article></div></div></section>
-      <section id="limites" class="band"><div class="wrap"><div class="intro"><div><div class="mono section-label">FRONTEIRAS CLARAS</div><h2>Uma camada técnica antes da decisão formal.</h2></div><p>A plataforma foi desenhada para elevar qualidade e rastreabilidade; não para substituir os responsáveis por uma autorização oficial.</p></div><div class="checks"><article class="check"><span>APLICÁVEL</span><h3>Critérios estruturados</h3><p>Organiza análise de marca, rótulo, alegação, código, escopo, geometria, canal e evidências datadas.</p></article><article class="check"><span>APLICÁVEL</span><h3>Dossiê de evidências</h3><p>Vincula captura de consulta pública, dados visíveis extraídos e arquivos à análise da peça.</p></article><article class="check"><span>NÃO SUBSTITUI</span><h3>Aprovação de marca</h3><p>A aprovação permanece com FSC, Trademark Service Provider ou organismo certificador, conforme aplicável.</p></article><article class="check"><span>NÃO AFIRMA</span><h3>Status sem prova</h3><p>Sem evidência adequada, o resultado é inconclusivo ou pendente de verificação — nunca uma confirmação automática.</p></article></div><div class="disclaimer"><span class="icon" style="background:#e4f2e5">!</span><div><b>Uso responsável de referências FSC.</b> A ScopeMark não é afiliada, patrocinada nem aprovada pelo FSC. Marcas e ativos oficiais devem ser usados somente por titulares autorizados e pelos canais apropriados.</div></div></div></section>
+      <section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow mono"><span class="dot"></span>PRÉ-ANÁLISE POR IA · BASE 2026</div><h1>Material com referência FSC pede evidência, não suposição.</h1><p>ScopeMark usa IA para ler a peça, confrontar critérios técnicos e consultar a base pública, e emite o relatório na hora, antes da aprovação formal. Uma estrutura para times de embalagem, marketing, cadeia de custódia e operação.</p><div class="actions"><a class="primary" href="#consulta">Fazer uma consulta de teste</a><a class="secondary" href="#pacotes">Ver pacotes</a></div></div><div class="matrix"><div class="matrix-head"><div><div class="mono" style="color:#adc8ba">ANALYSIS MATRIX</div><h2>Leitura por critério</h2></div><span class="pill">PRE-CHECK</span></div><div class="lineitem"><span class="number">01</span><span>Marca e integridade</span><span class="state">Verificado</span></div><div class="lineitem"><span class="number">02</span><span>Rótulo e alegação</span><span class="state">Ressalva</span></div><div class="lineitem"><span class="number">03</span><span>Código, escopo e status</span><span class="pending">Evidência requerida</span></div><div class="lineitem"><span class="number">04</span><span>Canal e aplicação</span><span class="state">Verificado</span></div></div></div></section>
+      <section id="metodo"><div class="wrap"><div class="intro"><div><div class="mono section-label">MÉTODO E RASTREABILIDADE</div><h2>Da arte ao dossiê, cada conclusão aponta sua base.</h2></div><p>O fluxo separa o que pode ser observado no arquivo daquilo que precisa de confirmação documental, territorial ou pública.</p></div><div class="grid"><article class="card"><div class="icon">01</div><h3>Receber e contextualizar</h3><p>Arquivo, organização, código, produto, país, canal, dimensões, alegação e uso pretendido entram na mesma consulta.</p></article><article class="card"><div class="icon">02</div><h3>Ler e confrontar</h3><p>A IA organiza a peça por critérios de marca, rótulo, texto, geometria, canal, perfil de licença e evidência disponível.</p></article><article class="card"><div class="icon">03</div><h3>Emitir o relatório</h3><p>O relatório sai na hora, com protocolo e a identidade ScopeMark: conforme, ressalva, não conforme ou inconclusivo, com recomendações e referências.</p></article></div></div></section>
+      <section id="motor" class="engine"><div class="wrap">
+        <div class="intro"><div><div class="mono section-label">MOTOR DE CONSULTA · IAS UTILIZADAS</div><h2>Quatro camadas de IA trabalham em cada consulta.</h2></div><p>Cada etapa registra o que leu e de onde veio, para que o relatório aponte a base de cada conclusão.</p></div>
+        <div class="ai-grid">
+          <article class="ai"><div class="mono">01 · IA DE VISÃO</div><h3>Leitura da arte</h3><p>Localiza a marca na peça e confere proporção, área de proteção, cores, contraste e legibilidade.</p></article>
+          <article class="ai"><div class="mono">02 · OCR E EXTRAÇÃO</div><h3>Textos e códigos</h3><p>Extrai código de licença, rótulo, alegações e demais textos visíveis no arquivo.</p></article>
+          <article class="ai"><div class="mono">03 · CONSULTA PÚBLICA</div><h3>Status e escopo</h3><p>Confere o código na base pública de certificados FSC e registra a data da consulta.</p></article>
+          <article class="ai"><div class="mono">04 · MODELO DE LINGUAGEM</div><h3>Confronto e relatório</h3><p>Cruza o que foi lido com a base normativa e redige o relatório com recomendações e referências.</p></article>
+        </div>
+        <div class="flow" aria-label="Etapas do motor de consulta"><span>ARQUIVO</span><i>→</i><span>LEITURA</span><i>→</i><span>EXTRAÇÃO</span><i>→</i><span>CONSULTA</span><i>→</i><span>CONFRONTO</span><i>→</i><span>RELATÓRIO</span></div>
+        <div class="govern"><span class="icon">✓</span><div><b>Gestão humana da plataforma.</b> A análise é feita pela IA, do início ao fim. A equipe de gestão acessa todas as consultas e relatórios emitidos para acompanhar a qualidade, validar resultados e corrigir erros de análise; cada correção gera uma nova versão do relatório.</div></div>
+      </div></section>
       <section id="consulta"><div class="wrap">
-        <div class="intro"><div><div class="mono section-label">CONSULTA DE TESTE · SIMULAÇÃO LOCAL</div><h2>Envie a peça, receba um protocolo e libere com validação humana.</h2></div><p>A pré-análise é montada a partir do que foi informado e só chega ao solicitante depois do parecer de um técnico. Nesta demonstração nada é enviado: os protocolos ficam salvos apenas neste navegador.</p></div>
-        <div class="toolbar"><div class="roles" role="group" aria-label="Perfil"><button type="button" data-role="requester" aria-pressed="true">Solicitante</button><button type="button" data-role="technician" aria-pressed="false">Técnico</button></div><button type="button" class="link-btn" id="clearAll">Limpar dados de teste</button></div>
+        <div class="intro"><div><div class="mono section-label">CONSULTA DE TESTE · SIMULAÇÃO LOCAL</div><h2>Envie a peça e receba o relatório na hora.</h2></div><p>O motor de consulta lê a arte, confronta os critérios e emite o relatório com protocolo, sem fila de espera. A gestão acompanha tudo e corrige quando a IA erra. Nesta demonstração a leitura é simulada e os dados ficam apenas neste navegador.</p></div>
+        <div class="toolbar"><div class="roles" role="group" aria-label="Perfil"><button type="button" data-role="client" aria-pressed="true">Cliente</button><button type="button" data-role="admin" aria-pressed="false">Gestão</button></div><button type="button" class="link-btn" id="clearAll">Limpar dados de teste</button></div>
         <div class="demo-grid">
           <form class="panel" id="requestForm" novalidate>
             <div class="mono section-label">NOVA CONSULTA</div><h3>Solicitar pré-análise</h3>
@@ -54,29 +70,41 @@
               <label class="field">Largura da logo (mm)<input id="width" inputmode="decimal" placeholder="Ex.: 12" /></label>
               <label class="field">Altura da logo (mm)<input id="height" inputmode="decimal" placeholder="Ex.: 8" /></label>
             </div>
-            <label class="field">Observações<textarea id="notes" placeholder="Contexto, alegação usada, dúvidas para o técnico"></textarea></label>
-            <div class="form-foot"><button class="btn" type="submit">Enviar para pré-análise</button><p class="msg" id="formMsg" role="status" aria-live="polite"></p></div>
+            <label class="field">Observações<textarea id="notes" placeholder="Contexto, alegação usada, dúvidas sobre a peça"></textarea></label>
+            <ol class="engine-run" id="engineRun" hidden></ol>
+            <div class="form-foot"><button class="btn" type="submit" id="submitBtn">Analisar com IA</button><p class="msg" id="formMsg" role="status" aria-live="polite"></p></div>
           </form>
-          <div class="panel" id="queuePanel" hidden>
-            <div class="mono section-label">REVISÃO TÉCNICA</div><h3>Fila do técnico</h3>
-            <div class="tally"><div><strong id="n-pending">0</strong><span>Aguardando revisão</span></div><div><strong id="n-approved">0</strong><span>Liberados</span></div><div><strong id="n-rejected">0</strong><span>Devolvidos</span></div></div>
-            <p class="hint">Abra um protocolo, confira a leitura por critério e registre o parecer. A resposta só aparece para o solicitante depois que você liberar.</p>
+          <div class="panel" id="adminPanel" hidden>
+            <div class="mono section-label">GESTÃO DA PLATAFORMA</div><h3>Painel da gestão</h3>
+            <div class="tally"><div><strong id="n-all">0</strong><span>Relatórios emitidos</span></div><div><strong id="n-pending">0</strong><span>Sem conferência</span></div><div><strong id="n-validated">0</strong><span>Validados</span></div><div><strong id="n-corrected">0</strong><span>Corrigidos</span></div></div>
+            <p class="hint">A gestão vê todas as consultas e relatórios emitidos pela IA. Valide o que está correto ou corrija um erro de análise; cada correção gera uma nova versão do relatório para o cliente.</p>
           </div>
           <div class="panel">
-            <div class="panel-head"><div><div class="mono section-label">ACOMPANHAMENTO</div><h3 id="casesTitle">Meus protocolos</h3></div><span class="count" id="caseCount">0</span></div>
+            <div class="panel-head"><div><div class="mono section-label">RELATÓRIOS</div><h3 id="casesTitle">Minhas consultas</h3></div><span class="count" id="caseCount">0</span></div>
             <div id="caseList"></div>
           </div>
         </div>
       </div></section>
-      <section class="cta"><div class="wrap cta-inner"><div><div class="mono">PLATAFORMA COMPLETA</div><h2>Precisa de uma análise real? Abra o ambiente técnico.</h2></div><a class="primary" href="https://scopemark-rgx4zj2n.manus.space">Acessar ScopeMark</a></div></section>
+      <section id="limites" class="band"><div class="wrap"><div class="intro"><div><div class="mono section-label">FRONTEIRAS CLARAS</div><h2>Uma camada técnica antes da decisão formal.</h2></div><p>A plataforma foi desenhada para elevar qualidade e rastreabilidade; não para substituir os responsáveis por uma autorização oficial.</p></div><div class="checks"><article class="check"><span>APLICÁVEL</span><h3>Critérios estruturados</h3><p>Organiza análise de marca, rótulo, alegação, código, escopo, geometria, canal e evidências datadas.</p></article><article class="check"><span>APLICÁVEL</span><h3>Dossiê de evidências</h3><p>Vincula captura de consulta pública, dados visíveis extraídos e arquivos à análise da peça.</p></article><article class="check"><span>NÃO SUBSTITUI</span><h3>Aprovação de marca</h3><p>A aprovação permanece com FSC, Trademark Service Provider ou organismo certificador, conforme aplicável.</p></article><article class="check"><span>NÃO AFIRMA</span><h3>Status sem prova</h3><p>Sem evidência adequada, o resultado é inconclusivo ou pendente de verificação — nunca uma confirmação automática.</p></article></div><div class="disclaimer"><span class="icon" style="background:#e4f2e5">!</span><div><b>Uso responsável de referências FSC.</b> A ScopeMark não é afiliada, patrocinada nem aprovada pelo FSC. Marcas e ativos oficiais devem ser usados somente por titulares autorizados e pelos canais apropriados.</div></div></div></section>
+      <section id="pacotes"><div class="wrap">
+        <div class="intro"><div><div class="mono section-label">PACOTES DE CONTRATAÇÃO</div><h2>Escolha o volume de consultas do seu time.</h2></div><p>Todos os pacotes usam o mesmo motor de consulta e emitem relatórios com protocolo e identidade ScopeMark. Valores definidos na contratação.</p></div>
+        <div class="plans">
+          <article class="plan"><div class="plan-top"><span class="mono quota">10 CONSULTAS / MÊS</span></div><h3>Essencial</h3><p class="lead">Para validar peças pontuais.</p><div class="price">Sob consulta</div><ul><li>Relatório com protocolo, em PDF</li><li>Consulta pública datada</li><li>Histórico de consultas</li><li>1 usuário</li></ul><a class="btn ghost" href="https://scopemark-rgx4zj2n.manus.space">Contratar</a></article>
+          <article class="plan featured"><div class="plan-top"><span class="mono quota">50 CONSULTAS / MÊS</span><span class="pill">RECOMENDADO</span></div><h3>Profissional</h3><p class="lead">Para times de embalagem e marketing.</p><div class="price">Sob consulta</div><ul><li>Tudo do Essencial</li><li>Até 5 usuários</li><li>Dossiê de evidências por peça</li><li>Suporte prioritário</li></ul><a class="btn" href="https://scopemark-rgx4zj2n.manus.space">Contratar</a></article>
+          <article class="plan"><div class="plan-top"><span class="mono quota">VOLUME SOB MEDIDA</span></div><h3>Corporativo</h3><p class="lead">Para grupos e alto volume.</p><div class="price">Sob consulta</div><ul><li>Tudo do Profissional</li><li>Usuários ilimitados</li><li>Integração via API</li><li>Acompanhamento dedicado da gestão</li></ul><a class="btn ghost" href="https://scopemark-rgx4zj2n.manus.space">Falar com a equipe</a></article>
+        </div>
+      </div></section>
+      <section class="cta"><div class="wrap cta-inner"><div><div class="mono">PLATAFORMA COMPLETA</div><h2>Pronto para a consulta real? Acesse a plataforma.</h2></div><a class="primary" href="https://scopemark-rgx4zj2n.manus.space">Acessar ScopeMark</a></div></section>
     </main>
     <footer><div class="wrap"><span>© ScopeMark · Pré-análise técnica</span><a class="footer-link" href="https://scopemark-rgx4zj2n.manus.space">Ambiente de consultas</a></div></footer>
     <script>
       (() => {
-        const KEY = 'scopemark-demo-cases';
-        const STATUS = { pending: 'Aguardando revisão', approved: 'Liberado', rejected: 'Devolvido' };
-        const STATE = { ok: 'Informado', check: 'Consulta pendente', warn: 'Ressalva', need: 'Evidência requerida', review: 'Revisão técnica' };
+        const KEY = 'scopemark-demo-v2';
+        const STATE = { ok: 'Verificado', info: 'Informado', warn: 'Ressalva', fail: 'Não conforme', need: 'Evidência requerida', sim: 'Simulado' };
+        const REVIEW = { pending: 'Sem conferência', validated: 'Validado', corrected: 'Corrigido' };
+        const STEPS = ['Recebendo arquivo e contexto', 'IA de visão · leitura da arte', 'OCR · textos e códigos', 'Consulta pública da licença', 'Modelo de linguagem · confronto normativo', 'Emitindo relatório'];
         const FORMATS = 'PDF, PNG, JPEG, WEBP ou SVG';
+        const LOGO = document.querySelector('.brand .mark').outerHTML;
         const $ = id => document.getElementById(id);
         const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
         const when = iso => new Date(iso).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' });
@@ -85,88 +113,124 @@
         const bytes = n => n < 1048576 ? Math.max(1, Math.round(n / 1024)) + ' KB' : (n / 1048576).toLocaleString('pt-BR', { maximumFractionDigits: 1 }) + ' MB';
         const kind = f => (/\.([a-z0-9]+)$/i.exec(f.name)?.[1] || 'arquivo').toUpperCase();
 
-        let role = 'requester', openId = null, cases = [];
-        try { cases = (JSON.parse(localStorage.getItem(KEY)) || []).filter(c => c && c.id && c.file && STATUS[c.status]); } catch (e) {}
+        let role = 'client', openId = null, editId = null, busy = false, cases = [];
+        try {
+          cases = (JSON.parse(localStorage.getItem(KEY)) || []).filter(c => c && c.id && c.file && REVIEW[c.review] && Array.isArray(c.criteria) && c.criteria.every(k => STATE[k.state]));
+        } catch (e) {}
         const save = () => { try { localStorage.setItem(KEY, JSON.stringify(cases)); } catch (e) {} };
 
-        // Builds the criteria matrix from what was informed; nothing is ever marked compliant automatically.
+        // Simulated engine output: only states what was informed or is missing, never "conforme" on its own.
         function assess(c) {
           const code = c.code.toUpperCase().replace(/\s+/g, ' ');
           const missing = [!c.channel && 'canal de aplicação', !(c.width && c.height) && 'dimensões da logo'].filter(Boolean);
+          const k = (name, state, note) => ({ name, state, note });
           return [
-            ['Marca e integridade', 'review', `Arquivo ${c.file.name} (${c.file.kind}, ${bytes(c.file.size)}). Proporção, cores e elementos da marca são conferidos na revisão técnica.`],
+            k('Marca e integridade', 'sim', `Arquivo ${c.file.name} (${c.file.kind}, ${bytes(c.file.size)}). Na plataforma, a IA de visão confere proporção, área de proteção, cores e legibilidade da marca; nesta demonstração a leitura é simulada.`),
             c.label && c.label !== 'Não sei'
-              ? ['Rótulo e alegação', 'ok', `Rótulo pretendido: ${c.label}. Conferir correspondência com o escopo do certificado.`]
-              : ['Rótulo e alegação', 'need', 'Rótulo não definido. Indique o rótulo pretendido ou anexe a declaração do fornecedor.'],
+              ? k('Rótulo e alegação', 'info', `Rótulo pretendido: ${c.label}. Conferir correspondência com o escopo do certificado.`)
+              : k('Rótulo e alegação', 'need', 'Rótulo não definido. Indique o rótulo pretendido ou anexe a declaração do fornecedor.'),
             !code
-              ? ['Código, escopo e status', 'need', 'Código de licença não informado. Sem ele, status e escopo não podem ser consultados na base pública.']
+              ? k('Código, escopo e status', 'need', 'Código de licença não informado. Sem ele, status e escopo não podem ser consultados na base pública.')
               : /^(FSC[®\s-]*)?[CN]\d{6}$/.test(code)
-                ? ['Código, escopo e status', 'check', `Formato válido (${code}). Status e escopo dependem de consulta pública datada.`]
-                : ['Código, escopo e status', 'warn', `"${code}" não segue o formato esperado: C ou N seguido de 6 dígitos.`],
+                ? k('Código, escopo e status', 'info', `Formato válido (${code}). Na plataforma, status e escopo são consultados na base pública, com data registrada.`)
+                : k('Código, escopo e status', 'warn', `"${code}" não segue o formato esperado: C ou N seguido de 6 dígitos.`),
             missing.length
-              ? ['Canal e aplicação', 'need', `Não informado: ${missing.join(' e ')}.`]
-              : ['Canal e aplicação', 'ok', `${c.channel} · logo com ${mm(c.width)} × ${mm(c.height)} mm.`]
+              ? k('Canal e aplicação', 'need', `Não informado: ${missing.join(' e ')}.`)
+              : k('Canal e aplicação', 'info', `${c.channel} · logo com ${mm(c.width)} × ${mm(c.height)} mm.`)
           ];
         }
 
-        function summary(crit) {
-          const s = crit.map(x => x[1]);
-          return s.includes('need') ? 'Inconclusivo · evidência requerida' : s.includes('warn') ? 'Com ressalvas' : 'Pronto para revisão técnica';
+        function summary(list) {
+          const s = list.map(k => k.state);
+          if (s.includes('fail')) return 'Não conforme';
+          if (s.includes('need')) return 'Inconclusivo · evidência requerida';
+          if (s.includes('warn')) return 'Com ressalvas';
+          return s.every(x => x === 'ok') ? 'Conforme nos critérios avaliados' : 'Sem pendências identificadas';
         }
 
-        function notice(c, tech) {
-          if (c.status === 'approved') return `Resposta liberada pelo técnico em ${when(c.decidedAt)}.`;
-          if (c.status === 'rejected') return `Consulta devolvida pelo técnico em ${when(c.decidedAt)}.${tech ? '' : ' Veja o parecer, ajuste a peça e envie novamente.'}`;
-          return tech ? 'Pré-análise pronta para sua revisão. Ela só chega ao solicitante depois do seu parecer.' : 'A pré-análise está aguardando validação humana e ainda não foi liberada.';
+        function report(c) {
+          const id = esc(c.id), size = c.width && c.height ? `${mm(c.width)} × ${mm(c.height)} mm` : '';
+          const facts = [['Arquivo', c.file.name], ['Organização', c.org], ['Código', c.code], ['Rótulo', c.label], ['Canal', c.channel], ['Dimensões', size], ['Observações', c.notes]]
+            .map(([k, v]) => `<dt>${k}</dt><dd>${esc(v || '—')}</dd>`).join('');
+          const rows = c.criteria.map((k, i) => `<div class="crit"><span class="crit-n">0${i + 1}</span><span>${esc(k.name)}</span><span class="st st-${k.state}">${STATE[k.state]}</span><p>${esc(k.note)}</p></div>`).join('');
+          const fix = c.correction ? `<div class="notice n-fix"><b>Versão ${c.version} · corrigida pela gestão em ${when(c.correction.at)}.</b> ${esc(c.correction.note)}</div>` : '';
+          return `<div class="report" id="rep-${id}"><div class="report-head"><div class="report-brand">${LOGO}<span>ScopeMark<small>RELATÓRIO DE PRÉ-ANÁLISE</small></span></div><div class="report-meta">${id}<br>EMITIDO ${when(c.createdAt)}<br>VERSÃO ${c.version}</div></div>`
+            + `<div class="report-body">${fix}<dl class="facts">${facts}</dl>${rows}<div class="summary"><span class="mono">RESULTADO</span><span>${summary(c.criteria)}</span></div></div>`
+            + '<div class="report-foot">Emitido automaticamente pelo motor de consulta ScopeMark (IA de visão, OCR, consulta pública e modelo de linguagem). Pré-análise técnica: não substitui a aprovação de marca pelo FSC, Trademark Service Provider ou organismo certificador. Demonstração com leitura simulada.</div></div>';
+        }
+
+        function actions(c, admin) {
+          const id = esc(c.id), print = `<button type="button" class="btn ghost sm" data-act="print" data-id="${id}">Imprimir / salvar PDF</button>`;
+          if (!admin) return `<div class="case-actions">${print}</div>`;
+          const validate = c.review === 'validated' ? '' : `<button type="button" class="btn sm" data-act="validate" data-id="${id}">Validar análise</button>`;
+          const note = c.review === 'validated' ? `<p class="msg">Validado pela gestão em ${when(c.validatedAt)}.</p>` : '';
+          return `<div class="case-actions">${validate}<button type="button" class="btn ghost sm" data-act="edit" data-id="${id}">Corrigir análise</button>${print}</div>${note}`;
+        }
+
+        function editor(c) {
+          const id = esc(c.id);
+          const options = s => Object.entries(STATE).map(([k, v]) => `<option value="${k}"${k === s ? ' selected' : ''}>${v}</option>`).join('');
+          const rows = c.criteria.map((k, i) => `<div class="crit-edit"><span class="crit-title"><span class="crit-n">0${i + 1}</span>${esc(k.name)}</span><select data-i="${i}" aria-label="Resultado: ${esc(k.name)}">${options(k.state)}</select><textarea data-i="${i}" aria-label="Nota: ${esc(k.name)}">${esc(k.note)}</textarea></div>`).join('');
+          return `<div id="ed-${id}"><div class="notice n-fix">Corrigindo a versão ${c.version}. Ao salvar, o cliente passa a ver a versão ${c.version + 1} do relatório.</div>${rows}`
+            + `<label class="field">Motivo da correção<textarea id="why-${id}" placeholder="O que a IA errou e o que foi ajustado"></textarea></label>`
+            + `<div class="case-actions"><button type="button" class="btn sm" data-act="save" data-id="${id}">Salvar correção</button><button type="button" class="btn ghost sm" data-act="cancel" data-id="${id}">Cancelar</button></div><p class="msg err" id="em-${id}" role="alert"></p></div>`;
         }
 
         function caseHtml(c) {
-          const tech = role === 'technician', id = esc(c.id), open = c.id === openId;
-          const head = `<button type="button" class="case-head" data-open="${id}" aria-expanded="${open}"><span class="case-id">${id}</span><span class="badge is-${c.status}">${STATUS[c.status]}</span><strong>${esc(c.file.name)}</strong><small>${esc(c.org || 'Organização não informada')} · ${when(c.createdAt)}</small></button>`;
+          const admin = role === 'admin', id = esc(c.id), open = c.id === openId;
+          const badge = admin
+            ? `<span class="badge is-${c.review}">${REVIEW[c.review]}</span>`
+            : c.version > 1 ? '<span class="badge is-corrected">Relatório revisado</span>' : '<span class="badge is-emitted">Relatório emitido</span>';
+          const head = `<button type="button" class="case-head" data-open="${id}" aria-expanded="${open}"><span class="case-id">${id}</span>${badge}<strong>${esc(c.file.name)}</strong><small>${esc(c.org || 'Organização não informada')} · ${when(c.createdAt)}</small></button>`;
           if (!open) return `<article class="case">${head}</article>`;
-          const crit = assess(c);
-          const size = c.width && c.height ? `${mm(c.width)} × ${mm(c.height)} mm` : '';
-          const facts = [['Organização', c.org], ['Código', c.code], ['Rótulo', c.label], ['Canal', c.channel], ['Dimensões', size], ['Observações', c.notes]]
-            .map(([k, v]) => `<dt>${k}</dt><dd>${esc(v || '—')}</dd>`).join('');
-          const matrix = tech || c.status === 'approved'
-            ? crit.map(([name, st, note], i) => `<div class="crit"><span class="crit-n">0${i + 1}</span><span>${name}</span><span class="st st-${st}">${STATE[st]}</span><p>${esc(note)}</p></div>`).join('')
-              + `<div class="summary"><span class="mono">PRÉ-ANÁLISE</span><span>${summary(crit)}</span></div>`
-            : '';
-          const opinion = c.status !== 'pending' && c.opinion ? `<div class="opinion"><b>Parecer do técnico</b>${esc(c.opinion)}</div>` : '';
-          const decide = tech && c.status === 'pending'
-            ? `<label class="field">Parecer do técnico<textarea id="op-${id}" placeholder="Obrigatório para devolver; opcional para liberar"></textarea></label><div class="decide-row"><button type="button" class="btn" data-decide="approved" data-id="${id}">Aprovar e liberar</button><button type="button" class="btn ghost" data-decide="rejected" data-id="${id}">Devolver ao solicitante</button></div><p class="msg err" id="dm-${id}" role="alert"></p>`
-            : '';
-          return `<article class="case open">${head}<div class="case-body"><div class="notice n-${c.status}">${notice(c, tech)}</div><dl class="facts">${facts}</dl>${matrix}${opinion}${decide}</div></article>`;
+          const body = admin && editId === c.id ? editor(c) : report(c) + actions(c, admin);
+          return `<article class="case open">${head}<div class="case-body">${body}</div></article>`;
         }
 
         function render() {
-          const tech = role === 'technician';
-          $('requestForm').hidden = tech;
-          $('queuePanel').hidden = !tech;
-          $('casesTitle').textContent = tech ? 'Fila de protocolos' : 'Meus protocolos';
-          $('caseCount').textContent = cases.length;
-          for (const s of Object.keys(STATUS)) $('n-' + s).textContent = cases.filter(c => c.status === s).length;
-          const list = tech ? [...cases].sort((a, b) => (b.status === 'pending') - (a.status === 'pending')) : cases;
+          const admin = role === 'admin';
+          $('requestForm').hidden = admin;
+          $('adminPanel').hidden = !admin;
+          $('casesTitle').textContent = admin ? 'Todas as consultas' : 'Minhas consultas';
+          $('caseCount').textContent = $('n-all').textContent = cases.length;
+          for (const s of Object.keys(REVIEW)) $('n-' + s).textContent = cases.filter(c => c.review === s).length;
+          const list = admin ? [...cases].sort((a, b) => (b.review === 'pending') - (a.review === 'pending')) : cases;
           $('caseList').innerHTML = list.length
             ? list.map(caseHtml).join('')
-            : `<div class="empty">${tech ? 'Nenhum protocolo na fila. Alterne para Solicitante e envie uma peça.' : 'Nenhum protocolo ainda. Envie uma peça para receber o primeiro.'}</div>`;
+            : `<div class="empty">${admin ? 'Nenhuma consulta emitida ainda. Alterne para Cliente e envie uma peça.' : 'Nenhuma consulta ainda. Envie uma peça para receber o primeiro relatório.'}</div>`;
+        }
+
+        function printReport(id) {
+          const rep = $('rep-' + id);
+          document.body.classList.add('printing');
+          rep.classList.add('print-target');
+          window.addEventListener('afterprint', () => { document.body.classList.remove('printing'); rep.classList.remove('print-target'); }, { once: true });
+          window.print();
         }
 
         document.querySelectorAll('.roles button').forEach(b => b.addEventListener('click', () => {
           role = b.dataset.role;
+          editId = null;
           document.querySelectorAll('.roles button').forEach(x => x.setAttribute('aria-pressed', x === b));
           render();
         }));
 
         $('caseList').addEventListener('click', e => {
           const head = e.target.closest('[data-open]');
-          if (head) { openId = openId === head.dataset.open ? null : head.dataset.open; render(); return; }
-          const btn = e.target.closest('[data-decide]');
+          if (head) { openId = openId === head.dataset.open ? null : head.dataset.open; editId = null; render(); return; }
+          const btn = e.target.closest('[data-act]');
           if (!btn) return;
-          const c = cases.find(x => x.id === btn.dataset.id), status = btn.dataset.decide;
-          const box = $('op-' + c.id), opinion = box.value.trim();
-          if (status === 'rejected' && !opinion) { $('dm-' + c.id).textContent = 'Descreva o motivo da devolução para o solicitante.'; box.focus(); return; }
-          Object.assign(c, { status, opinion, decidedAt: new Date().toISOString() });
+          const c = cases.find(x => x.id === btn.dataset.id), act = btn.dataset.act;
+          if (act === 'print') return printReport(c.id);
+          if (act === 'edit' || act === 'cancel') { editId = act === 'edit' ? c.id : null; render(); return; }
+          if (act === 'validate') Object.assign(c, { review: 'validated', validatedAt: new Date().toISOString() });
+          if (act === 'save') {
+            const ed = $('ed-' + c.id), why = $('why-' + c.id);
+            if (!why.value.trim()) { $('em-' + c.id).textContent = 'Descreva o motivo da correção.'; why.focus(); return; }
+            c.criteria = c.criteria.map((k, i) => ({ name: k.name, state: ed.querySelector(`select[data-i="${i}"]`).value, note: ed.querySelector(`textarea[data-i="${i}"]`).value.trim() }));
+            Object.assign(c, { version: c.version + 1, review: 'corrected', correction: { at: new Date().toISOString(), note: why.value.trim() } });
+            editId = null;
+          }
           save();
           render();
         });
@@ -187,29 +251,48 @@
 
         $('requestForm').addEventListener('submit', e => {
           e.preventDefault();
-          const f = file.files[0], w = $('width'), h = $('height'), msg = $('formMsg');
+          if (busy) return;
+          const form = e.target, f = file.files[0], w = $('width'), h = $('height'), msg = $('formMsg'), run = $('engineRun');
           const fail = (text, el) => { msg.className = 'msg err'; msg.textContent = text; el.setAttribute('aria-invalid', 'true'); el.focus(); };
-          e.target.querySelectorAll('[aria-invalid]').forEach(el => el.removeAttribute('aria-invalid'));
+          form.querySelectorAll('[aria-invalid]').forEach(el => el.removeAttribute('aria-invalid'));
           if (!f) return fail('Selecione o arquivo final da arte.', file);
           if (!/\.(pdf|png|jpe?g|webp|svg)$/i.test(f.name)) return fail(`Formato não aceito. Envie ${FORMATS}.`, file);
           for (const el of [w, h]) if (el.value.trim() && !num(el.value)) return fail('Informe as dimensões em milímetros, com números maiores que zero.', el);
           const d = new Date(), day = `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`;
           let id;
           do id = `SM-${day}-${Math.random().toString(36).slice(2, 6).toUpperCase().padEnd(4, '0')}`; while (cases.some(c => c.id === id));
-          cases.unshift({ id, createdAt: d.toISOString(), status: 'pending', file: { name: f.name, kind: kind(f), size: f.size }, org: $('org').value.trim(), code: $('code').value.trim(), label: $('label').value, channel: $('channel').value, width: num(w.value), height: num(h.value), notes: $('notes').value.trim(), opinion: '' });
-          save();
-          openId = id;
-          e.target.reset();
-          showFile();
-          msg.className = 'msg';
-          msg.textContent = `Protocolo ${id} criado. Ele fica aguardando revisão até o técnico liberar.`;
-          render();
+          const c = { id, createdAt: d.toISOString(), version: 1, review: 'pending', file: { name: f.name, kind: kind(f), size: f.size }, org: $('org').value.trim(), code: $('code').value.trim(), label: $('label').value, channel: $('channel').value, width: num(w.value), height: num(h.value), notes: $('notes').value.trim() };
+          c.criteria = assess(c);
+
+          busy = true;
+          $('submitBtn').disabled = true;
+          msg.textContent = '';
+          run.innerHTML = STEPS.map(s => `<li>${s}</li>`).join('');
+          run.hidden = false;
+          let step = 0;
+          const tick = () => {
+            [...run.children].forEach((li, j) => { li.className = j < step ? 'done' : j === step ? 'now' : ''; });
+            if (step++ < STEPS.length) { setTimeout(tick, 380); return; }
+            c.createdAt = new Date().toISOString();
+            cases.unshift(c);
+            save();
+            openId = id;
+            form.reset();
+            showFile();
+            run.hidden = true;
+            busy = false;
+            $('submitBtn').disabled = false;
+            msg.className = 'msg';
+            msg.textContent = `Relatório ${id} emitido. Ele já está disponível em Minhas consultas.`;
+            render();
+          };
+          tick();
         });
 
         $('clearAll').addEventListener('click', () => {
-          if (!cases.length || !confirm('Apagar todos os protocolos de teste salvos neste navegador?')) return;
+          if (!cases.length || !confirm('Apagar todas as consultas de teste salvas neste navegador?')) return;
           cases = [];
-          openId = null;
+          openId = editId = null;
           save();
           render();
         });
