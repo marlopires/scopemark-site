@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="ScopeMark — pré-análise técnica de materiais com referências FSC." />
     <title>ScopeMark — Pré-análise técnica FSC</title>
+    <meta name="theme-color" content="#0e2c24" />
+    <link rel="icon" href="logo.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -12,20 +14,208 @@
       :root { --ink:#11362c; --forest:#0e2c24; --mint:#b8e6b5; --line:#dce8df; --paper:#f6faf7; --soft:#eaf5e8; --muted:#698177; }
       * { box-sizing:border-box; } body { margin:0; color:var(--ink); font-family:Manrope,Arial,sans-serif; background:var(--paper); } a { color:inherit; }
       .wrap { width:min(1160px,calc(100% - 40px)); margin:0 auto; } .mono { font-family:"DM Mono",monospace; font-size:10px; letter-spacing:.13em; } 
-      header { padding:24px 0; color:#fff; background:var(--forest); } .nav { display:flex; align-items:center; justify-content:space-between; gap:20px; } .brand { display:flex; align-items:center; gap:10px; font-size:15px; font-weight:800; letter-spacing:-.04em; } .mark { display:grid; place-items:center; width:30px; height:30px; border-radius:10px; background:var(--mint); color:var(--forest); font-weight:800; } .nav a { color:#ddede3; text-decoration:none; font-size:13px; } .nav .button { padding:10px 15px; border:1px solid #9ab7a9; border-radius:11px; color:#fff; font-weight:700; }
+      header { padding:24px 0; color:#fff; background:var(--forest); } .nav { display:flex; align-items:center; justify-content:space-between; gap:20px; } .brand { display:flex; align-items:center; gap:10px; font-size:15px; font-weight:800; letter-spacing:-.04em; } .mark { display:block; flex:none; width:30px; height:30px; } .links { display:flex; align-items:center; gap:22px; } .nav a { color:#ddede3; text-decoration:none; font-size:13px; } .nav .button { padding:10px 15px; border:1px solid #9ab7a9; border-radius:11px; color:#fff; font-weight:700; }
       .hero { color:#fff; overflow:hidden; padding:88px 0 0; background:radial-gradient(circle at 85% 10%,#276d55 0,transparent 28%),linear-gradient(125deg,#123f34 0%,#0e2c24 64%); } .hero-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:55px; align-items:center; } .eyebrow { display:flex; align-items:center; gap:8px; color:#c6e8bf; } .dot { width:6px; height:6px; border-radius:50%; background:var(--mint); } h1 { max-width:700px; margin:22px 0; font-size:clamp(40px,6vw,72px); letter-spacing:-.075em; line-height:.98; } .hero p { max-width:620px; color:#bfd4c8; font-size:17px; line-height:1.75; } .actions { display:flex; flex-wrap:wrap; gap:12px; margin:30px 0 44px; } .primary { background:var(--mint); color:#163b30; padding:14px 18px; border-radius:11px; text-decoration:none; font-size:14px; font-weight:800; } .secondary { border:1px solid #739486; color:#fff; padding:13px 18px; border-radius:11px; text-decoration:none; font-size:14px; font-weight:700; }
       .matrix { margin-bottom:-1px; border:1px solid rgba(202,235,203,.58); border-radius:20px 20px 0 0; padding:22px; background:rgba(14,47,37,.62); backdrop-filter:blur(8px); } .matrix-head { display:flex; justify-content:space-between; align-items:start; padding-bottom:16px; border-bottom:1px solid rgba(255,255,255,.16); } .matrix h2 { margin:7px 0 0; font-size:16px; font-weight:600; } .pill { border:1px solid #87aa98; color:#d4e9dc; border-radius:20px; padding:5px 8px; font:10px "DM Mono",monospace; } .lineitem { display:grid; grid-template-columns:30px 1fr auto; align-items:center; gap:12px; min-height:58px; border-bottom:1px solid rgba(255,255,255,.12); font-size:13px; } .lineitem:last-child{ border:0; }.number { color:#a7c2b5;font:10px "DM Mono",monospace;}.state{color:#c2e4bc;font-size:11px}.pending{color:#b5c6bd}
-      section { padding:84px 0; } .section-label { color:#4e816a; }.intro { display:flex; justify-content:space-between; align-items:end; gap:30px; margin-bottom:28px; }.intro h2 { max-width:620px; margin:10px 0 0; font-size:32px; letter-spacing:-.055em; line-height:1.1; }.intro p { max-width:380px; margin:0; color:var(--muted); font-size:14px; line-height:1.7; }.grid { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; }.card { min-height:205px; padding:24px; border:1px solid var(--line); border-radius:16px; background:#fff; }.icon { display:grid; width:32px;height:32px;place-items:center;border-radius:9px;background:var(--soft);color:#31745b;font-weight:800;}.card h3{margin:20px 0 8px;font-size:16px;letter-spacing:-.04em}.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}.band { background:#e9f4eb; border-top:1px solid #d8e9dc; border-bottom:1px solid #d8e9dc;}.checks { display:grid; grid-template-columns:repeat(2,1fr); gap:2px; border:1px solid #d7e7da; border-radius:18px; overflow:hidden; background:#d7e7da;}.check { padding:24px; background:#f6faf7; }.check span { display:inline-block; color:#327358; font:bold 11px "DM Mono",monospace;}.check h3 { margin:10px 0 8px; font-size:16px;letter-spacing:-.04em}.check p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}.disclaimer { display:grid; grid-template-columns:auto 1fr; gap:16px; max-width:790px; margin:28px auto 0; padding:18px; border:1px solid #d7e7da; border-radius:13px; color:#55736a; background:#fbfdfb;font-size:12px;line-height:1.65}.disclaimer b{color:#275344}.cta { padding:74px 0; color:#fff; background:#123f34; }.cta-inner { display:flex; justify-content:space-between; align-items:center; gap:30px; }.cta h2{max-width:620px;margin:11px 0 0;font-size:34px;letter-spacing:-.055em;line-height:1.1}.cta .primary{white-space:nowrap}.cta .mono{color:#b8e6b5}footer{padding:25px 0;background:#0e2c24;color:#9bb4a8;font-size:11px}footer .wrap{display:flex;justify-content:space-between;gap:20px}.footer-link{color:#d9eadf;text-decoration:none}@media(max-width:760px){.wrap{width:min(100% - 32px,1160px)}.nav>div:last-child{display:none}.hero{padding-top:62px}.hero-grid{grid-template-columns:1fr;gap:25px}.grid{grid-template-columns:1fr}.intro{display:block}.intro p{margin-top:18px}.checks{grid-template-columns:1fr}.cta-inner{align-items:start;flex-direction:column}.matrix{margin-top:15px}.lineitem{font-size:12px}.cta h2{font-size:29px}footer .wrap{flex-direction:column}}
+      section { padding:84px 0; } .section-label { color:#4e816a; }.intro { display:flex; justify-content:space-between; align-items:end; gap:30px; margin-bottom:28px; }.intro h2 { max-width:620px; margin:10px 0 0; font-size:32px; letter-spacing:-.055em; line-height:1.1; }.intro p { max-width:380px; margin:0; color:var(--muted); font-size:14px; line-height:1.7; }.grid { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; }.card { min-height:205px; padding:24px; border:1px solid var(--line); border-radius:16px; background:#fff; }.icon { display:grid; width:32px;height:32px;place-items:center;border-radius:9px;background:var(--soft);color:#31745b;font-weight:800;}.card h3{margin:20px 0 8px;font-size:16px;letter-spacing:-.04em}.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}.band { background:#e9f4eb; border-top:1px solid #d8e9dc; border-bottom:1px solid #d8e9dc;}.checks { display:grid; grid-template-columns:repeat(2,1fr); gap:2px; border:1px solid #d7e7da; border-radius:18px; overflow:hidden; background:#d7e7da;}.check { padding:24px; background:#f6faf7; }.check span { display:inline-block; color:#327358; font:bold 11px "DM Mono",monospace;}.check h3 { margin:10px 0 8px; font-size:16px;letter-spacing:-.04em}.check p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}.disclaimer { display:grid; grid-template-columns:auto 1fr; gap:16px; max-width:790px; margin:28px auto 0; padding:18px; border:1px solid #d7e7da; border-radius:13px; color:#55736a; background:#fbfdfb;font-size:12px;line-height:1.65}.disclaimer b{color:#275344}.cta { padding:74px 0; color:#fff; background:#123f34; }.cta-inner { display:flex; justify-content:space-between; align-items:center; gap:30px; }.cta h2{max-width:620px;margin:11px 0 0;font-size:34px;letter-spacing:-.055em;line-height:1.1}.cta .primary{white-space:nowrap}.cta .mono{color:#b8e6b5}footer{padding:25px 0;background:#0e2c24;color:#9bb4a8;font-size:11px}footer .wrap{display:flex;justify-content:space-between;gap:20px}.footer-link{color:#d9eadf;text-decoration:none}@media(max-width:760px){.wrap{width:min(100% - 32px,1160px)}.links a:not(.button){display:none}.hero{padding-top:62px}.hero-grid{grid-template-columns:1fr;gap:25px}.grid{grid-template-columns:1fr}.intro{display:block}.intro p{margin-top:18px}.checks{grid-template-columns:1fr}.cta-inner{align-items:start;flex-direction:column}.matrix{margin-top:15px}.lineitem{font-size:12px}.cta h2{font-size:29px}footer .wrap{flex-direction:column}}
+      html { scroll-behavior:smooth; } [hidden] { display:none !important; }
+      .toolbar { display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; margin-bottom:15px; } .roles { display:inline-flex; padding:4px; border:1px solid var(--line); border-radius:13px; background:#fff; } .roles button { border:0; border-radius:9px; padding:9px 16px; background:none; color:var(--muted); font:700 13px Manrope,Arial,sans-serif; cursor:pointer; } .roles button[aria-pressed="true"] { background:var(--forest); color:#fff; } .link-btn { border:0; background:none; color:var(--muted); font:500 12px Manrope,Arial,sans-serif; text-decoration:underline; cursor:pointer; }
+      .demo-grid { display:grid; grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr); gap:15px; align-items:start; } .panel { padding:24px; border:1px solid var(--line); border-radius:16px; background:#fff; } .panel-head { display:flex; justify-content:space-between; align-items:start; gap:12px; } .panel h3 { margin:8px 0 0; font-size:18px; letter-spacing:-.04em; } .count { min-width:30px; padding:4px 9px; border-radius:20px; background:var(--soft); color:#31745b; font:500 12px "DM Mono",monospace; text-align:center; }
+      .drop { position:relative; display:flex; align-items:center; gap:14px; margin-top:18px; padding:18px; border:1px dashed #9fcca6; border-radius:13px; background:var(--paper); cursor:pointer; } .drop:hover,.drop.drag { border-color:#5fa978; background:var(--soft); } .drop:focus-within { outline:2px solid #8fcf8a; outline-offset:2px; } .drop input { position:absolute; width:1px; height:1px; opacity:0; } .drop-icon { display:grid; flex:none; width:38px; height:38px; place-items:center; border-radius:11px; background:var(--soft); color:#31745b; font-weight:800; } .drop b { display:block; font-size:14px; overflow-wrap:anywhere; } .drop small { display:block; margin-top:3px; color:var(--muted); font-size:12px; }
+      .fields { display:grid; grid-template-columns:1fr 1fr; gap:0 12px; } .field { display:block; margin-top:14px; color:#3d5a4f; font-size:12px; font-weight:700; } .field input,.field select,.field textarea { display:block; width:100%; margin-top:6px; padding:11px 12px; border:1px solid var(--line); border-radius:11px; background:var(--paper); color:var(--ink); font:500 14px Manrope,Arial,sans-serif; } .field textarea { min-height:84px; resize:vertical; } .field :focus { border-color:#8fcf8a; outline:2px solid #8fcf8a; outline-offset:0; background:#fff; } .field [aria-invalid="true"] { border-color:#d59a8c; }
+      .btn { border:0; border-radius:11px; padding:13px 18px; background:var(--ink); color:#fff; font:800 14px Manrope,Arial,sans-serif; cursor:pointer; } .btn:hover { background:#1d4b3d; } .btn.ghost { border:1px solid #c9dccf; background:#fff; color:var(--ink); } .btn.ghost:hover { background:var(--paper); } .form-foot { display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-top:20px; } .msg { margin:0; color:#2b6a50; font-size:13px; line-height:1.55; } .msg.err { color:#9a3b2c; }
+      .tally { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:18px; } .tally div { padding:14px; border:1px solid var(--line); border-radius:12px; background:var(--paper); } .tally strong { display:block; font-size:26px; letter-spacing:-.04em; } .tally span { color:var(--muted); font-size:11px; } .hint { margin:16px 0 0; color:var(--muted); font-size:13px; line-height:1.65; }
+      .case { margin-top:10px; border:1px solid var(--line); border-radius:13px; background:#fff; overflow:hidden; } .case.open { border-color:#a9d3ae; box-shadow:0 0 0 3px var(--soft); } .case-head { display:grid; grid-template-columns:1fr auto; gap:5px 12px; width:100%; padding:14px 16px; border:0; background:none; color:inherit; font:inherit; text-align:left; cursor:pointer; } .case-head:hover { background:var(--paper); } .case-id { color:#4e816a; font:500 11px "DM Mono",monospace; letter-spacing:.06em; } .case-head strong { grid-column:1/-1; font-size:15px; letter-spacing:-.03em; overflow-wrap:anywhere; } .case-head small { grid-column:1/-1; color:var(--muted); font-size:12px; }
+      .badge,.st { padding:4px 9px; border-radius:20px; font:500 10px "DM Mono",monospace; letter-spacing:.05em; white-space:nowrap; } .badge { justify-self:end; } .is-pending,.st-warn { background:#f6eed6; color:#7d5c12; } .is-approved,.st-ok { background:#e3f2e2; color:#2b6a50; } .is-rejected,.st-need { background:#f6e4df; color:#8f3d2b; } .st-check,.st-review { background:#eaf0ed; color:#4f6b60; }
+      .case-body { padding:2px 16px 18px; border-top:1px solid var(--line); } .notice { margin:14px 0 0; padding:12px 14px; border-radius:11px; font-size:13px; line-height:1.6; } .n-pending { background:#fbf6e6; color:#6d5214; } .n-approved { background:#eef7ec; color:#285f47; } .n-rejected { background:#fbefeb; color:#7f3627; } .facts { display:grid; grid-template-columns:auto 1fr; gap:6px 14px; margin:14px 0 0; font-size:12px; } .facts dt { color:var(--muted); } .facts dd { margin:0; overflow-wrap:anywhere; white-space:pre-wrap; }
+      .crit { display:grid; grid-template-columns:24px 1fr auto; align-items:center; gap:4px 10px; padding:12px 0; border-bottom:1px solid var(--line); font-size:13px; font-weight:700; } .crit-n { color:#7f998d; font:10px "DM Mono",monospace; } .crit p { grid-column:2/-1; margin:0; color:var(--muted); font-size:12px; font-weight:500; line-height:1.6; } .summary { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:14px; padding:13px 15px; border-radius:11px; background:var(--forest); color:#fff; font-size:13px; font-weight:700; } .summary .mono { color:var(--mint); }
+      .opinion { margin:14px 0 0; padding:13px 15px; border-left:3px solid #8fcf8a; border-radius:0 11px 11px 0; background:var(--paper); font-size:13px; line-height:1.6; white-space:pre-wrap; } .opinion b { display:block; margin-bottom:4px; } .decide-row { display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; } .case .msg:not(:empty) { margin-top:10px; } .empty { margin-top:12px; padding:34px 18px; border:1px dashed var(--line); border-radius:13px; color:var(--muted); font-size:13px; line-height:1.6; text-align:center; }
+      @media(max-width:860px){.demo-grid{grid-template-columns:1fr}} @media(max-width:480px){.fields{grid-template-columns:1fr}.panel{padding:18px}.tally strong{font-size:22px}.summary{flex-direction:column;align-items:start}}
     </style>
   </head>
   <body>
-    <header><div class="wrap nav"><div class="brand"><span class="mark">S</span><span>ScopeMark<br><small class="mono" style="font-weight:400;color:#9fbbae">TECHNICAL PRE-CHECK</small></span></div><div><a href="#metodo" style="margin-right:22px">Método</a><a href="#limites" style="margin-right:22px">Limites</a><a href="https://scopemark-rgx4zj2n.manus.space" class="button">Acessar plataforma</a></div></div></header>
+    <header><div class="wrap nav"><div class="brand"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#b8e6b5"/><g fill="none" stroke="#0e2c24" stroke-linecap="round" stroke-linejoin="round"><path stroke-width="2.2" d="M8 12.5V8h4.5M19.5 8H24v4.5M24 19.5V24h-4.5M12.5 24H8v-4.5"/><path stroke-width="2.6" d="M11.4 16.4l3.1 3.1 6.1-6.5"/></g></svg><span>ScopeMark<br><small class="mono" style="font-weight:400;color:#9fbbae">TECHNICAL PRE-CHECK</small></span></div><div class="links"><a href="#metodo">Método</a><a href="#limites">Limites</a><a href="#consulta">Protocolos</a><a href="#consulta" class="button">Nova consulta</a></div></div></header>
     <main>
-      <section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow mono"><span class="dot"></span>PRÉ-ANÁLISE TÉCNICA · BASE 2026</div><h1>Material com referência FSC pede evidência, não suposição.</h1><p>ScopeMark organiza contexto, leitura da peça, critérios técnicos e consulta pública antes da aprovação formal. Uma estrutura para times de embalagem, marketing, cadeia de custódia e operação.</p><div class="actions"><a class="primary" href="https://scopemark-rgx4zj2n.manus.space">Conhecer a plataforma completa</a><a class="secondary" href="#metodo">Ver o método</a></div></div><div class="matrix"><div class="matrix-head"><div><div class="mono" style="color:#adc8ba">ANALYSIS MATRIX</div><h2>Leitura por critério</h2></div><span class="pill">PRE-CHECK</span></div><div class="lineitem"><span class="number">01</span><span>Marca e integridade</span><span class="state">Verificado</span></div><div class="lineitem"><span class="number">02</span><span>Rótulo e alegação</span><span class="state">Ressalva</span></div><div class="lineitem"><span class="number">03</span><span>Código, escopo e status</span><span class="pending">Evidência requerida</span></div><div class="lineitem"><span class="number">04</span><span>Canal e aplicação</span><span class="state">Verificado</span></div></div></div></section>
+      <section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow mono"><span class="dot"></span>PRÉ-ANÁLISE TÉCNICA · BASE 2026</div><h1>Material com referência FSC pede evidência, não suposição.</h1><p>ScopeMark organiza contexto, leitura da peça, critérios técnicos e consulta pública antes da aprovação formal. Uma estrutura para times de embalagem, marketing, cadeia de custódia e operação.</p><div class="actions"><a class="primary" href="#consulta">Fazer uma consulta de teste</a><a class="secondary" href="#metodo">Ver o método</a></div></div><div class="matrix"><div class="matrix-head"><div><div class="mono" style="color:#adc8ba">ANALYSIS MATRIX</div><h2>Leitura por critério</h2></div><span class="pill">PRE-CHECK</span></div><div class="lineitem"><span class="number">01</span><span>Marca e integridade</span><span class="state">Verificado</span></div><div class="lineitem"><span class="number">02</span><span>Rótulo e alegação</span><span class="state">Ressalva</span></div><div class="lineitem"><span class="number">03</span><span>Código, escopo e status</span><span class="pending">Evidência requerida</span></div><div class="lineitem"><span class="number">04</span><span>Canal e aplicação</span><span class="state">Verificado</span></div></div></div></section>
       <section id="metodo"><div class="wrap"><div class="intro"><div><div class="mono section-label">MÉTODO E RASTREABILIDADE</div><h2>Da arte ao dossiê, cada conclusão aponta sua base.</h2></div><p>O fluxo separa o que pode ser observado no arquivo daquilo que precisa de confirmação documental, territorial ou pública.</p></div><div class="grid"><article class="card"><div class="icon">01</div><h3>Receber e contextualizar</h3><p>Arquivo, organização, código, produto, país, canal, dimensões, alegação e uso pretendido entram na mesma consulta.</p></article><article class="card"><div class="icon">02</div><h3>Ler e confrontar</h3><p>A peça é organizada por critérios de marca, rótulo, texto, geometria, canal, perfil de licença e evidência disponível.</p></article><article class="card"><div class="icon">03</div><h3>Documentar e orientar</h3><p>O relatório apresenta conforme, ressalva, não conforme ou inconclusivo, com perguntas, recomendações e referências.</p></article></div></div></section>
       <section id="limites" class="band"><div class="wrap"><div class="intro"><div><div class="mono section-label">FRONTEIRAS CLARAS</div><h2>Uma camada técnica antes da decisão formal.</h2></div><p>A plataforma foi desenhada para elevar qualidade e rastreabilidade; não para substituir os responsáveis por uma autorização oficial.</p></div><div class="checks"><article class="check"><span>APLICÁVEL</span><h3>Critérios estruturados</h3><p>Organiza análise de marca, rótulo, alegação, código, escopo, geometria, canal e evidências datadas.</p></article><article class="check"><span>APLICÁVEL</span><h3>Dossiê de evidências</h3><p>Vincula captura de consulta pública, dados visíveis extraídos e arquivos à análise da peça.</p></article><article class="check"><span>NÃO SUBSTITUI</span><h3>Aprovação de marca</h3><p>A aprovação permanece com FSC, Trademark Service Provider ou organismo certificador, conforme aplicável.</p></article><article class="check"><span>NÃO AFIRMA</span><h3>Status sem prova</h3><p>Sem evidência adequada, o resultado é inconclusivo ou pendente de verificação — nunca uma confirmação automática.</p></article></div><div class="disclaimer"><span class="icon" style="background:#e4f2e5">!</span><div><b>Uso responsável de referências FSC.</b> A ScopeMark não é afiliada, patrocinada nem aprovada pelo FSC. Marcas e ativos oficiais devem ser usados somente por titulares autorizados e pelos canais apropriados.</div></div></div></section>
-      <section class="cta"><div class="wrap cta-inner"><div><div class="mono">PLATAFORMA COMPLETA</div><h2>Abra a consulta de teste no ambiente técnico.</h2></div><a class="primary" href="https://scopemark-rgx4zj2n.manus.space">Acessar ScopeMark</a></div></section>
+      <section id="consulta"><div class="wrap">
+        <div class="intro"><div><div class="mono section-label">CONSULTA DE TESTE · SIMULAÇÃO LOCAL</div><h2>Envie a peça, receba um protocolo e libere com validação humana.</h2></div><p>A pré-análise é montada a partir do que foi informado e só chega ao solicitante depois do parecer de um técnico. Nesta demonstração nada é enviado: os protocolos ficam salvos apenas neste navegador.</p></div>
+        <div class="toolbar"><div class="roles" role="group" aria-label="Perfil"><button type="button" data-role="requester" aria-pressed="true">Solicitante</button><button type="button" data-role="technician" aria-pressed="false">Técnico</button></div><button type="button" class="link-btn" id="clearAll">Limpar dados de teste</button></div>
+        <div class="demo-grid">
+          <form class="panel" id="requestForm" novalidate>
+            <div class="mono section-label">NOVA CONSULTA</div><h3>Solicitar pré-análise</h3>
+            <label class="drop" id="drop"><input id="file" type="file" accept=".pdf,.png,.jpg,.jpeg,.webp,.svg"><span class="drop-icon" aria-hidden="true">↑</span><span><b id="fileName">Selecionar arte final</b><small id="fileMeta">Arraste o arquivo ou clique · PDF, PNG, JPEG, WEBP ou SVG</small></span></label>
+            <div class="fields">
+              <label class="field">Organização<input id="org" placeholder="Ex.: Embalagens Aurora Ltda." /></label>
+              <label class="field">Código de licença<input id="code" placeholder="Ex.: FSC-C000000" autocomplete="off" /></label>
+              <label class="field">Rótulo pretendido<select id="label"><option value="">Selecione</option><option>FSC 100%</option><option>FSC Mix</option><option>FSC Recycled</option><option>Uso promocional</option><option>Não sei</option></select></label>
+              <label class="field">Canal de aplicação<select id="channel"><option value="">Selecione</option><option>Embalagem ou produto</option><option>Material promocional</option><option>Site ou mídia digital</option><option>Ponto de venda</option></select></label>
+              <label class="field">Largura da logo (mm)<input id="width" inputmode="decimal" placeholder="Ex.: 12" /></label>
+              <label class="field">Altura da logo (mm)<input id="height" inputmode="decimal" placeholder="Ex.: 8" /></label>
+            </div>
+            <label class="field">Observações<textarea id="notes" placeholder="Contexto, alegação usada, dúvidas para o técnico"></textarea></label>
+            <div class="form-foot"><button class="btn" type="submit">Enviar para pré-análise</button><p class="msg" id="formMsg" role="status" aria-live="polite"></p></div>
+          </form>
+          <div class="panel" id="queuePanel" hidden>
+            <div class="mono section-label">REVISÃO TÉCNICA</div><h3>Fila do técnico</h3>
+            <div class="tally"><div><strong id="n-pending">0</strong><span>Aguardando revisão</span></div><div><strong id="n-approved">0</strong><span>Liberados</span></div><div><strong id="n-rejected">0</strong><span>Devolvidos</span></div></div>
+            <p class="hint">Abra um protocolo, confira a leitura por critério e registre o parecer. A resposta só aparece para o solicitante depois que você liberar.</p>
+          </div>
+          <div class="panel">
+            <div class="panel-head"><div><div class="mono section-label">ACOMPANHAMENTO</div><h3 id="casesTitle">Meus protocolos</h3></div><span class="count" id="caseCount">0</span></div>
+            <div id="caseList"></div>
+          </div>
+        </div>
+      </div></section>
+      <section class="cta"><div class="wrap cta-inner"><div><div class="mono">PLATAFORMA COMPLETA</div><h2>Precisa de uma análise real? Abra o ambiente técnico.</h2></div><a class="primary" href="https://scopemark-rgx4zj2n.manus.space">Acessar ScopeMark</a></div></section>
     </main>
     <footer><div class="wrap"><span>© ScopeMark · Pré-análise técnica</span><a class="footer-link" href="https://scopemark-rgx4zj2n.manus.space">Ambiente de consultas</a></div></footer>
+    <script>
+      (() => {
+        const KEY = 'scopemark-demo-cases';
+        const STATUS = { pending: 'Aguardando revisão', approved: 'Liberado', rejected: 'Devolvido' };
+        const STATE = { ok: 'Informado', check: 'Consulta pendente', warn: 'Ressalva', need: 'Evidência requerida', review: 'Revisão técnica' };
+        const FORMATS = 'PDF, PNG, JPEG, WEBP ou SVG';
+        const $ = id => document.getElementById(id);
+        const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+        const when = iso => new Date(iso).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' });
+        const num = v => { const n = parseFloat(String(v).replace(',', '.')); return n > 0 ? n : null; };
+        const mm = n => n.toLocaleString('pt-BR', { maximumFractionDigits: 1 });
+        const bytes = n => n < 1048576 ? Math.max(1, Math.round(n / 1024)) + ' KB' : (n / 1048576).toLocaleString('pt-BR', { maximumFractionDigits: 1 }) + ' MB';
+        const kind = f => (/\.([a-z0-9]+)$/i.exec(f.name)?.[1] || 'arquivo').toUpperCase();
+
+        let role = 'requester', openId = null, cases = [];
+        try { cases = (JSON.parse(localStorage.getItem(KEY)) || []).filter(c => c && c.id && c.file && STATUS[c.status]); } catch (e) {}
+        const save = () => { try { localStorage.setItem(KEY, JSON.stringify(cases)); } catch (e) {} };
+
+        // Builds the criteria matrix from what was informed; nothing is ever marked compliant automatically.
+        function assess(c) {
+          const code = c.code.toUpperCase().replace(/\s+/g, ' ');
+          const missing = [!c.channel && 'canal de aplicação', !(c.width && c.height) && 'dimensões da logo'].filter(Boolean);
+          return [
+            ['Marca e integridade', 'review', `Arquivo ${c.file.name} (${c.file.kind}, ${bytes(c.file.size)}). Proporção, cores e elementos da marca são conferidos na revisão técnica.`],
+            c.label && c.label !== 'Não sei'
+              ? ['Rótulo e alegação', 'ok', `Rótulo pretendido: ${c.label}. Conferir correspondência com o escopo do certificado.`]
+              : ['Rótulo e alegação', 'need', 'Rótulo não definido. Indique o rótulo pretendido ou anexe a declaração do fornecedor.'],
+            !code
+              ? ['Código, escopo e status', 'need', 'Código de licença não informado. Sem ele, status e escopo não podem ser consultados na base pública.']
+              : /^(FSC[®\s-]*)?[CN]\d{6}$/.test(code)
+                ? ['Código, escopo e status', 'check', `Formato válido (${code}). Status e escopo dependem de consulta pública datada.`]
+                : ['Código, escopo e status', 'warn', `"${code}" não segue o formato esperado: C ou N seguido de 6 dígitos.`],
+            missing.length
+              ? ['Canal e aplicação', 'need', `Não informado: ${missing.join(' e ')}.`]
+              : ['Canal e aplicação', 'ok', `${c.channel} · logo com ${mm(c.width)} × ${mm(c.height)} mm.`]
+          ];
+        }
+
+        function summary(crit) {
+          const s = crit.map(x => x[1]);
+          return s.includes('need') ? 'Inconclusivo · evidência requerida' : s.includes('warn') ? 'Com ressalvas' : 'Pronto para revisão técnica';
+        }
+
+        function notice(c, tech) {
+          if (c.status === 'approved') return `Resposta liberada pelo técnico em ${when(c.decidedAt)}.`;
+          if (c.status === 'rejected') return `Consulta devolvida pelo técnico em ${when(c.decidedAt)}.${tech ? '' : ' Veja o parecer, ajuste a peça e envie novamente.'}`;
+          return tech ? 'Pré-análise pronta para sua revisão. Ela só chega ao solicitante depois do seu parecer.' : 'A pré-análise está aguardando validação humana e ainda não foi liberada.';
+        }
+
+        function caseHtml(c) {
+          const tech = role === 'technician', id = esc(c.id), open = c.id === openId;
+          const head = `<button type="button" class="case-head" data-open="${id}" aria-expanded="${open}"><span class="case-id">${id}</span><span class="badge is-${c.status}">${STATUS[c.status]}</span><strong>${esc(c.file.name)}</strong><small>${esc(c.org || 'Organização não informada')} · ${when(c.createdAt)}</small></button>`;
+          if (!open) return `<article class="case">${head}</article>`;
+          const crit = assess(c);
+          const size = c.width && c.height ? `${mm(c.width)} × ${mm(c.height)} mm` : '';
+          const facts = [['Organização', c.org], ['Código', c.code], ['Rótulo', c.label], ['Canal', c.channel], ['Dimensões', size], ['Observações', c.notes]]
+            .map(([k, v]) => `<dt>${k}</dt><dd>${esc(v || '—')}</dd>`).join('');
+          const matrix = tech || c.status === 'approved'
+            ? crit.map(([name, st, note], i) => `<div class="crit"><span class="crit-n">0${i + 1}</span><span>${name}</span><span class="st st-${st}">${STATE[st]}</span><p>${esc(note)}</p></div>`).join('')
+              + `<div class="summary"><span class="mono">PRÉ-ANÁLISE</span><span>${summary(crit)}</span></div>`
+            : '';
+          const opinion = c.status !== 'pending' && c.opinion ? `<div class="opinion"><b>Parecer do técnico</b>${esc(c.opinion)}</div>` : '';
+          const decide = tech && c.status === 'pending'
+            ? `<label class="field">Parecer do técnico<textarea id="op-${id}" placeholder="Obrigatório para devolver; opcional para liberar"></textarea></label><div class="decide-row"><button type="button" class="btn" data-decide="approved" data-id="${id}">Aprovar e liberar</button><button type="button" class="btn ghost" data-decide="rejected" data-id="${id}">Devolver ao solicitante</button></div><p class="msg err" id="dm-${id}" role="alert"></p>`
+            : '';
+          return `<article class="case open">${head}<div class="case-body"><div class="notice n-${c.status}">${notice(c, tech)}</div><dl class="facts">${facts}</dl>${matrix}${opinion}${decide}</div></article>`;
+        }
+
+        function render() {
+          const tech = role === 'technician';
+          $('requestForm').hidden = tech;
+          $('queuePanel').hidden = !tech;
+          $('casesTitle').textContent = tech ? 'Fila de protocolos' : 'Meus protocolos';
+          $('caseCount').textContent = cases.length;
+          for (const s of Object.keys(STATUS)) $('n-' + s).textContent = cases.filter(c => c.status === s).length;
+          const list = tech ? [...cases].sort((a, b) => (b.status === 'pending') - (a.status === 'pending')) : cases;
+          $('caseList').innerHTML = list.length
+            ? list.map(caseHtml).join('')
+            : `<div class="empty">${tech ? 'Nenhum protocolo na fila. Alterne para Solicitante e envie uma peça.' : 'Nenhum protocolo ainda. Envie uma peça para receber o primeiro.'}</div>`;
+        }
+
+        document.querySelectorAll('.roles button').forEach(b => b.addEventListener('click', () => {
+          role = b.dataset.role;
+          document.querySelectorAll('.roles button').forEach(x => x.setAttribute('aria-pressed', x === b));
+          render();
+        }));
+
+        $('caseList').addEventListener('click', e => {
+          const head = e.target.closest('[data-open]');
+          if (head) { openId = openId === head.dataset.open ? null : head.dataset.open; render(); return; }
+          const btn = e.target.closest('[data-decide]');
+          if (!btn) return;
+          const c = cases.find(x => x.id === btn.dataset.id), status = btn.dataset.decide;
+          const box = $('op-' + c.id), opinion = box.value.trim();
+          if (status === 'rejected' && !opinion) { $('dm-' + c.id).textContent = 'Descreva o motivo da devolução para o solicitante.'; box.focus(); return; }
+          Object.assign(c, { status, opinion, decidedAt: new Date().toISOString() });
+          save();
+          render();
+        });
+
+        const file = $('file'), drop = $('drop');
+        const showFile = () => {
+          const f = file.files[0];
+          $('fileName').textContent = f ? f.name : 'Selecionar arte final';
+          $('fileMeta').textContent = f ? `${kind(f)} · ${bytes(f.size)} · clique para trocar` : `Arraste o arquivo ou clique · ${FORMATS}`;
+        };
+        file.addEventListener('change', showFile);
+        ['dragenter', 'dragover'].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.add('drag'); }));
+        ['dragleave', 'drop'].forEach(t => drop.addEventListener(t, () => drop.classList.remove('drag')));
+        drop.addEventListener('drop', e => {
+          e.preventDefault();
+          if (e.dataTransfer.files.length) { file.files = e.dataTransfer.files; showFile(); }
+        });
+
+        $('requestForm').addEventListener('submit', e => {
+          e.preventDefault();
+          const f = file.files[0], w = $('width'), h = $('height'), msg = $('formMsg');
+          const fail = (text, el) => { msg.className = 'msg err'; msg.textContent = text; el.setAttribute('aria-invalid', 'true'); el.focus(); };
+          e.target.querySelectorAll('[aria-invalid]').forEach(el => el.removeAttribute('aria-invalid'));
+          if (!f) return fail('Selecione o arquivo final da arte.', file);
+          if (!/\.(pdf|png|jpe?g|webp|svg)$/i.test(f.name)) return fail(`Formato não aceito. Envie ${FORMATS}.`, file);
+          for (const el of [w, h]) if (el.value.trim() && !num(el.value)) return fail('Informe as dimensões em milímetros, com números maiores que zero.', el);
+          const d = new Date(), day = `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`;
+          let id;
+          do id = `SM-${day}-${Math.random().toString(36).slice(2, 6).toUpperCase().padEnd(4, '0')}`; while (cases.some(c => c.id === id));
+          cases.unshift({ id, createdAt: d.toISOString(), status: 'pending', file: { name: f.name, kind: kind(f), size: f.size }, org: $('org').value.trim(), code: $('code').value.trim(), label: $('label').value, channel: $('channel').value, width: num(w.value), height: num(h.value), notes: $('notes').value.trim(), opinion: '' });
+          save();
+          openId = id;
+          e.target.reset();
+          showFile();
+          msg.className = 'msg';
+          msg.textContent = `Protocolo ${id} criado. Ele fica aguardando revisão até o técnico liberar.`;
+          render();
+        });
+
+        $('clearAll').addEventListener('click', () => {
+          if (!cases.length || !confirm('Apagar todos os protocolos de teste salvos neste navegador?')) return;
+          cases = [];
+          openId = null;
+          save();
+          render();
+        });
+
+        render();
+      })();
+    </script>
   </body>
 </html>
