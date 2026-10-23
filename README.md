@@ -1,14 +1,14 @@
 # ScopeMark — Vitrine pública
 
-Esta pasta contém somente a **vitrine estática** da ScopeMark para GitHub Pages. Ela não inclui código do aplicativo autenticado, dados de clientes, chaves, integração de pagamento, armazenamento em servidor, a análise real por IA nem o painel do administrador da plataforma.
+Esta pasta contém somente a **vitrine estática** da ScopeMark para GitHub Pages. Ela não inclui código do aplicativo autenticado, dados de clientes, chaves, integração de pagamento, armazenamento em servidor, a análise real por IA nem o painel do administrador da plataforma. A plataforma fica no repositório `marlopires/scopemark`.
 
-- `index.html` — vitrine com método, motor de consulta (IAs utilizadas), pacotes de contratação, calculadora de custos e uma **consulta de teste** funcional com três acessos:
-  - **Pessoa física** (plano Individual): faz consultas e vê só as próprias; adicionais vão para a fatura.
-  - **Equipe** (plano Business): usuário da empresa faz consultas e vê só as próprias; adicionais são debitados dos créditos pré-pagos da empresa.
-  - **Gestor** (plano Business): vê as consultas de toda a equipe, a franquia, os adicionais, o extrato e recarrega créditos.
-  - A leitura da arte, os pagamentos e as recargas são simulados; os dados ficam apenas no `localStorage` de quem testa.
+- `index.html` — vitrine com método, motor de consulta (o mesmo do analiselogo: certificado no site do FSC, medição do rótulo, agentes e checklist pelas versões V2-1 e V3-0), pacotes de contratação, calculadora de custos e uma **consulta de teste** com três acessos:
+  - **Pessoa física** (plano Avulso): consulta o certificado, escolhe o produto do escopo, envia a arte e recebe o parecer na hora; vê só as próprias consultas.
+  - **Equipe** (empresa no plano Profissional): usa o saldo da empresa; passando da cota, a análise sai dos créditos pré-pagos.
+  - **Gestor**: vê as consultas da equipe, a cota, os créditos, o extrato e recarrega créditos.
+  - A leitura da arte, a consulta ao certificado e as recargas são simuladas; os dados ficam apenas no `localStorage` de quem testa.
 - `logo.svg` — marca da ScopeMark (visor de inspeção com check), usada também como favicon.
 
-Os preços, franquias e adicionais são **valores de exemplo** e ficam no objeto `PRICING`, no início do script de `index.html`: alterar ali atualiza os pacotes, a calculadora e a consulta de teste.
+Os planos, o excedente de cada plano e os adicionais seguem `servidor/scope.js` da plataforma e ficam no objeto `PLANOS`, no início do script de `index.html`. O valor do usuário adicional (R$ 39 por mês) é provisório.
 
 Os botões "Contratar" e "Acessar ScopeMark" conduzem ao ambiente completo hospedado separadamente. Para publicar, este repositório utiliza o workflow `.github/workflows/deploy-pages.yml`, disparado após cada envio para a branch `main`.

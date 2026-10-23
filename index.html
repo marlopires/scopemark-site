@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="ScopeMark — pré-análise técnica por IA de materiais com referências FSC." />
+    <meta name="description" content="ScopeMark — pré-análise por IA do uso da marca FSC na arte, pelas versões V2-1 e V3-0 da norma, com relatório na hora." />
     <title>ScopeMark — Pré-análise técnica FSC</title>
     <meta name="theme-color" content="#0e2c24" />
     <link rel="icon" href="logo.svg" type="image/svg+xml" />
@@ -43,51 +43,55 @@
       .calc { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:15px; margin-top:15px; } .calc .roles { margin-top:16px; } .calc-out { padding:24px; border-radius:16px; background:var(--forest); color:#fff; } .calc-out .mono { color:var(--mint); } .calc-out .row { border-color:rgba(255,255,255,.14); font-size:13px; } .calc-out .row span:first-child { color:#bfd4c8; } .total { display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-top:16px; font-size:14px; font-weight:700; } .total strong { font-size:32px; letter-spacing:-.05em; font-variant-numeric:tabular-nums; } .calc-note { margin:12px 0 0; color:#bfd4c8; font-size:12px; line-height:1.6; }
       @media(max-width:1000px){.ai-grid{grid-template-columns:1fr 1fr}} @media(max-width:860px){.demo-grid,.plans,.calc{grid-template-columns:1fr}} @media(max-width:560px){.ai-grid,.govern{grid-template-columns:1fr}} @media(max-width:480px){.fields{grid-template-columns:1fr}.panel{padding:18px}.tally strong{font-size:20px}.summary,.report-head{flex-direction:column;align-items:start}.report-meta{text-align:left}}
       @media print { @page { margin:12mm; } body.printing { background:#fff; } .printing *:not(:has(.print-target)):not(.print-target):not(.print-target *) { display:none !important; } .printing *:has(.print-target) { display:block !important; width:auto !important; margin:0 !important; padding:0 !important; border:0 !important; background:none !important; box-shadow:none !important; } .print-target { margin:0; } .print-target * { -webkit-print-color-adjust:exact; print-color-adjust:exact; } }
+      .grupo { margin-bottom:26px; } .grupo-head { display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:12px; } .grupo-head p { margin:0; color:var(--muted); font-size:13px; } .plans.quatro { grid-template-columns:repeat(4,1fr); } .plan .por { color:var(--muted); font:500 11px "DM Mono",monospace; letter-spacing:.06em; }
+      .cert { display:grid; gap:4px; margin-top:12px; padding:12px 14px; border:1px solid #bfe0c3; border-radius:11px; background:var(--soft); font-size:12px; color:#2b6a50; } .cert b { color:var(--ink); } .opts { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; } .opts label { display:inline-flex; align-items:center; gap:7px; padding:8px 11px; border:1px solid var(--line); border-radius:10px; background:var(--paper); font-size:12px; font-weight:600; cursor:pointer; } .opts label:has(input:checked) { border-color:#5fa978; background:var(--soft); } .com-botao { display:flex; gap:8px; } .com-botao input { flex:1; } .com-botao .btn { margin-top:6px; }
+      .calc-out .row.melhor span { color:var(--mint); font-weight:700; } .calc-out .row b { font-variant-numeric:tabular-nums; }
+      @media(max-width:1000px){.plans.quatro{grid-template-columns:1fr 1fr}} @media(max-width:640px){.plans.quatro{grid-template-columns:1fr}}
     </style>
   </head>
   <body>
     <header><div class="wrap nav"><div class="brand"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#b8e6b5"/><g fill="none" stroke="#0e2c24" stroke-linecap="round" stroke-linejoin="round"><path stroke-width="2.2" d="M8 12.5V8h4.5M19.5 8H24v4.5M24 19.5V24h-4.5M12.5 24H8v-4.5"/><path stroke-width="2.6" d="M11.4 16.4l3.1 3.1 6.1-6.5"/></g></svg><span>ScopeMark<br><small class="mono" style="font-weight:400;color:#9fbbae">TECHNICAL PRE-CHECK</small></span></div><div class="links"><a href="#metodo">Método</a><a href="#motor">Motor de IA</a><a href="#pacotes">Pacotes</a><a href="#consulta" class="button">Nova consulta</a></div></div></header>
     <main>
-      <section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow mono"><span class="dot"></span>PRÉ-ANÁLISE POR IA · BASE 2026</div><h1>Material com referência FSC pede evidência, não suposição.</h1><p>ScopeMark usa IA para ler a peça, confrontar critérios técnicos e consultar a base pública, e emite o relatório na hora, antes da aprovação formal. Uma estrutura para times de embalagem, marketing, cadeia de custódia e operação.</p><div class="actions"><a class="primary" href="#consulta">Fazer uma consulta de teste</a><a class="secondary" href="#pacotes">Ver pacotes</a></div></div><div class="matrix"><div class="matrix-head"><div><div class="mono" style="color:#adc8ba">ANALYSIS MATRIX</div><h2>Leitura por critério</h2></div><span class="pill">PRE-CHECK</span></div><div class="lineitem"><span class="number">01</span><span>Marca e integridade</span><span class="state">Verificado</span></div><div class="lineitem"><span class="number">02</span><span>Rótulo e alegação</span><span class="state">Ressalva</span></div><div class="lineitem"><span class="number">03</span><span>Código, escopo e status</span><span class="pending">Evidência requerida</span></div><div class="lineitem"><span class="number">04</span><span>Canal e aplicação</span><span class="state">Verificado</span></div></div></div></section>
-      <section id="metodo"><div class="wrap"><div class="intro"><div><div class="mono section-label">MÉTODO E RASTREABILIDADE</div><h2>Da arte ao dossiê, cada conclusão aponta sua base.</h2></div><p>O fluxo separa o que pode ser observado no arquivo daquilo que precisa de confirmação documental, territorial ou pública.</p></div><div class="grid"><article class="card"><div class="icon">01</div><h3>Receber e contextualizar</h3><p>Arquivo, organização, código, produto, país, canal, dimensões, alegação e uso pretendido entram na mesma consulta.</p></article><article class="card"><div class="icon">02</div><h3>Ler e confrontar</h3><p>A IA organiza a peça por critérios de marca, rótulo, texto, geometria, canal, perfil de licença e evidência disponível.</p></article><article class="card"><div class="icon">03</div><h3>Emitir o relatório</h3><p>O relatório sai na hora, com protocolo e a identidade ScopeMark: conforme, ressalva, não conforme ou inconclusivo, com recomendações e referências.</p></article></div></div></section>
+      <section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow mono"><span class="dot"></span>PRÉ-ANÁLISE POR IA · FSC-STD-50-001 V2-1 E V3-0</div><h1>Material com referência FSC pede evidência, não suposição.</h1><p>ScopeMark consulta o certificado no site do FSC, mede o rótulo na arte e confere cada requisito da norma nas duas versões vigentes. O relatório sai na hora, antes de a arte ir para o organismo certificador. Uma estrutura para times de embalagem, marketing, gráficas e agências.</p><div class="actions"><a class="primary" href="#consulta">Fazer uma consulta de teste</a><a class="secondary" href="#pacotes">Ver pacotes</a></div></div><div class="matrix"><div class="matrix-head"><div><div class="mono" style="color:#adc8ba">ANALYSIS MATRIX</div><h2>Leitura por critério</h2></div><span class="pill">PRE-CHECK</span></div><div class="lineitem"><span class="number">01</span><span>Marca e integridade</span><span class="state">Verificado</span></div><div class="lineitem"><span class="number">02</span><span>Rótulo e alegação</span><span class="state">Ressalva</span></div><div class="lineitem"><span class="number">03</span><span>Código, escopo e status</span><span class="pending">Evidência requerida</span></div><div class="lineitem"><span class="number">04</span><span>Canal e aplicação</span><span class="state">Verificado</span></div></div></div></section>
+      <section id="metodo"><div class="wrap"><div class="intro"><div><div class="mono section-label">MÉTODO E RASTREABILIDADE</div><h2>Da arte ao dossiê, cada conclusão aponta sua base.</h2></div><p>O fluxo separa o que pode ser observado no arquivo daquilo que precisa de confirmação documental, territorial ou pública.</p></div><div class="grid"><article class="card"><div class="icon">01</div><h3>Receber e contextualizar</h3><p>Código de licença, certificado oficial do FSC, produto do escopo, onde a arte vai ser usada, dimensões e a arte final entram na mesma consulta.</p></article><article class="card"><div class="icon">02</div><h3>Ler e confrontar</h3><p>A arte é lida em todas as páginas e cada item do checklist é avaliado pelas duas versões da norma, com as regras objetivas por cima.</p></article><article class="card"><div class="icon">03</div><h3>Emitir o relatório</h3><p>O relatório sai na hora, com protocolo e a identidade ScopeMark: o que ajustar, com a versão e a cláusula da norma, o rótulo recomendado e o que enviar à certificadora.</p></article></div></div></section>
       <section id="motor" class="engine"><div class="wrap">
-        <div class="intro"><div><div class="mono section-label">MOTOR DE CONSULTA · IAS UTILIZADAS</div><h2>Quatro camadas de IA trabalham em cada consulta.</h2></div><p>Cada etapa registra o que leu e de onde veio, para que o relatório aponte a base de cada conclusão.</p></div>
+        <div class="intro"><div><div class="mono section-label">MOTOR DE CONSULTA · IAS UTILIZADAS</div><h2>O mesmo motor de análise, do certificado ao parecer.</h2></div><p>Cada etapa registra o que leu e de onde veio, para que o relatório aponte a base de cada conclusão.</p></div>
         <div class="ai-grid">
-          <article class="ai"><div class="mono">01 · IA DE VISÃO</div><h3>Leitura da arte</h3><p>Localiza a marca na peça e confere proporção, área de proteção, cores, contraste e legibilidade.</p></article>
-          <article class="ai"><div class="mono">02 · OCR E EXTRAÇÃO</div><h3>Textos e códigos</h3><p>Extrai código de licença, rótulo, alegações e demais textos visíveis no arquivo.</p></article>
-          <article class="ai"><div class="mono">03 · CONSULTA PÚBLICA</div><h3>Status e escopo</h3><p>Confere o código na base pública de certificados FSC e registra a data da consulta.</p></article>
-          <article class="ai"><div class="mono">04 · MODELO DE LINGUAGEM</div><h3>Confronto e relatório</h3><p>Cruza o que foi lido com a base normativa e redige o relatório com recomendações e referências.</p></article>
+          <article class="ai"><div class="mono">01 · CERTIFICADO</div><h3>Consulta ao FSC</h3><p>Pesquisa o código de licença no site do FSC e baixa o certificado oficial em PDF: status, validade e produtos do escopo.</p></article>
+          <article class="ai"><div class="mono">02 · MOTOR</div><h3>Leitura e medição</h3><p>Percorre todas as páginas da arte, amplia cada marca FSC e mede o rótulo em milímetros. Lê também os QR codes e o destino deles.</p></article>
+          <article class="ai"><div class="mono">03 · AGENTES</div><h3>Localizador e especialistas</h3><p>Aponta cada uso da marca FSC na arte. Agentes próprios avaliam outros selos e alegações ambientais e os acordos de rotulagem.</p></article>
+          <article class="ai"><div class="mono">04 · ANÁLISE</div><h3>Checklist pelas duas versões</h3><p>Avalia os itens do checklist pela FSC-STD-50-001 V2-1 e V3-0, aplica as regras objetivas e a regra da transição e escreve o parecer.</p></article>
         </div>
-        <div class="flow" aria-label="Etapas do motor de consulta"><span>ARQUIVO</span><i>→</i><span>LEITURA</span><i>→</i><span>EXTRAÇÃO</span><i>→</i><span>CONSULTA</span><i>→</i><span>CONFRONTO</span><i>→</i><span>RELATÓRIO</span></div>
-        <div class="govern"><span class="icon">✓</span><div><b>Administração ScopeMark.</b> A análise é feita pela IA, do início ao fim. A equipe ScopeMark mantém o conhecimento da IA e a base normativa atualizados, acompanha a qualidade das análises e corrige erros; cada correção gera uma nova versão do relatório.</div></div>
+        <div class="flow" aria-label="Etapas do motor de consulta"><span>CÓDIGO</span><i>→</i><span>CERTIFICADO</span><i>→</i><span>LEITURA</span><i>→</i><span>MEDIÇÃO</span><i>→</i><span>CHECKLIST V2-1 · V3-0</span><i>→</i><span>RELATÓRIO</span></div>
+        <div class="govern"><span class="icon">✓</span><div><b>Sem técnico no meio, com gestão.</b> A análise é feita pela IA e o parecer chega direto ao cliente. Nas empresas, o gestor acompanha as consultas da equipe. A equipe ScopeMark mantém o conhecimento da IA e a base normativa e acompanha a qualidade das análises.</div></div>
       </div></section>
       <section id="consulta"><div class="wrap">
-        <div class="intro"><div><div class="mono section-label">CONSULTA DE TESTE · SIMULAÇÃO LOCAL</div><h2>Envie a peça e receba o relatório na hora.</h2></div><p>Teste os três acessos: pessoa física, usuário de uma equipe Business e o gestor da empresa, que acompanha as consultas do time, o consumo e os créditos. A leitura é simulada e os dados ficam apenas neste navegador.</p></div>
+        <div class="intro"><div><div class="mono section-label">CONSULTA DE TESTE · SIMULAÇÃO LOCAL</div><h2>Envie a peça e receba o parecer na hora.</h2></div><p>Mesmo fluxo da plataforma: código de licença, certificado, produto do escopo e a arte. Teste os três acessos: pessoa física, usuário de uma empresa e o gestor dela. A leitura é simulada e os dados ficam só neste navegador.</p></div>
         <div class="toolbar"><div class="toolbar-left"><div class="roles" id="roleSwitch" role="group" aria-label="Acesso"><button type="button" data-role="pf" aria-pressed="true">Pessoa física</button><button type="button" data-role="member" aria-pressed="false">Equipe</button><button type="button" data-role="manager" aria-pressed="false">Gestor</button></div><label class="as" id="asWrap" hidden>Consultando como<select id="asMember"></select></label></div><div class="clear"><button type="button" class="link-btn" id="clearAll">Reiniciar demonstração</button><span id="clearAsk" hidden>Apagar as consultas de teste e voltar aos dados de exemplo?<button type="button" class="link-btn danger" id="clearYes">Reiniciar</button><button type="button" class="link-btn" id="clearNo">Cancelar</button></span></div></div>
         <div class="demo-grid">
           <form class="panel" id="requestForm" novalidate>
-            <div class="mono section-label">NOVA CONSULTA</div><h3>Solicitar pré-análise</h3>
+            <div class="mono section-label">NOVA CONSULTA</div><h3>Conferir a arte</h3>
             <div class="usage" id="usage"></div>
-            <label class="drop" id="drop"><input id="file" type="file" accept=".pdf,.png,.jpg,.jpeg,.webp,.svg"><span class="drop-icon" aria-hidden="true">↑</span><span><b id="fileName">Selecionar arte final</b><small id="fileMeta">Arraste o arquivo ou clique · PDF, PNG, JPEG, WEBP ou SVG</small></span></label>
+            <label class="field">Código de licença FSC<span class="com-botao"><input id="code" placeholder="FSC-C000000" autocomplete="off" /><button type="button" class="btn ghost sm" id="consultar">Consultar</button></span></label>
+            <div id="certBox"></div>
+            <label class="field">Produto do escopo<select id="product" disabled><option value="">Consulte o certificado primeiro</option></select></label>
+            <div class="field">Onde a arte vai ser usada<div class="opts" id="uses"></div></div>
+            <label class="drop" id="drop"><input id="file" type="file" accept=".pdf,.png,.jpg,.jpeg"><span class="drop-icon" aria-hidden="true">↑</span><span><b id="fileName">Selecionar arte final</b><small id="fileMeta">Arraste o arquivo ou clique · PDF, PNG ou JPG · prefira o PDF final</small></span></label>
             <div class="fields">
-              <label class="field">Organização<input id="org" placeholder="Ex.: Embalagens Aurora Ltda." /></label>
-              <label class="field">Código de licença<input id="code" placeholder="Ex.: FSC-C000000" autocomplete="off" /></label>
-              <label class="field">Rótulo pretendido<select id="label"><option value="">Selecione</option><option>FSC 100%</option><option>FSC Mix</option><option>FSC Recycled</option><option>Uso promocional</option><option>Não sei</option></select></label>
-              <label class="field">Canal de aplicação<select id="channel"><option value="">Selecione</option><option>Embalagem ou produto</option><option>Material promocional</option><option>Site ou mídia digital</option><option>Ponto de venda</option></select></label>
-              <label class="field">Largura da logo (mm)<input id="width" inputmode="decimal" placeholder="Ex.: 12" /></label>
-              <label class="field">Altura da logo (mm)<input id="height" inputmode="decimal" placeholder="Ex.: 8" /></label>
+              <label class="field">Largura do rótulo (mm)<input id="width" inputmode="decimal" placeholder="Opcional no PDF" /></label>
+              <label class="field">Altura do rótulo (mm)<input id="height" inputmode="decimal" placeholder="Opcional no PDF" /></label>
             </div>
-            <label class="field">Observações<textarea id="notes" placeholder="Contexto, alegação usada, dúvidas sobre a peça"></textarea></label>
-            <label class="opt"><input type="checkbox" id="priority" />Análise prioritária <span id="prioPrice">+R$ 6,00</span></label>
+            <label class="field">Pergunta para a consultoria (opcional)<textarea id="notes" placeholder="Ex.: posso usar o rótulo em uma cor só?"></textarea></label>
+            <label class="opt"><input type="checkbox" id="priority" />Análise prioritária <span>passa na frente da fila · meia análise a mais</span></label>
             <ol class="engine-run" id="engineRun" hidden></ol>
-            <div class="form-foot"><button class="btn" type="submit" id="submitBtn">Analisar com IA</button><p class="cost-note" id="costNote"></p></div>
+            <div class="form-foot"><button class="btn" type="submit" id="submitBtn">Analisar</button><p class="cost-note" id="costNote"></p></div>
             <p class="msg form-msg" id="formMsg" role="status" aria-live="polite"></p>
           </form>
           <div class="panel" id="managerPanel" hidden>
-            <div class="mono section-label">GESTÃO DA EMPRESA · BUSINESS</div><h3>Embalagens Aurora</h3>
+            <div class="mono section-label">GESTÃO DA EMPRESA · PLANO PROFISSIONAL</div><h3>Embalagens Aurora</h3>
             <div class="tally" id="mgrTally"></div>
             <p class="hint" id="mgrHint"></p>
-            <div class="wallet"><div class="mono">CRÉDITOS PRÉ-PAGOS</div><strong id="mgrCredits">R$ 0,00</strong><div class="topups"><button type="button" data-topup="100">+ R$ 100</button><button type="button" data-topup="250">+ R$ 250</button><button type="button" data-topup="500">+ R$ 500</button></div><p>Os créditos pagam consultas extras e análises prioritárias da equipe. Recarga simulada nesta demonstração.</p></div>
+            <div class="wallet"><div class="mono">CRÉDITOS PRÉ-PAGOS</div><strong id="mgrCredits">0 análises</strong><div class="topups" id="topups"></div><p>As análises além da cota saem dos créditos, a R$ 10 cada no plano Profissional. Na plataforma, o pagamento é por Pix ou boleto; aqui a recarga é simulada.</p></div>
             <div class="rows"><h4>Extrato</h4><div id="mgrLedger"></div></div>
             <div class="rows"><h4>Equipe</h4><div id="mgrTeam"></div></div>
           </div>
@@ -98,160 +102,156 @@
           </div>
         </div>
       </div></section>
-      <section id="limites" class="band"><div class="wrap"><div class="intro"><div><div class="mono section-label">FRONTEIRAS CLARAS</div><h2>Uma camada técnica antes da decisão formal.</h2></div><p>A plataforma foi desenhada para elevar qualidade e rastreabilidade; não para substituir os responsáveis por uma autorização oficial.</p></div><div class="checks"><article class="check"><span>APLICÁVEL</span><h3>Critérios estruturados</h3><p>Organiza análise de marca, rótulo, alegação, código, escopo, geometria, canal e evidências datadas.</p></article><article class="check"><span>APLICÁVEL</span><h3>Dossiê de evidências</h3><p>Vincula captura de consulta pública, dados visíveis extraídos e arquivos à análise da peça.</p></article><article class="check"><span>NÃO SUBSTITUI</span><h3>Aprovação de marca</h3><p>A aprovação permanece com FSC, Trademark Service Provider ou organismo certificador, conforme aplicável.</p></article><article class="check"><span>NÃO AFIRMA</span><h3>Status sem prova</h3><p>Sem evidência adequada, o resultado é inconclusivo ou pendente de verificação — nunca uma confirmação automática.</p></article></div><div class="disclaimer"><span class="icon" style="background:#e4f2e5">!</span><div><b>Uso responsável de referências FSC.</b> A ScopeMark não é afiliada, patrocinada nem aprovada pelo FSC. Marcas e ativos oficiais devem ser usados somente por titulares autorizados e pelos canais apropriados.</div></div></div></section>
+      <section id="limites" class="band"><div class="wrap"><div class="intro"><div><div class="mono section-label">FRONTEIRAS CLARAS</div><h2>Uma camada técnica antes da decisão formal.</h2></div><p>A plataforma foi desenhada para elevar qualidade e rastreabilidade; não para substituir os responsáveis por uma autorização oficial.</p></div><div class="checks"><article class="check"><span>APLICÁVEL</span><h3>Critérios estruturados</h3><p>Organiza análise de marca, rótulo, alegação, código, escopo, geometria, canal e evidências datadas.</p></article><article class="check"><span>APLICÁVEL</span><h3>Dossiê de evidências</h3><p>Vincula o certificado oficial, os dados extraídos da arte e as medições à análise da peça.</p></article><article class="check"><span>NÃO SUBSTITUI</span><h3>Aprovação de marca</h3><p>A aprovação permanece com FSC, Trademark Service Provider ou organismo certificador, conforme aplicável.</p></article><article class="check"><span>NÃO AFIRMA</span><h3>Status sem prova</h3><p>Sem evidência adequada, o resultado é inconclusivo ou pendente de verificação — nunca uma confirmação automática.</p></article></div><div class="disclaimer"><span class="icon" style="background:#e4f2e5">!</span><div><b>Uso responsável de referências FSC.</b> A ScopeMark não é afiliada, patrocinada nem aprovada pelo FSC. Marcas e ativos oficiais devem ser usados somente por titulares autorizados e pelos canais apropriados.</div></div></div></section>
       <section id="pacotes"><div class="wrap">
-        <div class="intro"><div><div class="mono section-label">PACOTES DE CONTRATAÇÃO · VALORES DE EXEMPLO</div><h2>Um plano para quem consulta sozinho, outro para equipes.</h2></div><p>Pessoa física contrata para consultar e acompanhar as próprias análises. Empresas contratam o Business, com vários acessos, painel do gestor e créditos pré-pagos para os adicionais.</p></div>
-        <div class="plans">
-          <article class="plan"><div class="plan-top"><span class="mono quota">PESSOA FÍSICA</span></div><h3>Individual</h3><p class="lead">Para quem consulta por conta própria.</p><div class="price"><span data-price="individual">R$ 89,00</span><small>/mês</small></div><div class="mono quota" data-quota="individual">10 CONSULTAS POR MÊS · 1 USUÁRIO</div><ul><li>Novas consultas com relatório na hora</li><li>Histórico das suas consultas</li><li>Relatório com protocolo, em PDF</li><li>Consultas extras e prioridade avulsas</li></ul><a class="btn ghost" href="https://scopemark-rgx4zj2n.manus.space">Contratar</a></article>
-          <article class="plan featured"><div class="plan-top"><span class="mono quota">BUSINESS</span><span class="pill">RECOMENDADO</span></div><h3>Equipe</h3><p class="lead">Para empresas com time e controle de gestão.</p><div class="price"><span data-price="business">R$ 490,00</span><small>/mês</small></div><div class="mono quota" data-quota="business">60 CONSULTAS POR MÊS · 5 USUÁRIOS</div><ul><li>Painel do gestor com as consultas da equipe</li><li>Créditos pré-pagos para adicionais</li><li>Calculadora de custos e extrato de consumo</li><li>Usuários adicionais sob demanda</li></ul><a class="btn" href="https://scopemark-rgx4zj2n.manus.space">Contratar</a></article>
-          <article class="plan"><div class="plan-top"><span class="mono quota">BUSINESS</span></div><h3>Corporativo</h3><p class="lead">Para grupos e alto volume.</p><div class="price">Sob consulta</div><div class="mono quota">VOLUME E USUÁRIOS SOB MEDIDA</div><ul><li>Tudo do Business Equipe</li><li>Várias unidades e gestores</li><li>Integração via API</li><li>Acompanhamento dedicado</li></ul><a class="btn ghost" href="https://scopemark-rgx4zj2n.manus.space">Falar com a equipe</a></article>
-        </div>
-        <div class="addons"><span class="mono section-label">ADICIONAIS</span><span>Consulta extra <b data-addon="extraConsult">R$ 12,00</b></span><span>Usuário adicional <b data-addon="extraUser">R$ 39,00</b> por mês</span><span>Análise prioritária <b data-addon="priority">R$ 6,00</b> por consulta</span></div>
+        <div class="intro"><div><div class="mono section-label">PACOTES DE CONTRATAÇÃO</div><h2>Um plano para quem consulta sozinho, outros para equipes.</h2></div><p>Comece com 3 análises grátis. Pessoa física consulta e acompanha as próprias análises. Nas empresas, o saldo é da empresa e o gestor vê as consultas da equipe e compra créditos pré-pagos.</p></div>
+        <div class="grupo"><div class="grupo-head"><span class="mono section-label">PESSOA FÍSICA</span><p>Um usuário, que faz e vê só as próprias análises.</p></div><div class="plans" id="plansPf"></div></div>
+        <div class="grupo"><div class="grupo-head"><span class="mono section-label">EMPRESAS</span><p>Equipe com gestor, saldo da empresa, extrato e créditos pré-pagos.</p></div><div class="plans quatro" id="plansBiz"></div></div>
+        <div class="addons" id="addons"></div>
         <div class="calc" id="calculadora">
           <div class="panel">
-            <div class="mono section-label">CALCULADORA DE CUSTOS</div><h3>Estime o custo mensal</h3>
-            <div class="roles" id="planSwitch" role="group" aria-label="Plano"><button type="button" data-plan="individual" aria-pressed="false">Individual</button><button type="button" data-plan="business" aria-pressed="true">Business Equipe</button></div>
+            <div class="mono section-label">CALCULADORA DE CUSTOS</div><h3>Compare os planos de empresa</h3>
             <div class="fields">
-              <label class="field">Usuários<input id="cUsers" type="number" min="1" value="8" inputmode="numeric" /></label>
-              <label class="field">Consultas por mês<input id="cConsults" type="number" min="0" value="80" inputmode="numeric" /></label>
+              <label class="field">Pessoas na equipe<input id="cUsers" type="number" min="1" value="8" inputmode="numeric" /></label>
+              <label class="field">Análises por mês<input id="cConsults" type="number" min="0" value="80" inputmode="numeric" /></label>
               <label class="field">Prioritárias por mês<input id="cPriority" type="number" min="0" value="10" inputmode="numeric" /></label>
             </div>
+            <p class="hint">Conta a mensalidade, os usuários além dos incluídos no plano e os créditos para as análises que passarem da cota. A prioritária vale meia análise a mais.</p>
           </div>
-          <div class="calc-out" aria-live="polite"><div class="mono">ESTIMATIVA MENSAL</div><div id="calcRows"></div><div class="total"><span>Total estimado</span><strong id="calcTotal">R$ 0,00</strong></div><p class="calc-note" id="calcNote"></p></div>
+          <div class="calc-out" aria-live="polite"><div class="mono">TOTAL ESTIMADO POR MÊS</div><div id="calcRows"></div><p class="calc-note" id="calcNote"></p></div>
         </div>
       </div></section>
       <section class="cta"><div class="wrap cta-inner"><div><div class="mono">PLATAFORMA COMPLETA</div><h2>Pronto para a consulta real? Acesse a plataforma.</h2></div><a class="primary" href="https://scopemark-rgx4zj2n.manus.space">Acessar ScopeMark</a></div></section>
     </main>
-    <footer><div class="wrap"><span>© ScopeMark · Pré-análise técnica</span><a class="footer-link" href="https://scopemark-rgx4zj2n.manus.space">Ambiente de consultas</a></div></footer>
+    <footer><div class="wrap"><span>© ScopeMark · Pré-análise técnica · FSC® é marca registrada do Forest Stewardship Council®</span><a class="footer-link" href="https://scopemark-rgx4zj2n.manus.space">Ambiente de consultas</a></div></footer>
     <script>
       (() => {
-        // Valores de exemplo: altere aqui para atualizar pacotes, adicionais, calculadora e consulta de teste.
-        const PRICING = {
-          individual: { name: 'Individual', monthly: 89, quota: 10, users: 1 },
-          business: { name: 'Business Equipe', monthly: 490, quota: 60, users: 5 },
-          extraConsult: 12, extraUser: 39, priority: 6
+        // Planos e adicionais da plataforma (servidor/scope.js do ScopeMark). O usuário adicional é provisório.
+        const PLANOS = {
+          teste: { nome: 'Teste grátis', preco: 0, analises: 3, tipo: 'unico', usuarios: 1, publico: 'pf' },
+          avulso: { nome: 'Avulso', preco: 179, analises: 10, tipo: 'avulso', usuarios: 1, publico: 'pf' },
+          essencial: { nome: 'Essencial', preco: 290, analises: 25, tipo: 'mensal', usuarios: 2, excedente: 12, publico: 'empresa' },
+          profissional: { nome: 'Profissional', preco: 690, analises: 75, tipo: 'mensal', usuarios: 5, excedente: 10, destaque: true, publico: 'empresa' },
+          grafica: { nome: 'Gráfica', preco: 1590, analises: 200, tipo: 'mensal', usuarios: 0, excedente: 8, publico: 'empresa' },
+          enterprise: { nome: 'Enterprise', preco: null, analises: null, tipo: 'mensal', usuarios: 0, publico: 'empresa' }
         };
+        const ADICIONAIS = { usuario: 39, prioridade: 0.5 };
+        const CONTRATAR = 'https://scopemark-rgx4zj2n.manus.space';
         const COMPANY = 'Embalagens Aurora';
         const TEAM = [{ name: 'Carla Mendes', area: 'Gestora' }, { name: 'Ana Souza', area: 'Marketing' }, { name: 'Bruno Lima', area: 'Embalagens' }];
-        const KEY = 'scopemark-demo-v3';
-        const STATE = { ok: 'Verificado', info: 'Informado', warn: 'Ressalva', fail: 'Não conforme', need: 'Evidência requerida', sim: 'Simulado' };
-        const STEPS = ['Recebendo arquivo e contexto', 'IA de visão · leitura da arte', 'OCR · textos e códigos', 'Consulta pública da licença', 'Modelo de linguagem · confronto normativo', 'Emitindo relatório'];
-        const FORMATS = 'PDF, PNG, JPEG, WEBP ou SVG';
+        const PRODUTOS = ['P5.1 Embalagens de papelão ondulado', 'P5.2 Caixas de papel cartão', 'P7.1 Impressos e material promocional'];
+        const USOS = [['Embalagem do produto', false], ['Rótulo ou etiqueta do produto', false], ['Manual ou encarte do produto', false], ['Material promocional (site, catálogo, feira)', true]];
+        const KEY = 'scopemark-demo-v4';
+        const STATE = { ok: 'Verificado', info: 'Informado', warn: 'Ressalva', need: 'Evidência requerida', sim: 'Simulado' };
+        const SITUACAO = { pronto: 'Pronta para enviar à certificadora', conferir: 'Conferir pontos antes de enviar', ajustar: 'Ajustar antes de enviar' };
+        const STEPS = ['Consultando o certificado no site do FSC', 'Lendo todas as páginas da arte', 'Medindo o rótulo em milímetros', 'Localizando marcas, selos e QR codes', 'Conferindo o checklist pelas versões V2-1 e V3-0', 'Emitindo o relatório'];
         const LOGO = document.querySelector('.brand .mark').outerHTML;
         const $ = id => document.getElementById(id);
         const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
         const when = iso => new Date(iso).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' });
-        const brl = n => n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        const brl = n => (n === null || n === undefined ? 'Sob consulta' : n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }));
+        const nn = n => String(Math.round(n * 10) / 10).replace('.', ',');
+        const analises = n => `${nn(n)} ${n === 1 ? 'análise' : 'análises'}`;
         const num = v => { const n = parseFloat(String(v).replace(',', '.')); return n > 0 ? n : null; };
         const mm = n => n.toLocaleString('pt-BR', { maximumFractionDigits: 1 });
         const bytes = n => n < 1048576 ? Math.max(1, Math.round(n / 1024)) + ' KB' : (n / 1048576).toLocaleString('pt-BR', { maximumFractionDigits: 1 }) + ' MB';
-        const count = n => `${n} ${n === 1 ? 'consulta' : 'consultas'}`;
         const kind = f => (/\.([a-z0-9]+)$/i.exec(f.name)?.[1] || 'arquivo').toUpperCase();
+        const count = n => `${n} ${n === 1 ? 'consulta' : 'consultas'}`;
         const dayOf = d => `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`;
         const newId = (d, list) => { let id; do id = `SM-${dayOf(d)}-${Math.random().toString(36).slice(2, 6).toUpperCase().padEnd(4, '0')}`; while (list.some(c => c.id === id)); return id; };
+        const codeOk = code => /^(FSC[®\s-]*)?[CN]\d{6}$/.test(code.toUpperCase().replace(/\s+/g, ' '));
 
-        // Simulated engine output: only states what was informed or is missing, never "conforme" on its own.
+        // Leitura simulada: só diz o que foi informado ou falta; nunca declara a arte conforme sozinha
         function assess(c) {
-          const code = c.code.toUpperCase().replace(/\s+/g, ' ');
-          const missing = [!c.channel && 'canal de aplicação', !(c.width && c.height) && 'dimensões da logo'].filter(Boolean);
           const k = (name, state, note) => ({ name, state, note });
+          const code = c.code.toUpperCase();
+          const usos = c.uses.length ? c.uses.join(', ') : '';
           return [
-            k('Marca e integridade', 'sim', `Arquivo ${c.file.name} (${c.file.kind}, ${bytes(c.file.size)}). Na plataforma, a IA de visão confere proporção, área de proteção, cores e legibilidade da marca; nesta demonstração a leitura é simulada.`),
-            c.label && c.label !== 'Não sei'
-              ? k('Rótulo e alegação', 'info', `Rótulo pretendido: ${c.label}. Conferir correspondência com o escopo do certificado.`)
-              : k('Rótulo e alegação', 'need', 'Rótulo não definido. Indique o rótulo pretendido ou anexe a declaração do fornecedor.'),
-            !code
-              ? k('Código, escopo e status', 'need', 'Código de licença não informado. Sem ele, status e escopo não podem ser consultados na base pública.')
-              : /^(FSC[®\s-]*)?[CN]\d{6}$/.test(code)
-                ? k('Código, escopo e status', 'info', `Formato válido (${code}). Na plataforma, status e escopo são consultados na base pública, com data registrada.`)
-                : k('Código, escopo e status', 'warn', `"${code}" não segue o formato esperado: C ou N seguido de 6 dígitos.`),
-            missing.length
-              ? k('Canal e aplicação', 'need', `Não informado: ${missing.join(' e ')}.`)
-              : k('Canal e aplicação', 'info', `${c.channel} · logo com ${mm(c.width)} × ${mm(c.height)} mm.`)
+            k('Leitura da arte e integridade da marca', 'sim', `Arquivo ${c.file.name} (${c.file.kind}, ${bytes(c.file.size)}). Na plataforma, o motor amplia cada marca FSC em todas as páginas e confere proporção, área de proteção, cores e legibilidade; aqui a leitura é simulada.`),
+            !code ? k('Logotipo e código de licença', 'need', 'Código de licença não informado: sem ele, não há certificado para conferir.')
+              : codeOk(code) ? k('Logotipo e código de licença', 'info', `Certificado de ${code} consultado (simulado). Na plataforma, o código lido no logotipo é comparado com o informado.`)
+                : k('Logotipo e código de licença', 'warn', `"${code}" não segue o formato do código de licença: C ou N seguido de 6 dígitos.`),
+            c.width && c.height ? k('Tamanho mínimo do rótulo', 'info', `Rótulo informado com ${mm(c.width)} × ${mm(c.height)} mm. Na plataforma, o PDF é medido pelo motor (erro abaixo de 1%) e comparado com o mínimo de cada versão.`)
+              : k('Tamanho mínimo do rótulo', c.file.kind === 'PDF' ? 'sim' : 'need', c.file.kind === 'PDF' ? 'No PDF, o motor mede o rótulo sozinho (simulado nesta demonstração).' : 'Em PNG ou JPG não há escala física: informe as medidas do rótulo.'),
+            c.product && usos ? k('Escopo do certificado e uso', 'info', `${c.product} · ${usos}. Na plataforma, o produto é conferido com a lista do certificado e a marca certa para o uso declarado.`)
+              : k('Escopo do certificado e uso', 'need', `Não informado: ${[!c.product && 'produto do escopo', !usos && 'onde a arte vai ser usada'].filter(Boolean).join(' e ')}.`)
           ];
         }
+        const situacao = list => { const s = list.map(k => k.state); return s.includes('warn') || s.includes('need') ? 'conferir' : 'pronto'; };
 
-        function summary(list) {
-          const s = list.map(k => k.state);
-          if (s.includes('fail')) return 'Não conforme';
-          if (s.includes('need')) return 'Inconclusivo · evidência requerida';
-          if (s.includes('warn')) return 'Com ressalvas';
-          return s.every(x => x === 'ok') ? 'Conforme nos critérios avaliados' : 'Sem pendências identificadas';
-        }
-
-        // Example team history so the manager view opens with real-looking data.
         function seed() {
           const now = Date.now(), hour = 3600e3, cases = [];
-          const add = (author, hoursAgo, fields) => {
+          const add = (author, hoursAgo, f) => {
             const d = new Date(now - hoursAgo * hour);
-            const c = { id: newId(d, cases), account: 'biz', author, example: true, priority: false, extra: false, charge: 0, createdAt: d.toISOString(), version: 1, org: COMPANY, notes: '', ...fields };
+            const c = { id: newId(d, cases), account: 'biz', author, example: true, priority: false, peso: 1, createdAt: d.toISOString(), notes: '', uses: [], ...f };
             c.criteria = assess(c);
             cases.push(c);
           };
-          add('Ana Souza', 3, { file: { name: 'caixa-cereal-500g.pdf', kind: 'PDF', size: 1843200 }, code: 'FSC-C000000', label: 'FSC Mix', channel: 'Embalagem ou produto', width: 14, height: 9 });
-          add('Bruno Lima', 26, { file: { name: 'rotulo-sacola-kraft.png', kind: 'PNG', size: 640000 }, code: 'FSC-C000000', label: 'FSC Recycled', channel: 'Embalagem ou produto', width: null, height: null, notes: 'Versão para impressão flexográfica.' });
-          add('Ana Souza', 50, { file: { name: 'banner-sustentabilidade.webp', kind: 'WEBP', size: 312000 }, code: '', label: 'Uso promocional', channel: 'Site ou mídia digital', width: 20, height: 12 });
-          return { cases, biz: { usedBefore: 55, credits: 150, ledger: [{ at: new Date(now - 72 * hour).toISOString(), label: 'Recarga de créditos', amount: 150 }] } };
+          add('Ana Souza', 3, { file: { name: 'caixa-cereal-500g.pdf', kind: 'PDF', size: 1843200 }, code: 'FSC-C000000', product: PRODUTOS[1], uses: [USOS[0][0]], width: 14, height: 9 });
+          add('Bruno Lima', 26, { file: { name: 'rotulo-sacola-kraft.png', kind: 'PNG', size: 640000 }, code: 'FSC-C000000', product: PRODUTOS[0], uses: [USOS[1][0]], width: null, height: null });
+          add('Ana Souza', 50, { file: { name: 'banner-sustentabilidade.pdf', kind: 'PDF', size: 312000 }, code: '', product: '', uses: [USOS[3][0]], width: null, height: null });
+          return { cases, pf: { plano: 'avulso', usadas: 0 }, biz: { plano: 'profissional', usadasAntes: 70, extras: 5, ledger: [{ at: new Date(now - 72 * hour).toISOString(), label: 'Créditos pré-pagos · Pix confirmado', analises: 5, valor: 50 }] } };
         }
 
-        let role = 'pf', member = TEAM[1].name, filter = '', openId = null, busy = false, calcPlan = 'business', db = null;
+        let role = 'pf', member = TEAM[1].name, filter = '', openId = null, busy = false, cert = null, db = null;
         try { db = JSON.parse(localStorage.getItem(KEY)); } catch (e) {}
-        const valid = d => d && Array.isArray(d.cases) && d.biz && Array.isArray(d.biz.ledger) && d.cases.every(c => c && c.id && c.file && Array.isArray(c.criteria) && c.criteria.every(k => STATE[k.state]));
+        const valid = d => d && Array.isArray(d.cases) && d.pf && d.biz && Array.isArray(d.biz.ledger) && d.cases.every(c => c && c.id && c.file && Array.isArray(c.criteria) && c.criteria.every(k => STATE[k.state]));
         if (!valid(db)) db = seed();
         const save = () => { try { localStorage.setItem(KEY, JSON.stringify(db)); } catch (e) {} };
 
         const ofAccount = a => db.cases.filter(c => c.account === a);
-        const used = a => ofAccount(a).length + (a === 'biz' ? db.biz.usedBefore : 0);
-        const planOf = a => PRICING[a === 'biz' ? 'business' : 'individual'];
         const accountOf = () => role === 'pf' ? 'pf' : 'biz';
-        function price(a, priority) {
-          const extra = used(a) >= planOf(a).quota;
-          return { extra, cost: (extra ? PRICING.extraConsult : 0) + (priority ? PRICING.priority : 0) };
+        // Saldo como na plataforma: a cota do período e depois os créditos
+        function conta(a) {
+          if (a === 'pf') { const p = PLANOS.avulso; const usadas = ofAccount('pf').reduce((s, c) => s + c.peso, 0); return { plano: p, cota: p.analises, usadas, extras: 0, saldo: Math.max(0, p.analises - usadas) }; }
+          const p = PLANOS.profissional, gasto = ofAccount('biz').filter(c => !c.example).reduce((s, c) => s + c.peso, 0) + ofAccount('biz').filter(c => c.example).length;
+          const usadas = Math.min(p.analises, db.biz.usadasAntes + gasto), doCredito = Math.max(0, db.biz.usadasAntes + gasto - p.analises);
+          return { plano: p, cota: p.analises, usadas, extras: Math.max(0, db.biz.extras - doCredito), saldo: Math.max(0, p.analises - usadas) + Math.max(0, db.biz.extras - doCredito), doCredito };
         }
 
         function report(c) {
           const id = esc(c.id), size = c.width && c.height ? `${mm(c.width)} × ${mm(c.height)} mm` : '';
-          const facts = [['Solicitante', c.account === 'biz' ? `${c.author} · ${COMPANY}` : 'Pessoa física'], ['Arquivo', c.file.name], ['Organização', c.org], ['Código', c.code], ['Rótulo', c.label], ['Canal', c.channel], ['Dimensões', size], ['Prioridade', c.priority ? 'Sim' : 'Não'], ['Observações', c.notes]]
+          const facts = [['Solicitante', c.account === 'biz' ? `${c.author} · ${COMPANY}` : 'Pessoa física'], ['Arquivo', c.file.name], ['Código', c.code], ['Produto', c.product], ['Uso', c.uses.join(', ')], ['Rótulo', size], ['Prioridade', c.priority ? 'Sim' : 'Não'], ['Pergunta', c.notes]]
             .map(([k, v]) => `<dt>${k}</dt><dd>${esc(v || '—')}</dd>`).join('');
           const rows = c.criteria.map((k, i) => `<div class="crit"><span class="crit-n">0${i + 1}</span><span>${esc(k.name)}</span><span class="st st-${k.state}">${STATE[k.state]}</span><p>${esc(k.note)}</p></div>`).join('');
-          return `<div class="report" id="rep-${id}"><div class="report-head"><div class="report-brand">${LOGO}<span>ScopeMark<small>RELATÓRIO DE PRÉ-ANÁLISE</small></span></div><div class="report-meta">${id}<br>EMITIDO ${when(c.createdAt)}<br>VERSÃO ${c.version}</div></div>`
-            + `<div class="report-body"><dl class="facts">${facts}</dl>${rows}<div class="summary"><span class="mono">RESULTADO</span><span>${summary(c.criteria)}</span></div></div>`
-            + '<div class="report-foot">Emitido automaticamente pelo motor de consulta ScopeMark (IA de visão, OCR, consulta pública e modelo de linguagem). Pré-análise técnica: não substitui a aprovação de marca pelo FSC, Trademark Service Provider ou organismo certificador. Demonstração com leitura simulada.</div></div>';
+          return `<div class="report" id="rep-${id}"><div class="report-head"><div class="report-brand">${LOGO}<span>ScopeMark<small>PARECER TÉCNICO · PRÉ-ANÁLISE</small></span></div><div class="report-meta">${id}<br>EMITIDO ${when(c.createdAt)}<br>FSC-STD-50-001 V2-1 · V3-0</div></div>`
+            + `<div class="report-body"><dl class="facts">${facts}</dl>${rows}<div class="summary"><span class="mono">SITUAÇÃO</span><span>${SITUACAO[situacao(c.criteria)]}</span></div></div>`
+            + '<div class="report-foot">Parecer técnico gerado com IA, emitido na hora pelo motor de consulta ScopeMark. Na plataforma, o checklist completo é avaliado pelas duas versões vigentes da norma, com o requisito e a cláusula de cada ajuste. A aprovação do uso das marcas FSC é sempre do organismo certificador. Demonstração com leitura simulada.</div></div>';
         }
 
         function caseHtml(c) {
           const id = esc(c.id), open = c.id === openId;
-          const badge = c.example ? '<span class="badge is-example">Exemplo</span>' : '<span class="badge is-emitted">Relatório emitido</span>';
-          const tags = (c.priority ? ' · prioritária' : '') + (c.extra ? ' · extra' : '');
-          const head = `<button type="button" class="case-head" data-open="${id}" aria-expanded="${open}"><span class="case-id">${id}</span>${badge}<strong>${esc(c.file.name)}</strong><small>${c.account === 'biz' ? esc(c.author) : 'Pessoa física'} · ${when(c.createdAt)}${tags}</small></button>`;
+          const badge = c.example ? '<span class="badge is-example">Exemplo</span>' : `<span class="badge ${situacao(c.criteria) === 'pronto' ? 'is-emitted' : 'st-warn'}">${situacao(c.criteria) === 'pronto' ? 'Pronta para enviar' : 'Conferir pontos'}</span>`;
+          const head = `<button type="button" class="case-head" data-open="${id}" aria-expanded="${open}"><span class="case-id">${id}</span>${badge}<strong>${esc(c.file.name)}</strong><small>${c.account === 'biz' ? esc(c.author) : 'Pessoa física'} · ${when(c.createdAt)}${c.priority ? ' · prioritária' : ''}</small></button>`;
           if (!open) return `<article class="case">${head}</article>`;
           return `<article class="case open">${head}<div class="case-body">${report(c)}<div class="case-actions"><button type="button" class="btn ghost sm" data-act="print" data-id="${id}">Imprimir / salvar PDF</button></div></div></article>`;
         }
 
         function renderUsage() {
-          const a = accountOf(), p = planOf(a), n = used(a);
-          const left = a === 'biz' ? `${COMPANY} · ${p.name}` : `Plano ${p.name}`;
-          const right = a === 'biz' ? `Créditos da empresa: <b>${brl(db.biz.credits)}</b>` : `Adicionais na fatura: <b>${brl(ofAccount('pf').reduce((s, c) => s + c.charge, 0))}</b>`;
-          $('usage').innerHTML = `<div class="usage-top"><span>${left} · <b>${n}/${p.quota}</b> consultas no mês</span><span>${right}</span></div><span class="meter${n >= p.quota ? ' over' : ''}"><i style="width:${Math.min(100, n / p.quota * 100)}%"></i></span>`;
+          const a = accountOf(), k = conta(a);
+          const left = a === 'biz' ? `${COMPANY} · plano ${k.plano.nome}` : `Plano ${k.plano.nome} · válido por 6 meses`;
+          const right = a === 'biz' ? `Créditos da empresa: <b>${analises(k.extras)}</b>` : `Saldo: <b>${analises(k.saldo)}</b>`;
+          $('usage').innerHTML = `<div class="usage-top"><span>${left} · <b>${nn(k.usadas)}/${k.cota}</b> da cota</span><span>${right}</span></div><span class="meter${k.usadas >= k.cota ? ' over' : ''}"><i style="width:${Math.min(100, k.usadas / k.cota * 100)}%"></i></span>`;
         }
-
+        const peso = () => 1 + ($('priority').checked ? ADICIONAIS.prioridade : 0);
         function costNote() {
           if (role === 'manager') return;
-          const a = accountOf(), priority = $('priority').checked, { extra, cost } = price(a, priority);
-          const parts = [extra ? `consulta extra ${brl(PRICING.extraConsult)}` : 'dentro da franquia'];
-          if (priority) parts.push(`prioridade ${brl(PRICING.priority)}`);
-          $('costNote').textContent = `Esta consulta: ${parts.join(' + ')}${cost ? (a === 'biz' ? ', debitado dos créditos' : ', cobrado na fatura') : ''}.`;
+          const a = accountOf(), k = conta(a), p = peso();
+          const daCota = Math.min(p, Math.max(0, k.cota - k.usadas));
+          $('costNote').textContent = `Esta consulta: ${analises(p)}${a === 'biz' && p > daCota ? `, ${analises(p - daCota)} dos créditos` : ''}.`;
+          $('submitBtn').textContent = `Analisar (${p === 1 ? '1 análise' : '1 análise e meia'})`;
         }
 
         function renderManager() {
-          const list = ofAccount('biz'), p = PRICING.business, n = used('biz');
-          const tiles = [[`${n}/${p.quota}`, 'Franquia do mês'], [list.filter(c => c.extra).length, 'Consultas extras'], [list.filter(c => c.priority).length, 'Análises prioritárias'], [brl(list.reduce((s, c) => s + c.charge, 0)), 'Gasto com adicionais']];
+          const list = ofAccount('biz'), k = conta('biz');
+          const noMes = list.filter(c => !c.example);
+          const tiles = [[`${nn(k.usadas)}/${k.cota}`, 'Cota do mês usada'], [analises(k.extras), 'Créditos disponíveis'], [nn(k.doCredito), 'Análises pagas com créditos'], [noMes.filter(c => c.priority).length, 'Análises prioritárias']];
           $('mgrTally').innerHTML = tiles.map(([v, l]) => `<div><strong>${v}</strong><span>${l}</span></div>`).join('');
-          $('mgrHint').textContent = `A franquia inclui ${db.biz.usedBefore} consultas feitas antes desta demonstração. Depois dela, cada consulta extra custa ${brl(PRICING.extraConsult)}.`;
-          $('mgrCredits').textContent = brl(db.biz.credits);
-          $('mgrLedger').innerHTML = db.biz.ledger.slice(0, 5).map(e => `<div class="row"><span>${when(e.at)} · ${esc(e.label)}</span><span class="${e.amount < 0 ? 'minus' : 'plus'}">${e.amount < 0 ? '−' : '+'} ${brl(Math.abs(e.amount))}</span></div>`).join('');
+          $('mgrHint').textContent = `A cota já tinha ${db.biz.usadasAntes} análises usadas antes desta demonstração. Passando de ${k.cota}, cada análise sai dos créditos.`;
+          $('mgrCredits').textContent = analises(k.extras);
+          $('mgrLedger').innerHTML = db.biz.ledger.slice(0, 6).map(e => `<div class="row"><span>${when(e.at)} · ${esc(e.label)}</span><span class="${e.analises < 0 ? 'minus' : 'plus'}">${e.analises < 0 ? '−' : '+'}${nn(Math.abs(e.analises))}${e.valor ? ` · ${brl(e.valor)}` : ''}</span></div>`).join('');
           $('mgrTeam').innerHTML = TEAM.map(t => `<div class="row"><span><b>${t.name}</b> · ${t.area}</span><span>${count(list.filter(c => c.author === t.name).length)}</span></div>`).join('')
-            + `<p class="hint">${TEAM.length} de ${p.users} usuários incluídos no plano. Usuário adicional: ${brl(PRICING.extraUser)} por mês.</p>`;
+            + `<p class="hint">${TEAM.length} de ${PLANOS.profissional.usuarios} usuários do plano. Usuário adicional: ${brl(ADICIONAIS.usuario)} por mês. Quem já tem conta recebe um convite e entra se aceitar.</p>`;
         }
 
         function render() {
@@ -260,13 +260,12 @@
           $('managerPanel').hidden = !manager;
           $('asWrap').hidden = role !== 'member';
           $('filterWrap').hidden = !manager;
-          $('casesLabel').textContent = role === 'pf' ? 'CONTA PESSOA FÍSICA' : `${COMPANY.toUpperCase()} · BUSINESS`;
+          $('casesLabel').textContent = role === 'pf' ? 'CONTA PESSOA FÍSICA' : `${COMPANY.toUpperCase()} · EMPRESA`;
           $('casesTitle').textContent = manager ? 'Consultas da equipe' : 'Minhas consultas';
           const list = role === 'pf' ? ofAccount('pf') : ofAccount('biz').filter(c => manager ? !filter || c.author === filter : c.author === member);
           $('caseCount').textContent = list.length;
-          $('caseList').innerHTML = list.length
-            ? list.map(caseHtml).join('')
-            : `<div class="empty">${manager ? 'Nenhuma consulta desta pessoa no mês.' : 'Nenhuma consulta ainda. Envie uma peça para receber o primeiro relatório.'}</div>`;
+          $('caseList').innerHTML = list.length ? list.map(caseHtml).join('')
+            : `<div class="empty">${manager ? 'Nenhuma consulta desta pessoa no mês.' : 'Nenhuma consulta ainda. Envie uma peça para receber o primeiro parecer.'}</div>`;
           if (manager) renderManager(); else { renderUsage(); costNote(); }
         }
 
@@ -290,6 +289,22 @@
         $('filter').insertAdjacentHTML('beforeend', TEAM.map(t => `<option>${t.name}</option>`).join(''));
         $('filter').addEventListener('change', e => { filter = e.target.value; render(); });
         $('priority').addEventListener('change', costNote);
+        $('uses').innerHTML = USOS.map(([n]) => `<label><input type="checkbox" value="${esc(n)}">${esc(n)}</label>`).join('');
+
+        // Consulta ao certificado (simulada): na plataforma, a busca no site do FSC leva cerca de 30 s
+        $('consultar').addEventListener('click', () => {
+          const code = $('code').value.trim();
+          const msg = $('formMsg');
+          if (!codeOk(code)) { cert = null; $('certBox').innerHTML = ''; msg.className = 'msg form-msg err'; msg.textContent = 'Use o formato FSC-C000000.'; return; }
+          msg.textContent = '';
+          $('certBox').innerHTML = '<div class="cert">Consultando o certificado no site do FSC…</div>';
+          setTimeout(() => {
+            cert = { code: code.toUpperCase(), org: role === 'pf' ? 'Gráfica de exemplo Ltda.' : COMPANY, validade: new Date(Date.now() + 400 * 86400e3).toLocaleDateString('pt-BR') };
+            $('certBox').innerHTML = `<div class="cert"><span><b>${esc(cert.org)}</b> · certificado válido até ${cert.validade} (exemplo)</span><span>${PRODUTOS.length} produtos no escopo · certificado oficial em PDF anexado ao relatório</span></div>`;
+            $('product').disabled = false;
+            $('product').innerHTML = `<option value="">Escolha um produto do certificado</option>${PRODUTOS.map(p => `<option>${esc(p)}</option>`).join('')}`;
+          }, 700);
+        });
 
         $('caseList').addEventListener('click', e => {
           const head = e.target.closest('[data-open]');
@@ -298,12 +313,14 @@
           if (btn) printReport(btn.dataset.id);
         });
 
+        const precoCredito = PLANOS.profissional.excedente;
+        $('topups').innerHTML = [10, 25, 50].map(n => `<button type="button" data-topup="${n}">+ ${n} · ${brl(n * precoCredito)}</button>`).join('');
         $('managerPanel').addEventListener('click', e => {
           const btn = e.target.closest('[data-topup]');
           if (!btn) return;
-          const value = Number(btn.dataset.topup);
-          db.biz.credits += value;
-          db.biz.ledger.unshift({ at: new Date().toISOString(), label: 'Recarga de créditos (simulada)', amount: value });
+          const n = Number(btn.dataset.topup);
+          db.biz.extras += n;
+          db.biz.ledger.unshift({ at: new Date().toISOString(), label: 'Créditos pré-pagos · recarga simulada', analises: n, valor: n * precoCredito });
           save();
           render();
         });
@@ -312,7 +329,7 @@
         const showFile = () => {
           const f = file.files[0];
           $('fileName').textContent = f ? f.name : 'Selecionar arte final';
-          $('fileMeta').textContent = f ? `${kind(f)} · ${bytes(f.size)} · clique para trocar` : `Arraste o arquivo ou clique · ${FORMATS}`;
+          $('fileMeta').textContent = f ? `${kind(f)} · ${bytes(f.size)} · clique para trocar` : 'Arraste o arquivo ou clique · PDF, PNG ou JPG · prefira o PDF final';
         };
         file.addEventListener('change', showFile);
         ['dragenter', 'dragover'].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.add('drag'); }));
@@ -329,12 +346,14 @@
           const fail = (text, el) => { msg.className = 'msg form-msg err'; msg.textContent = text; if (el) { el.setAttribute('aria-invalid', 'true'); el.focus(); } };
           form.querySelectorAll('[aria-invalid]').forEach(el => el.removeAttribute('aria-invalid'));
           if (!f) return fail('Selecione o arquivo final da arte.', file);
-          if (!/\.(pdf|png|jpe?g|webp|svg)$/i.test(f.name)) return fail(`Formato não aceito. Envie ${FORMATS}.`, file);
-          for (const el of [w, h]) if (el.value.trim() && !num(el.value)) return fail('Informe as dimensões em milímetros, com números maiores que zero.', el);
-          const a = accountOf(), priority = $('priority').checked, { extra, cost } = price(a, priority);
-          if (a === 'biz' && cost > db.biz.credits) return fail(`Saldo de créditos insuficiente: esta consulta custa ${brl(cost)} e a empresa tem ${brl(db.biz.credits)}. Peça ao gestor para adicionar créditos.`);
+          if (!/\.(pdf|png|jpe?g)$/i.test(f.name)) return fail('Formato não aceito. Envie PDF, PNG ou JPG.', file);
+          for (const el of [w, h]) if (el.value.trim() && !num(el.value)) return fail('Informe as medidas em milímetros, com números maiores que zero.', el);
+          const a = accountOf(), k = conta(a), p = peso();
+          if (k.saldo < p) return fail(a === 'biz' ? 'O saldo de análises da empresa acabou. Peça ao gestor para comprar créditos.' : 'Seu saldo de análises acabou. Contrate outro pacote Avulso ou um plano.');
           const d = new Date(), id = newId(d, db.cases);
-          const c = { id, account: a, author: a === 'biz' ? member : '', example: false, priority, extra, charge: cost, createdAt: d.toISOString(), version: 1, file: { name: f.name, kind: kind(f), size: f.size }, org: $('org').value.trim() || (a === 'biz' ? COMPANY : ''), code: $('code').value.trim(), label: $('label').value, channel: $('channel').value, width: num(w.value), height: num(h.value), notes: $('notes').value.trim() };
+          const c = { id, account: a, author: a === 'biz' ? member : '', example: false, priority: $('priority').checked, peso: p, createdAt: d.toISOString(),
+            file: { name: f.name, kind: kind(f), size: f.size }, code: cert && cert.code === $('code').value.trim().toUpperCase() ? cert.code : $('code').value.trim(), product: $('product').value,
+            uses: [...$('uses').querySelectorAll('input:checked')].map(x => x.value), width: num(w.value), height: num(h.value), notes: $('notes').value.trim() };
           c.criteria = assess(c);
 
           busy = true;
@@ -345,22 +364,28 @@
           let step = 0;
           const tick = () => {
             [...run.children].forEach((li, j) => { li.className = j < step ? 'done' : j === step ? 'now' : ''; });
-            if (step++ < STEPS.length) { setTimeout(tick, priority ? 200 : 380); return; }
+            if (step++ < STEPS.length) { setTimeout(tick, c.priority ? 220 : 380); return; }
             c.createdAt = new Date().toISOString();
+            const antes = conta(a);
             db.cases.unshift(c);
-            if (a === 'biz' && cost) {
-              db.biz.credits -= cost;
-              db.biz.ledger.unshift({ at: c.createdAt, label: `Consulta ${id} · ${[extra && 'extra', priority && 'prioritária'].filter(Boolean).join(' + ')}`, amount: -cost });
+            if (a === 'biz') {
+              const daCota = Math.min(p, Math.max(0, antes.cota - antes.usadas));
+              db.biz.ledger.unshift({ at: c.createdAt, label: `Consulta ${id} · ${member}${c.priority ? ' · prioritária' : ''}`, analises: -p });
+              if (p > daCota) db.biz.ledger[0].label += ` · ${nn(p - daCota)} dos créditos`;
             }
             save();
             openId = id;
             form.reset();
             showFile();
+            cert = null;
+            $('certBox').innerHTML = '';
+            $('product').disabled = true;
+            $('product').innerHTML = '<option value="">Consulte o certificado primeiro</option>';
             run.hidden = true;
             busy = false;
             $('submitBtn').disabled = false;
             msg.className = 'msg form-msg';
-            msg.textContent = `Relatório ${id} emitido.${cost ? ` Adicionais: ${brl(cost)}, ${a === 'biz' ? 'debitados dos créditos' : 'na fatura do mês'}.` : ''}`;
+            msg.textContent = `Parecer ${id} emitido.`;
             render();
           };
           tick();
@@ -377,36 +402,38 @@
           render();
         });
 
+        // Pacotes e calculadora, a partir dos planos da plataforma
+        const plano = (id, p) => {
+          const porAnalise = p.preco && p.analises ? `${brl(p.preco / p.analises)} por análise` : '';
+          const itens = id === 'teste' ? ['3 análises completas, uma vez', 'Parecer e relatório consultivo', 'Sem cartão de crédito']
+            : id === 'avulso' ? ['10 análises, válidas por 6 meses', 'Parecer e relatório consultivo', '1 usuário']
+              : id === 'enterprise' ? ['Volume sob contrato', 'Várias unidades e gestores', 'Integração e suporte dedicado']
+                : [`${p.analises} análises por mês`, p.usuarios ? `${p.usuarios} usuário${p.usuarios > 1 ? 's' : ''}` : 'Usuários ilimitados', 'Painel do gestor com a equipe', `Créditos: ${brl(p.excedente)} por análise extra`];
+          const periodo = p.tipo === 'mensal' && p.preco ? '<small>/mês</small>' : p.tipo === 'avulso' ? '<small>uma vez</small>' : '';
+          return `<article class="plan${p.destaque ? ' featured' : ''}"><div class="plan-top"><span class="mono quota">${p.publico === 'pf' ? 'PESSOA FÍSICA' : 'EMPRESA'}</span>${p.destaque ? '<span class="pill">MAIS ESCOLHIDO</span>' : ''}</div>
+            <h3>${esc(p.nome)}</h3><div class="price">${p.preco === 0 ? 'Grátis' : brl(p.preco)}${periodo}</div><div class="por">${esc(porAnalise)}</div>
+            <ul>${itens.map(x => `<li>${esc(x)}</li>`).join('')}</ul><a class="btn${p.destaque || id === 'teste' ? '' : ' ghost'}" href="${CONTRATAR}">${id === 'teste' ? 'Começar grátis' : id === 'enterprise' ? 'Falar com a equipe' : 'Contratar'}</a></article>`;
+        };
+        $('plansPf').innerHTML = Object.entries(PLANOS).filter(([, p]) => p.publico === 'pf').map(([id, p]) => plano(id, p)).join('');
+        $('plansBiz').innerHTML = Object.entries(PLANOS).filter(([, p]) => p.publico === 'empresa').map(([id, p]) => plano(id, p)).join('');
+        $('addons').innerHTML = `<span class="mono section-label">ADICIONAIS</span><span>Análise além da cota <b>${brl(PLANOS.grafica.excedente)} a ${brl(PLANOS.essencial.excedente)}</b>, conforme o plano</span><span>Usuário adicional <b>${brl(ADICIONAIS.usuario)}</b> por mês</span><span>Análise prioritária <b>meia análise</b> a mais</span><span>Versão corrigida em até 7 dias <b>meia análise</b></span>`;
+
         function calc() {
           const int = (id, min) => Math.max(min, parseInt($(id).value, 10) || 0);
-          const consults = int('cConsults', 0), prio = Math.min(consults, int('cPriority', 0)), users = int('cUsers', 1);
-          const estimate = (key, n) => {
-            const p = PRICING[key], extraUsers = Math.max(0, n - p.users), extras = Math.max(0, consults - p.quota);
-            const lines = [[`Mensalidade ${p.name}`, p.monthly], [`Usuários adicionais · ${extraUsers} × ${brl(PRICING.extraUser)}`, extraUsers * PRICING.extraUser], [`Consultas extras · ${extras} × ${brl(PRICING.extraConsult)}`, extras * PRICING.extraConsult], [`Análises prioritárias · ${prio} × ${brl(PRICING.priority)}`, prio * PRICING.priority]];
-            return { lines, total: lines.reduce((s, l) => s + l[1], 0), addons: extras * PRICING.extraConsult + prio * PRICING.priority };
-          };
-          const business = calcPlan === 'business', cur = estimate(calcPlan, business ? users : 1);
-          $('cUsers').disabled = !business;
-          $('calcRows').innerHTML = cur.lines.map(([l, v]) => `<div class="row"><span>${l}</span><span>${brl(v)}</span></div>`).join('');
-          $('calcTotal').textContent = brl(cur.total);
-          const notes = [business
-            ? (cur.addons ? `Consultas extras e prioritárias saem dos créditos pré-pagos: cerca de ${brl(cur.addons)} em créditos por mês.` : 'Esse volume cabe na franquia, sem adicionais.')
-            : 'O plano Individual tem 1 usuário; os adicionais vêm na fatura do mês.'];
-          const other = business ? (users === 1 ? estimate('individual', 1) : null) : estimate('business', 1);
-          if (other && other.total < cur.total) notes.push(business ? `Para uma pessoa só, o Individual sai por ${brl(other.total)} por mês.` : `Com esse volume, o Business Equipe sai por ${brl(other.total)} por mês.`);
-          $('calcNote').textContent = notes.join(' ');
+          const users = int('cUsers', 1), consults = int('cConsults', 0), prio = Math.min(consults, int('cPriority', 0));
+          const consumo = consults + prio * ADICIONAIS.prioridade;
+          const linhas = Object.values(PLANOS).filter(p => p.publico === 'empresa').map(p => {
+            if (p.preco === null) return { p, total: null };
+            const extraUsers = p.usuarios ? Math.max(0, users - p.usuarios) : 0, alem = Math.max(0, consumo - p.analises);
+            return { p, extraUsers, alem, total: p.preco + extraUsers * ADICIONAIS.usuario + alem * p.excedente };
+          });
+          const menor = Math.min(...linhas.filter(l => l.total !== null).map(l => l.total));
+          $('calcRows').innerHTML = linhas.map(l => l.total === null ? `<div class="row"><span>${l.p.nome}</span><span>Sob consulta</span></div>`
+            : `<div class="row${l.total === menor ? ' melhor' : ''}"><span>${l.p.nome}${l.total === menor ? ' · menor custo' : ''}</span><b>${brl(l.total)}</b></div>`).join('');
+          const best = linhas.find(l => l.total === menor);
+          $('calcNote').textContent = best ? `${best.p.nome}: ${brl(best.p.preco)} de mensalidade${best.extraUsers ? `, ${best.extraUsers} usuário${best.extraUsers > 1 ? 's' : ''} ${best.extraUsers > 1 ? 'adicionais' : 'adicional'}` : ''}${best.alem ? ` e ${nn(best.alem)} análises em créditos` : ''}. Para uma pessoa só, o Avulso custa ${brl(PLANOS.avulso.preco)} por 10 análises.` : '';
         }
-        document.querySelectorAll('#planSwitch button').forEach(b => b.addEventListener('click', () => {
-          calcPlan = b.dataset.plan;
-          document.querySelectorAll('#planSwitch button').forEach(x => x.setAttribute('aria-pressed', x === b));
-          calc();
-        }));
         ['cUsers', 'cConsults', 'cPriority'].forEach(id => $(id).addEventListener('input', calc));
-
-        document.querySelectorAll('[data-price]').forEach(el => { el.textContent = brl(PRICING[el.dataset.price].monthly); });
-        document.querySelectorAll('[data-quota]').forEach(el => { const p = PRICING[el.dataset.quota]; el.textContent = `${p.quota} CONSULTAS POR MÊS · ${p.users} ${p.users > 1 ? 'USUÁRIOS' : 'USUÁRIO'}`; });
-        document.querySelectorAll('[data-addon]').forEach(el => { el.textContent = brl(PRICING[el.dataset.addon]); });
-        $('prioPrice').textContent = `+${brl(PRICING.priority)}`;
 
         calc();
         render();
