@@ -7,7 +7,7 @@ Esta pasta contém somente a **vitrine estática** da ScopeMark para GitHub Page
   - **Equipe** (empresa no plano Profissional): usa o saldo da empresa; passando da cota, a análise sai dos créditos pré-pagos.
   - **Gestor**: vê as consultas da equipe, a cota, os créditos, o extrato e recarrega créditos.
   - A leitura da arte, a consulta ao certificado e as recargas são simuladas; os dados ficam apenas no `localStorage` de quem testa.
-- `logo.svg` — logotipo completo da ScopeMark: o nome entre marcas de corte, com a marca de registro e a faixa de cores embaixo, como uma prova de impressão. Cores da marca: tinta `#121417`, papel `#F3F1EA` e amarelo `#FFC629`; fontes Archivo e IBM Plex Mono.
+- `logo.svg` — logotipo completo da ScopeMark: o nome entre marcas de corte, com a marca de registro e a faixa de cores embaixo, como uma prova de impressão. Nas cores da vitrine: verde `#0e2c24` com menta `#b8e6b5` (sobre fundo escuro, o nome fica branco).
 - `favicon.svg` — versão compacta (SM) usada como ícone da aba.
 
 Os planos, o excedente de cada plano e os adicionais seguem `servidor/scope.js` da plataforma e ficam no objeto `PLANOS`, no início do script de `index.html`. O valor do usuário adicional (R$ 39 por mês) é provisório.
