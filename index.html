@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="ScopeMark — pré-análise por IA do uso da marca FSC na arte, pelas versões V2-1 e V3-0 da norma, com relatório na hora." />
-    <title>ScopeMark — Pré-análise técnica FSC</title>
+    <meta name="description" content="Antes de enviar à certificadora, a ScopeMark confere o uso da marca FSC na sua arte, item por item, e mostra o que ajustar, com a cláusula da norma. Parecer em minutos." />
+    <title>ScopeMark · Pré-análise da marca FSC na sua arte</title>
     <meta name="theme-color" content="#0e2c24" />
     <link rel="icon" href="logo.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,44 +46,44 @@
       .grupo { margin-bottom:26px; } .grupo-head { display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:12px; } .grupo-head p { margin:0; color:var(--muted); font-size:13px; } .plans.quatro { grid-template-columns:repeat(4,1fr); } .plan .por { color:var(--muted); font:500 11px "DM Mono",monospace; letter-spacing:.06em; }
       .cert { display:grid; gap:4px; margin-top:12px; padding:12px 14px; border:1px solid #bfe0c3; border-radius:11px; background:var(--soft); font-size:12px; color:#2b6a50; } .cert b { color:var(--ink); } .opts { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; } .opts label { display:inline-flex; align-items:center; gap:7px; padding:8px 11px; border:1px solid var(--line); border-radius:10px; background:var(--paper); font-size:12px; font-weight:600; cursor:pointer; } .opts label:has(input:checked) { border-color:#5fa978; background:var(--soft); } .opts input { flex:none; width:16px; height:16px; margin:0; accent-color:var(--ink); } .com-botao { display:flex; gap:8px; } .com-botao input { flex:1; } .com-botao .btn { margin-top:6px; }
       .calc-out .row.melhor span { color:var(--mint); font-weight:700; } .calc-out .row b { font-variant-numeric:tabular-nums; }
-      .opt { align-items:flex-start; } .opt input { margin-top:1px; } .opt .opt-txt { color:var(--ink); font-weight:700; } .opt-txt b { display:block; } .opt-txt small { display:block; margin-top:2px; color:var(--muted); font-size:12px; font-weight:500; } .tally span { display:block; line-height:1.4; }
+      .lineitem .ajustar { color:#f2c879; } .opt { align-items:flex-start; } .opt input { margin-top:1px; } .opt .opt-txt { color:var(--ink); font-weight:700; } .opt-txt b { display:block; } .opt-txt small { display:block; margin-top:2px; color:var(--muted); font-size:12px; font-weight:500; } .tally span { display:block; line-height:1.4; }
       @media(max-width:1000px){.plans.quatro{grid-template-columns:1fr 1fr}} @media(max-width:640px){.plans.quatro{grid-template-columns:1fr}} @media(max-width:560px){.flow i{display:none}}
     </style>
   </head>
   <body>
-    <header><div class="wrap nav"><div class="brand"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#b8e6b5"/><g fill="none" stroke="#0e2c24" stroke-linecap="round" stroke-linejoin="round"><path stroke-width="2.2" d="M8 12.5V8h4.5M19.5 8H24v4.5M24 19.5V24h-4.5M12.5 24H8v-4.5"/><path stroke-width="2.6" d="M11.4 16.4l3.1 3.1 6.1-6.5"/></g></svg><span>ScopeMark<br><small class="mono" style="font-weight:400;color:#9fbbae">TECHNICAL PRE-CHECK</small></span></div><div class="links"><a href="#metodo">Método</a><a href="#motor">Motor de IA</a><a href="#pacotes">Pacotes</a><a href="#consulta" class="button">Nova consulta</a></div></div></header>
+    <header><div class="wrap nav"><div class="brand"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#b8e6b5"/><g fill="none" stroke="#0e2c24" stroke-linecap="round" stroke-linejoin="round"><path stroke-width="2.2" d="M8 12.5V8h4.5M19.5 8H24v4.5M24 19.5V24h-4.5M12.5 24H8v-4.5"/><path stroke-width="2.6" d="M11.4 16.4l3.1 3.1 6.1-6.5"/></g></svg><span>ScopeMark<br><small class="mono" style="font-weight:400;color:#9fbbae">PRÉ-ANÁLISE FSC</small></span></div><div class="links"><a href="#metodo">Como funciona</a><a href="#motor">O que conferimos</a><a href="#pacotes">Planos</a><a href="#consulta" class="button">Testar grátis</a></div></div></header>
     <main>
-      <section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow mono"><span class="dot"></span>PRÉ-ANÁLISE POR IA · FSC-STD-50-001 V2-1 E V3-0</div><h1>Material com referência FSC pede evidência, não suposição.</h1><p>ScopeMark consulta o certificado no site do FSC, mede o rótulo na arte e confere cada requisito da norma nas duas versões vigentes. O relatório sai na hora, antes de a arte ir para o organismo certificador. Uma estrutura para times de embalagem, marketing, gráficas e agências.</p><div class="actions"><a class="primary" href="#consulta">Fazer uma consulta de teste</a><a class="secondary" href="#pacotes">Ver pacotes</a></div></div><div class="matrix"><div class="matrix-head"><div><div class="mono" style="color:#adc8ba">ANALYSIS MATRIX</div><h2>Leitura por critério</h2></div><span class="pill">PRE-CHECK</span></div><div class="lineitem"><span class="number">01</span><span>Marca e integridade</span><span class="state">Verificado</span></div><div class="lineitem"><span class="number">02</span><span>Rótulo e alegação</span><span class="state">Ressalva</span></div><div class="lineitem"><span class="number">03</span><span>Código, escopo e status</span><span class="pending">Evidência requerida</span></div><div class="lineitem"><span class="number">04</span><span>Canal e aplicação</span><span class="state">Verificado</span></div></div></div></section>
-      <section id="metodo"><div class="wrap"><div class="intro"><div><div class="mono section-label">MÉTODO E RASTREABILIDADE</div><h2>Da arte ao dossiê, cada conclusão aponta sua base.</h2></div><p>O fluxo separa o que pode ser observado no arquivo daquilo que precisa de confirmação documental, territorial ou pública.</p></div><div class="grid"><article class="card"><div class="icon">01</div><h3>Receber e contextualizar</h3><p>Código de licença, certificado oficial do FSC, produto do escopo, onde a arte vai ser usada, dimensões e a arte final entram na mesma consulta.</p></article><article class="card"><div class="icon">02</div><h3>Ler e confrontar</h3><p>A arte é lida em todas as páginas e cada item do checklist é avaliado pelas duas versões da norma, com as regras objetivas por cima.</p></article><article class="card"><div class="icon">03</div><h3>Emitir o relatório</h3><p>O relatório sai na hora, com protocolo e a identidade ScopeMark: o que ajustar, com a versão e a cláusula da norma, o rótulo recomendado e o que enviar à certificadora.</p></article></div></div></section>
+      <section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow mono"><span class="dot"></span>PRÉ-ANÁLISE DA MARCA FSC · NORMA V2-1 E V3-0</div><h1>Evite que a certificadora devolva a sua arte.</h1><p>Antes de enviar, a ScopeMark confere o uso da marca FSC item por item e mostra o que ajustar, com a cláusula da norma. O parecer sai em minutos, para empresas certificadas, gráficas e agências.</p><div class="actions"><a class="primary" href="#consulta">Testar grátis com uma arte</a><a class="secondary" href="#pacotes">Ver planos</a></div></div><div class="matrix"><div class="matrix-head"><div><div class="mono" style="color:#adc8ba">EXEMPLO DE PARECER</div><h2>Sua arte, item por item</h2></div><span class="pill">V2-1 · V3-0</span></div><div class="lineitem"><span class="number">01</span><span>Logotipo e código de licença</span><span class="state">Ok</span></div><div class="lineitem"><span class="number">02</span><span>Tamanho mínimo do rótulo</span><span class="state ajustar">Ajustar</span></div><div class="lineitem"><span class="number">03</span><span>Produto no seu certificado</span><span class="pending">Conferir</span></div><div class="lineitem"><span class="number">04</span><span>Uso na embalagem</span><span class="state">Ok</span></div></div></div></section>
+      <section id="metodo"><div class="wrap"><div class="intro"><div><div class="mono section-label">COMO FUNCIONA</div><h2>Três passos entre a sua arte e um parecer claro.</h2></div><p>Você não precisa saber a norma de cor: a ScopeMark separa o que está certo, o que ajustar e o que depende de algum documento.</p></div><div class="grid"><article class="card"><div class="icon">01</div><h3>Você envia a arte</h3><p>Informe o código de licença, escolha o produto do seu certificado, diga onde a arte vai ser usada e envie o arquivo final.</p></article><article class="card"><div class="icon">02</div><h3>A ScopeMark confere</h3><p>Cada item da norma é conferido na sua arte, pelas duas versões em vigor: marca, rótulo, tamanho, código, produto e uso.</p></article><article class="card"><div class="icon">03</div><h3>Você recebe o parecer</h3><p>Em minutos, você sabe se a arte está pronta para a certificadora ou o que ajustar, com a cláusula da norma e o rótulo recomendado.</p></article></div></div></section>
       <section id="motor" class="engine"><div class="wrap">
-        <div class="intro"><div><div class="mono section-label">MOTOR DE CONSULTA · IAS UTILIZADAS</div><h2>O mesmo motor de análise, do certificado ao parecer.</h2></div><p>Cada etapa registra o que leu e de onde veio, para que o relatório aponte a base de cada conclusão.</p></div>
+        <div class="intro"><div><div class="mono section-label">O QUE CONFERIMOS · COMO A IA TRABALHA</div><h2>O que a certificadora vai olhar, conferido antes.</h2></div><p>Cada conclusão do parecer mostra de onde veio: do seu certificado, da medição da arte ou da norma.</p></div>
         <div class="ai-grid">
-          <article class="ai"><div class="mono">01 · CERTIFICADO</div><h3>Consulta ao FSC</h3><p>Pesquisa o código de licença no site do FSC e baixa o certificado oficial em PDF: status, validade e produtos do escopo.</p></article>
-          <article class="ai"><div class="mono">02 · MOTOR</div><h3>Leitura e medição</h3><p>Percorre todas as páginas da arte, amplia cada marca FSC e mede o rótulo em milímetros. Lê também os QR codes e o destino deles.</p></article>
-          <article class="ai"><div class="mono">03 · AGENTES</div><h3>Localizador e especialistas</h3><p>Aponta cada uso da marca FSC na arte. Agentes próprios avaliam outros selos e alegações ambientais e os acordos de rotulagem.</p></article>
-          <article class="ai"><div class="mono">04 · ANÁLISE</div><h3>Checklist pelas duas versões</h3><p>Avalia os itens do checklist pela FSC-STD-50-001 V2-1 e V3-0, aplica as regras objetivas e a regra da transição e escreve o parecer.</p></article>
+          <article class="ai"><div class="mono">01 · SEU CERTIFICADO</div><h3>Certificado e produtos</h3><p>Consultamos o seu código de licença no site do FSC e conferimos a validade, a situação do certificado e se o produto está no escopo.</p></article>
+          <article class="ai"><div class="mono">02 · SUA ARTE</div><h3>Leitura e medição</h3><p>Lemos todas as páginas, ampliamos cada marca FSC e medimos o rótulo em milímetros. Os QR codes da arte também são lidos.</p></article>
+          <article class="ai"><div class="mono">03 · OUTROS SELOS</div><h3>Selos e alegações</h3><p>Apontamos outros selos, alegações ambientais e acordos de rotulagem que podem gerar problema com a certificadora.</p></article>
+          <article class="ai"><div class="mono">04 · A NORMA</div><h3>As duas versões da norma</h3><p>Conferimos cada item pela FSC-STD-50-001 V2-1 e V3-0, as duas em vigor na transição, e explicamos cada ajuste.</p></article>
         </div>
-        <div class="flow" aria-label="Etapas do motor de consulta"><span>CÓDIGO</span><i>→</i><span>CERTIFICADO</span><i>→</i><span>LEITURA</span><i>→</i><span>MEDIÇÃO</span><i>→</i><span>CHECKLIST V2-1 · V3-0</span><i>→</i><span>RELATÓRIO</span></div>
-        <div class="govern"><span class="icon">✓</span><div><b>Sem técnico no meio, com gestão.</b> A análise é feita pela IA e o parecer chega direto ao cliente. Nas empresas, o gestor acompanha as consultas da equipe. A equipe ScopeMark mantém o conhecimento da IA e a base normativa e acompanha a qualidade das análises.</div></div>
+        <div class="flow" aria-label="Etapas da análise"><span>SEU CÓDIGO</span><i>→</i><span>CERTIFICADO</span><i>→</i><span>LEITURA</span><i>→</i><span>MEDIÇÃO</span><i>→</i><span>NORMA V2-1 · V3-0</span><i>→</i><span>SEU PARECER</span></div>
+        <div class="govern"><span class="icon">✓</span><div><b>Resposta direta para você.</b> O parecer chega assim que a análise termina, sem fila de aprovação. Na sua empresa, o gestor acompanha as consultas da equipe. E a equipe ScopeMark mantém as regras atualizadas com as publicações do FSC.</div></div>
       </div></section>
       <section id="consulta"><div class="wrap">
-        <div class="intro"><div><div class="mono section-label">CONSULTA DE TESTE · SIMULAÇÃO LOCAL</div><h2>Envie a peça e receba o parecer na hora.</h2></div><p>Mesmo fluxo da plataforma: código de licença, certificado, produto do escopo e a arte. Teste os três acessos: pessoa física, usuário de uma empresa e o gestor dela. A leitura é simulada e os dados ficam só neste navegador.</p></div>
+        <div class="intro"><div><div class="mono section-label">EXPERIMENTE · DEMONSTRAÇÃO</div><h2>Veja como é receber um parecer.</h2></div><p>Faça uma consulta de exemplo, do jeito que você faria na plataforma. Teste como pessoa física, como alguém da equipe de uma empresa ou como o gestor dela. A leitura é simulada e nada sai do seu navegador.</p></div>
         <div class="toolbar"><div class="toolbar-left"><div class="roles" id="roleSwitch" role="group" aria-label="Acesso"><button type="button" data-role="pf" aria-pressed="true">Pessoa física</button><button type="button" data-role="member" aria-pressed="false">Equipe</button><button type="button" data-role="manager" aria-pressed="false">Gestor</button></div><label class="as" id="asWrap" hidden>Consultando como<select id="asMember"></select></label></div><div class="clear"><button type="button" class="link-btn" id="clearAll">Reiniciar demonstração</button><span id="clearAsk" hidden>Apagar as consultas de teste e voltar aos dados de exemplo?<button type="button" class="link-btn danger" id="clearYes">Reiniciar</button><button type="button" class="link-btn" id="clearNo">Cancelar</button></span></div></div>
         <div class="demo-grid">
           <form class="panel" id="requestForm" novalidate>
-            <div class="mono section-label">NOVA CONSULTA</div><h3>Conferir a arte</h3>
+            <div class="mono section-label">NOVA CONSULTA</div><h3>Confira a sua arte</h3>
             <div class="usage" id="usage"></div>
             <label class="field">Código de licença FSC<span class="com-botao"><input id="code" placeholder="FSC-C000000" autocomplete="off" /><button type="button" class="btn ghost sm" id="consultar">Consultar</button></span></label>
             <div id="certBox"></div>
-            <label class="field">Produto do escopo<select id="product" disabled><option value="">Consulte o certificado primeiro</option></select></label>
+            <label class="field">Produto do seu certificado<select id="product" disabled><option value="">Consulte o certificado primeiro</option></select></label>
             <div class="field">Onde a arte vai ser usada<div class="opts" id="uses"></div></div>
-            <label class="drop" id="drop"><input id="file" type="file" accept=".pdf,.png,.jpg,.jpeg"><span class="drop-icon" aria-hidden="true">↑</span><span><b id="fileName">Selecionar arte final</b><small id="fileMeta">Arraste o arquivo ou clique · PDF, PNG ou JPG · prefira o PDF final</small></span></label>
+            <label class="drop" id="drop"><input id="file" type="file" accept=".pdf,.png,.jpg,.jpeg"><span class="drop-icon" aria-hidden="true">↑</span><span><b id="fileName">Escolha a arte final</b><small id="fileMeta">Arraste o arquivo ou clique · PDF, PNG ou JPG · prefira o PDF final</small></span></label>
             <div class="fields">
               <label class="field">Largura do rótulo (mm)<input id="width" inputmode="decimal" placeholder="Opcional no PDF" /></label>
               <label class="field">Altura do rótulo (mm)<input id="height" inputmode="decimal" placeholder="Opcional no PDF" /></label>
             </div>
-            <label class="field">Pergunta para a consultoria (opcional)<textarea id="notes" placeholder="Ex.: posso usar o rótulo em uma cor só?"></textarea></label>
-            <label class="opt"><input type="checkbox" id="priority" /><span class="opt-txt"><b>Análise prioritária</b><small>Passa na frente da fila · meia análise a mais</small></span></label>
+            <label class="field">Sua dúvida sobre a arte (opcional)<textarea id="notes" placeholder="Ex.: posso usar o rótulo em uma cor só?"></textarea></label>
+            <label class="opt"><input type="checkbox" id="priority" /><span class="opt-txt"><b>Análise prioritária</b><small>Sua análise passa na frente da fila · meia análise a mais</small></span></label>
             <ol class="engine-run" id="engineRun" hidden></ol>
             <div class="form-foot"><button class="btn" type="submit" id="submitBtn">Analisar</button><p class="cost-note" id="costNote"></p></div>
             <p class="msg form-msg" id="formMsg" role="status" aria-live="polite"></p>
@@ -92,39 +92,39 @@
             <div class="mono section-label">GESTÃO DA EMPRESA · PLANO PROFISSIONAL</div><h3>Embalagens Aurora</h3>
             <div class="tally" id="mgrTally"></div>
             <p class="hint" id="mgrHint"></p>
-            <div class="wallet"><div class="mono">CRÉDITOS PRÉ-PAGOS</div><strong id="mgrCredits">0 análises</strong><div class="topups" id="topups"></div><p>As análises além da cota saem dos créditos, a R$ 10 cada no plano Profissional. Na plataforma, o pagamento é por Pix ou boleto; aqui a recarga é simulada.</p></div>
+            <div class="wallet"><div class="mono">CRÉDITOS PRÉ-PAGOS</div><strong id="mgrCredits">0 análises</strong><div class="topups" id="topups"></div><p>Quando a cota do mês acaba, as análises saem dos créditos: R$ 10 cada no plano Profissional. Você paga por Pix ou boleto; aqui a recarga é simulada.</p></div>
             <div class="rows"><h4>Extrato</h4><div id="mgrLedger"></div></div>
             <div class="rows"><h4>Equipe</h4><div id="mgrTeam"></div></div>
           </div>
           <div class="panel">
-            <div class="panel-head"><div><div class="mono section-label" id="casesLabel">RELATÓRIOS</div><h3 id="casesTitle">Minhas consultas</h3></div><span class="count" id="caseCount">0</span></div>
+            <div class="panel-head"><div><div class="mono section-label" id="casesLabel">PARECERES</div><h3 id="casesTitle">Minhas consultas</h3></div><span class="count" id="caseCount">0</span></div>
             <label class="as" id="filterWrap" hidden>Filtrar por pessoa<select id="filter"><option value="">Toda a equipe</option></select></label>
             <div id="caseList"></div>
           </div>
         </div>
       </div></section>
-      <section id="limites" class="band"><div class="wrap"><div class="intro"><div><div class="mono section-label">FRONTEIRAS CLARAS</div><h2>Uma camada técnica antes da decisão formal.</h2></div><p>A plataforma foi desenhada para elevar qualidade e rastreabilidade; não para substituir os responsáveis por uma autorização oficial.</p></div><div class="checks"><article class="check"><span>APLICÁVEL</span><h3>Critérios estruturados</h3><p>Organiza análise de marca, rótulo, alegação, código, escopo, geometria, canal e evidências datadas.</p></article><article class="check"><span>APLICÁVEL</span><h3>Dossiê de evidências</h3><p>Vincula o certificado oficial, os dados extraídos da arte e as medições à análise da peça.</p></article><article class="check"><span>NÃO SUBSTITUI</span><h3>Aprovação de marca</h3><p>A aprovação permanece com FSC, Trademark Service Provider ou organismo certificador, conforme aplicável.</p></article><article class="check"><span>NÃO AFIRMA</span><h3>Status sem prova</h3><p>Sem evidência adequada, o resultado é inconclusivo ou pendente de verificação — nunca uma confirmação automática.</p></article></div><div class="disclaimer"><span class="icon" style="background:#e4f2e5">!</span><div><b>Uso responsável de referências FSC.</b> A ScopeMark não é afiliada, patrocinada nem aprovada pelo FSC. Marcas e ativos oficiais devem ser usados somente por titulares autorizados e pelos canais apropriados.</div></div></div></section>
+      <section id="limites" class="band"><div class="wrap"><div class="intro"><div><div class="mono section-label">O QUE VOCÊ PRECISA SABER</div><h2>A ScopeMark prepara a sua arte. Quem aprova é a certificadora.</h2></div><p>O parecer diminui o risco de devolução e o retrabalho, mas a decisão oficial continua com o organismo certificador da sua empresa.</p></div><div class="checks"><article class="check"><span>VOCÊ GANHA</span><h3>Cada item conferido</h3><p>Marca, rótulo, código, produto, tamanho e uso, com o que ajustar e a cláusula da norma de cada ajuste.</p></article><article class="check"><span>VOCÊ GANHA</span><h3>Um registro do que foi conferido</h3><p>O parecer guarda o certificado consultado, os dados lidos da arte e as medições, prontos para mostrar à certificadora.</p></article><article class="check"><span>NÃO SUBSTITUI</span><h3>A aprovação oficial</h3><p>Quem aprova o uso da marca FSC é a certificadora da sua empresa, ou o FSC e o Trademark Service Provider, conforme o caso.</p></article><article class="check"><span>NÃO APROVA NO ESCURO</span><h3>Nada é dado como certo sem prova</h3><p>Se faltar um documento ou uma informação, o parecer diz o que conferir, em vez de dar a arte como aprovada.</p></article></div><div class="disclaimer"><span class="icon" style="background:#e4f2e5">!</span><div><b>Sobre a marca FSC.</b> A ScopeMark não é afiliada, patrocinada nem aprovada pelo FSC. Só quem tem certificado ou licença FSC pode usar as marcas FSC, com os arquivos oficiais obtidos no portal de marcas do FSC.</div></div></div></section>
       <section id="pacotes"><div class="wrap">
-        <div class="intro"><div><div class="mono section-label">PACOTES DE CONTRATAÇÃO</div><h2>Um plano para quem consulta sozinho, outros para equipes.</h2></div><p>Comece com 3 análises grátis. Pessoa física consulta e acompanha as próprias análises. Nas empresas, o saldo é da empresa e o gestor vê as consultas da equipe e compra créditos pré-pagos.</p></div>
-        <div class="grupo"><div class="grupo-head"><span class="mono section-label">PESSOA FÍSICA</span><p>Um usuário, que faz e vê só as próprias análises.</p></div><div class="plans" id="plansPf"></div></div>
-        <div class="grupo"><div class="grupo-head"><span class="mono section-label">EMPRESAS</span><p>Equipe com gestor, saldo da empresa, extrato e créditos pré-pagos.</p></div><div class="plans quatro" id="plansBiz"></div></div>
+        <div class="intro"><div><div class="mono section-label">PLANOS</div><h2>Escolha pelo número de artes que você confere por mês.</h2></div><p>Comece com 3 análises grátis, sem cartão. Se você consulta sozinho, um plano de pessoa física basta. Para equipes, o saldo é da empresa e o gestor acompanha as consultas de todos e compra créditos quando precisar.</p></div>
+        <div class="grupo"><div class="grupo-head"><span class="mono section-label">PESSOA FÍSICA</span><p>Para quem consulta sozinho: você faz e vê as suas análises.</p></div><div class="plans" id="plansPf"></div></div>
+        <div class="grupo"><div class="grupo-head"><span class="mono section-label">EMPRESAS</span><p>Para equipes: um saldo para todos, com gestor, extrato e créditos pré-pagos.</p></div><div class="plans quatro" id="plansBiz"></div></div>
         <div class="addons" id="addons"></div>
         <div class="calc" id="calculadora">
           <div class="panel">
-            <div class="mono section-label">CALCULADORA DE CUSTOS</div><h3>Compare os planos de empresa</h3>
+            <div class="mono section-label">CALCULADORA DE CUSTOS</div><h3>Quanto a sua equipe pagaria por mês</h3>
             <div class="fields">
-              <label class="field">Pessoas na equipe<input id="cUsers" type="number" min="1" value="8" inputmode="numeric" /></label>
-              <label class="field">Análises por mês<input id="cConsults" type="number" min="0" value="80" inputmode="numeric" /></label>
+              <label class="field">Pessoas na sua equipe<input id="cUsers" type="number" min="1" value="8" inputmode="numeric" /></label>
+              <label class="field">Artes conferidas por mês<input id="cConsults" type="number" min="0" value="80" inputmode="numeric" /></label>
               <label class="field">Prioritárias por mês<input id="cPriority" type="number" min="0" value="10" inputmode="numeric" /></label>
             </div>
-            <p class="hint">Conta a mensalidade, os usuários além dos incluídos no plano e os créditos para as análises que passarem da cota. A prioritária vale meia análise a mais.</p>
+            <p class="hint">A conta inclui a mensalidade, os usuários além dos que o plano inclui e os créditos para o que passar da cota. A análise prioritária vale meia análise a mais.</p>
           </div>
           <div class="calc-out" aria-live="polite"><div class="mono">TOTAL ESTIMADO POR MÊS</div><div id="calcRows"></div><p class="calc-note" id="calcNote"></p></div>
         </div>
       </div></section>
-      <section class="cta"><div class="wrap cta-inner"><div><div class="mono">PLATAFORMA COMPLETA</div><h2>Pronto para a consulta real? Acesse a plataforma.</h2></div><a class="primary" href="https://scopemark-rgx4zj2n.manus.space">Acessar ScopeMark</a></div></section>
+      <section class="cta"><div class="wrap cta-inner"><div><div class="mono">PRONTO PARA COMEÇAR?</div><h2>Confira a sua próxima arte antes de enviar à certificadora.</h2></div><a class="primary" href="https://scopemark-rgx4zj2n.manus.space">Começar com 3 análises grátis</a></div></section>
     </main>
-    <footer><div class="wrap"><span>© ScopeMark · Pré-análise técnica · FSC® é marca registrada do Forest Stewardship Council®</span><a class="footer-link" href="https://scopemark-rgx4zj2n.manus.space">Ambiente de consultas</a></div></footer>
+    <footer><div class="wrap"><span>© ScopeMark · Pré-análise da marca FSC · FSC® é marca registrada do Forest Stewardship Council®</span><a class="footer-link" href="https://scopemark-rgx4zj2n.manus.space">Entrar na plataforma</a></div></footer>
     <script>
       (() => {
         // Planos e adicionais da plataforma (servidor/scope.js do ScopeMark). O usuário adicional é provisório.
@@ -145,7 +145,7 @@
         const KEY = 'scopemark-demo-v4';
         const STATE = { ok: 'Verificado', info: 'Informado', warn: 'Ressalva', need: 'Evidência requerida', sim: 'Simulado' };
         const SITUACAO = { pronto: 'Pronta para enviar à certificadora', conferir: 'Conferir pontos antes de enviar', ajustar: 'Ajustar antes de enviar' };
-        const STEPS = ['Consultando o certificado no site do FSC', 'Lendo todas as páginas da arte', 'Medindo o rótulo em milímetros', 'Localizando marcas, selos e QR codes', 'Conferindo o checklist pelas versões V2-1 e V3-0', 'Emitindo o relatório'];
+        const STEPS = ['Consultando o certificado no site do FSC', 'Lendo todas as páginas da arte', 'Medindo o rótulo em milímetros', 'Localizando marcas, selos e QR codes', 'Conferindo cada item pelas duas versões da norma', 'Preparando o seu parecer'];
         const LOGO = document.querySelector('.brand .mark').outerHTML;
         const $ = id => document.getElementById(id);
         const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
@@ -168,14 +168,14 @@
           const code = c.code.toUpperCase();
           const usos = c.uses.length ? c.uses.join(', ') : '';
           return [
-            k('Leitura da arte e integridade da marca', 'sim', `Arquivo ${c.file.name} (${c.file.kind}, ${bytes(c.file.size)}). Na plataforma, o motor amplia cada marca FSC em todas as páginas e confere proporção, área de proteção, cores e legibilidade; aqui a leitura é simulada.`),
-            !code ? k('Logotipo e código de licença', 'need', 'Código de licença não informado: sem ele, não há certificado para conferir.')
-              : codeOk(code) ? k('Logotipo e código de licença', 'info', `Certificado de ${code} consultado (simulado). Na plataforma, o código lido no logotipo é comparado com o informado.`)
-                : k('Logotipo e código de licença', 'warn', `"${code}" não segue o formato do código de licença: C ou N seguido de 6 dígitos.`),
-            c.width && c.height ? k('Tamanho mínimo do rótulo', 'info', `Rótulo informado com ${mm(c.width)} × ${mm(c.height)} mm. Na plataforma, o PDF é medido pelo motor (erro abaixo de 1%) e comparado com o mínimo de cada versão.`)
-              : k('Tamanho mínimo do rótulo', c.file.kind === 'PDF' ? 'sim' : 'need', c.file.kind === 'PDF' ? 'No PDF, o motor mede o rótulo sozinho (simulado nesta demonstração).' : 'Em PNG ou JPG não há escala física: informe as medidas do rótulo.'),
-            c.product && usos ? k('Escopo do certificado e uso', 'info', `${c.product} · ${usos}. Na plataforma, o produto é conferido com a lista do certificado e a marca certa para o uso declarado.`)
-              : k('Escopo do certificado e uso', 'need', `Não informado: ${[!c.product && 'produto do escopo', !usos && 'onde a arte vai ser usada'].filter(Boolean).join(' e ')}.`)
+            k('Leitura da arte e integridade da marca', 'sim', `Arquivo ${c.file.name} (${c.file.kind}, ${bytes(c.file.size)}). Na versão completa, ampliamos cada marca FSC da sua arte e conferimos proporção, área de proteção, cores e legibilidade. Nesta demonstração, essa leitura é simulada.`),
+            !code ? k('Logotipo e código de licença', 'need', 'Informe o código de licença: sem ele, não dá para conferir o seu certificado.')
+              : codeOk(code) ? k('Logotipo e código de licença', 'info', `Certificado ${code} consultado (exemplo). Na versão completa, conferimos se o código impresso no logotipo é o mesmo do seu certificado.`)
+                : k('Logotipo e código de licença', 'warn', `Confira o código "${code}": o código de licença tem C ou N seguido de 6 dígitos.`),
+            c.width && c.height ? k('Tamanho mínimo do rótulo', 'info', `Você informou ${mm(c.width)} × ${mm(c.height)} mm. Na versão completa, medimos o rótulo no próprio PDF, com erro abaixo de 1%, e comparamos com o tamanho mínimo da norma.`)
+              : k('Tamanho mínimo do rótulo', c.file.kind === 'PDF' ? 'sim' : 'need', c.file.kind === 'PDF' ? 'No PDF, medimos o rótulo para você (simulado nesta demonstração).' : 'Imagem PNG ou JPG não tem medida real: informe a largura e a altura do rótulo.'),
+            c.product && usos ? k('Escopo do certificado e uso', 'info', `${c.product} · ${usos}. Na versão completa, conferimos se o produto está no seu certificado e se a marca escolhida serve para esse uso.`)
+              : k('Escopo do certificado e uso', 'need', `Falta informar: ${[!c.product && 'o produto do seu certificado', !usos && 'onde a arte vai ser usada'].filter(Boolean).join(' e ')}.`)
           ];
         }
         const situacao = list => { const s = list.map(k => k.state); return s.includes('warn') || s.includes('need') ? 'conferir' : 'pronto'; };
@@ -217,7 +217,7 @@
           const rows = c.criteria.map((k, i) => `<div class="crit"><span class="crit-n">0${i + 1}</span><span>${esc(k.name)}</span><span class="st st-${k.state}">${STATE[k.state]}</span><p>${esc(k.note)}</p></div>`).join('');
           return `<div class="report" id="rep-${id}"><div class="report-head"><div class="report-brand">${LOGO}<span>ScopeMark<small>PARECER TÉCNICO · PRÉ-ANÁLISE</small></span></div><div class="report-meta">${id}<br>EMITIDO ${when(c.createdAt)}<br>FSC-STD-50-001 V2-1 · V3-0</div></div>`
             + `<div class="report-body"><dl class="facts">${facts}</dl>${rows}<div class="summary"><span class="mono">SITUAÇÃO</span><span>${SITUACAO[situacao(c.criteria)]}</span></div></div>`
-            + '<div class="report-foot">Parecer técnico gerado com IA, emitido na hora pelo motor de consulta ScopeMark. Na plataforma, o checklist completo é avaliado pelas duas versões vigentes da norma, com o requisito e a cláusula de cada ajuste. A aprovação do uso das marcas FSC é sempre do organismo certificador. Demonstração com leitura simulada.</div></div>';
+            + '<div class="report-foot">Parecer gerado com IA pela ScopeMark. Na versão completa, cada item é conferido pelas duas versões da norma, com a cláusula de cada ajuste. Quem aprova o uso da marca FSC é sempre a certificadora da sua empresa. Demonstração com leitura simulada.</div></div>';
         }
 
         function caseHtml(c) {
@@ -248,11 +248,11 @@
           const noMes = list.filter(c => !c.example);
           const tiles = [[`${nn(k.usadas)}/${k.cota}`, 'Cota do mês usada'], [analises(k.extras), 'Créditos disponíveis'], [nn(k.doCredito), 'Análises pagas com créditos'], [noMes.filter(c => c.priority).length, 'Análises prioritárias']];
           $('mgrTally').innerHTML = tiles.map(([v, l]) => `<div><strong>${v}</strong><span>${l}</span></div>`).join('');
-          $('mgrHint').textContent = `A cota já tinha ${db.biz.usadasAntes} análises usadas antes desta demonstração. Passando de ${k.cota}, cada análise sai dos créditos.`;
+          $('mgrHint').textContent = `Exemplo: a empresa já usou ${db.biz.usadasAntes} análises neste mês. Depois de ${k.cota}, cada análise sai dos créditos pré-pagos.`;
           $('mgrCredits').textContent = analises(k.extras);
           $('mgrLedger').innerHTML = db.biz.ledger.slice(0, 6).map(e => `<div class="row"><span>${when(e.at)} · ${esc(e.label)}</span><span class="${e.analises < 0 ? 'minus' : 'plus'}">${e.analises < 0 ? '−' : '+'}${nn(Math.abs(e.analises))}${e.valor ? ` · ${brl(e.valor)}` : ''}</span></div>`).join('');
           $('mgrTeam').innerHTML = TEAM.map(t => `<div class="row"><span><b>${t.name}</b> · ${t.area}</span><span>${count(list.filter(c => c.author === t.name).length)}</span></div>`).join('')
-            + `<p class="hint">${TEAM.length} de ${PLANOS.profissional.usuarios} usuários do plano. Usuário adicional: ${brl(ADICIONAIS.usuario)} por mês. Quem já tem conta recebe um convite e entra se aceitar.</p>`;
+            + `<p class="hint">Sua equipe usa ${TEAM.length} dos ${PLANOS.profissional.usuarios} usuários do plano. Usuário adicional: ${brl(ADICIONAIS.usuario)} por mês. Quem já tem conta na ScopeMark recebe um convite e entra se aceitar.</p>`;
         }
 
         function render() {
@@ -266,7 +266,7 @@
           const list = role === 'pf' ? ofAccount('pf') : ofAccount('biz').filter(c => manager ? !filter || c.author === filter : c.author === member);
           $('caseCount').textContent = list.length;
           $('caseList').innerHTML = list.length ? list.map(caseHtml).join('')
-            : `<div class="empty">${manager ? 'Nenhuma consulta desta pessoa no mês.' : 'Nenhuma consulta ainda. Envie uma peça para receber o primeiro parecer.'}</div>`;
+            : `<div class="empty">${manager ? 'Nenhuma consulta desta pessoa no mês.' : 'Você ainda não tem consultas. Envie uma arte para receber o primeiro parecer.'}</div>`;
           if (manager) renderManager(); else { renderUsage(); costNote(); }
         }
 
@@ -301,7 +301,7 @@
           $('certBox').innerHTML = '<div class="cert">Consultando o certificado no site do FSC…</div>';
           setTimeout(() => {
             cert = { code: code.toUpperCase(), org: role === 'pf' ? 'Gráfica de exemplo Ltda.' : COMPANY, validade: new Date(Date.now() + 400 * 86400e3).toLocaleDateString('pt-BR') };
-            $('certBox').innerHTML = `<div class="cert"><span><b>${esc(cert.org)}</b> · certificado válido até ${cert.validade} (exemplo)</span><span>${PRODUTOS.length} produtos no escopo · certificado oficial em PDF anexado ao relatório</span></div>`;
+            $('certBox').innerHTML = `<div class="cert"><span><b>${esc(cert.org)}</b> · certificado válido até ${cert.validade} (exemplo)</span><span>${PRODUTOS.length} produtos no escopo · o certificado oficial vai anexado ao seu parecer</span></div>`;
             $('product').disabled = false;
             $('product').innerHTML = `<option value="">Escolha um produto do certificado</option>${PRODUTOS.map(p => `<option>${esc(p)}</option>`).join('')}`;
           }, 700);
@@ -329,7 +329,7 @@
         const file = $('file'), drop = $('drop');
         const showFile = () => {
           const f = file.files[0];
-          $('fileName').textContent = f ? f.name : 'Selecionar arte final';
+          $('fileName').textContent = f ? f.name : 'Escolha a arte final';
           $('fileMeta').textContent = f ? `${kind(f)} · ${bytes(f.size)} · clique para trocar` : 'Arraste o arquivo ou clique · PDF, PNG ou JPG · prefira o PDF final';
         };
         file.addEventListener('change', showFile);
@@ -386,7 +386,7 @@
             busy = false;
             $('submitBtn').disabled = false;
             msg.className = 'msg form-msg';
-            msg.textContent = `Parecer ${id} emitido.`;
+            msg.textContent = `Pronto: o parecer ${id} está na sua lista.`;
             render();
           };
           tick();
@@ -406,10 +406,10 @@
         // Pacotes e calculadora, a partir dos planos da plataforma
         const plano = (id, p) => {
           const porAnalise = p.preco && p.analises ? `${brl(p.preco / p.analises)} por análise` : '';
-          const itens = id === 'teste' ? ['3 análises completas, uma vez', 'Parecer e relatório consultivo', 'Sem cartão de crédito']
-            : id === 'avulso' ? ['10 análises, válidas por 6 meses', 'Parecer e relatório consultivo', '1 usuário']
+          const itens = id === 'teste' ? ['3 análises completas, uma vez só', 'Parecer com o que ajustar', 'Sem cartão de crédito']
+            : id === 'avulso' ? ['10 análises para usar em 6 meses', 'Parecer e relatório em PDF', '1 usuário']
               : id === 'enterprise' ? ['Volume sob contrato', 'Várias unidades e gestores', 'Integração e suporte dedicado']
-                : [`${p.analises} análises por mês`, p.usuarios ? `${p.usuarios} usuário${p.usuarios > 1 ? 's' : ''}` : 'Usuários ilimitados', 'Painel do gestor com a equipe', `Créditos: ${brl(p.excedente)} por análise extra`];
+                : [`${p.analises} análises por mês`, p.usuarios ? `${p.usuarios} usuário${p.usuarios > 1 ? 's' : ''}` : 'Usuários ilimitados', 'O gestor acompanha as análises da equipe', `Análise extra por ${brl(p.excedente)}, com créditos pré-pagos`];
           const periodo = p.tipo === 'mensal' && p.preco ? '<small>/mês</small>' : p.tipo === 'avulso' ? '<small>uma vez</small>' : '';
           return `<article class="plan${p.destaque ? ' featured' : ''}"><div class="plan-top"><span class="mono quota">${p.publico === 'pf' ? 'PESSOA FÍSICA' : 'EMPRESA'}</span>${p.destaque ? '<span class="pill">MAIS ESCOLHIDO</span>' : ''}</div>
             <h3>${esc(p.nome)}</h3><div class="price">${p.preco === 0 ? 'Grátis' : brl(p.preco)}${periodo}</div><div class="por">${esc(porAnalise)}</div>
@@ -417,7 +417,7 @@
         };
         $('plansPf').innerHTML = Object.entries(PLANOS).filter(([, p]) => p.publico === 'pf').map(([id, p]) => plano(id, p)).join('');
         $('plansBiz').innerHTML = Object.entries(PLANOS).filter(([, p]) => p.publico === 'empresa').map(([id, p]) => plano(id, p)).join('');
-        $('addons').innerHTML = `<span class="mono section-label">ADICIONAIS</span><span>Análise além da cota <b>${brl(PLANOS.grafica.excedente)} a ${brl(PLANOS.essencial.excedente)}</b>, conforme o plano</span><span>Usuário adicional <b>${brl(ADICIONAIS.usuario)}</b> por mês</span><span>Análise prioritária <b>meia análise</b> a mais</span><span>Versão corrigida em até 7 dias <b>meia análise</b></span>`;
+        $('addons').innerHTML = `<span class="mono section-label">ADICIONAIS</span><span>Análise além da cota <b>${brl(PLANOS.grafica.excedente)} a ${brl(PLANOS.essencial.excedente)}</b>, conforme o plano</span><span>Usuário adicional <b>${brl(ADICIONAIS.usuario)}</b> por mês</span><span>Análise prioritária <b>meia análise</b> a mais</span><span>Conferir a versão corrigida em até 7 dias <b>meia análise</b></span>`;
 
         function calc() {
           const int = (id, min) => Math.max(min, parseInt($(id).value, 10) || 0);
@@ -432,7 +432,7 @@
           $('calcRows').innerHTML = linhas.map(l => l.total === null ? `<div class="row"><span>${l.p.nome}</span><span>Sob consulta</span></div>`
             : `<div class="row${l.total === menor ? ' melhor' : ''}"><span>${l.p.nome}${l.total === menor ? ' · menor custo' : ''}</span><b>${brl(l.total)}</b></div>`).join('');
           const best = linhas.find(l => l.total === menor);
-          $('calcNote').textContent = best ? `${best.p.nome}: ${brl(best.p.preco)} de mensalidade${best.extraUsers ? `, ${best.extraUsers} usuário${best.extraUsers > 1 ? 's' : ''} ${best.extraUsers > 1 ? 'adicionais' : 'adicional'}` : ''}${best.alem ? ` e ${nn(best.alem)} análises em créditos` : ''}. Para uma pessoa só, o Avulso custa ${brl(PLANOS.avulso.preco)} por 10 análises.` : '';
+          $('calcNote').textContent = best ? `Para a sua equipe, o ${best.p.nome} sai mais em conta: ${brl(best.p.preco)} de mensalidade${best.extraUsers ? `, ${best.extraUsers} usuário${best.extraUsers > 1 ? 's' : ''} ${best.extraUsers > 1 ? 'adicionais' : 'adicional'}` : ''}${best.alem ? ` e ${nn(best.alem)} análises em créditos` : ''}. Se só uma pessoa consulta, o Avulso custa ${brl(PLANOS.avulso.preco)} por 10 análises.` : '';
         }
         ['cUsers', 'cConsults', 'cPriority'].forEach(id => $(id).addEventListener('input', calc));
 
