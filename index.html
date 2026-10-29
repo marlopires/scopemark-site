@@ -1,1 +1,449 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Análise Técnica FSC</title><style>:root{--blue:#003a63;--blue2:#0060a9;--cyan:#00a0d2;--bg:#f2f5f8;--line:#dde5ec;--muted:#5b6b78;--ok:#1a8a4e;--warn:#c47f00;--err:#c0392b}*{box-sizing:border-box}body{margin:0;font-family:Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#1f2d3a}header{background:linear-gradient(90deg,var(--blue),var(--blue2));color:#fff;min-height:82px;padding:14px 24px;box-shadow:0 2px 8px #0002}.head{max-width:1000px;margin:auto;display:flex;align-items:center;gap:18px;flex-wrap:wrap}.title{display:flex;gap:10px;align-items:center}.title b{font-size:16px;font-weight:500}.title small{display:block;color:#d9eff8;font-size:11px;letter-spacing:.5px;margin-top:2px}nav{margin-left:auto;display:flex;gap:5px;flex-wrap:wrap}button{border:0;border-radius:7px;padding:10px 15px;font:inherit;font-size:14px;font-weight:600;cursor:pointer;background:var(--blue2);color:#fff}nav button{background:#ffffff1f;color:#fff;font-weight:500}nav button.active,nav button:hover{background:#fff;color:var(--blue)}main{max-width:1000px;margin:24px auto;padding:0 16px}.intro{display:flex;justify-content:space-between;gap:20px;align-items:start;flex-wrap:wrap;margin-bottom:20px}.eyebrow{color:var(--blue2);font-size:12px;font-weight:700;letter-spacing:1.5px}.intro h1{color:var(--blue);font-size:29px;margin:5px 0}.intro p{color:var(--muted);font-size:14px;margin:0;max-width:650px;line-height:1.5}.profile{background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px 14px;text-align:right;color:var(--muted);font-size:12px}.profile b{display:block;color:var(--blue);font-size:13px}.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px;margin-bottom:18px;box-shadow:0 1px 3px #0000000a}.stats{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:18px}.stat{flex:1;min-width:180px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}.stat strong{display:block;color:var(--blue);font-size:24px}.stat span{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.6px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.drop{border:1px dashed var(--cyan);background:#f7fbfe;border-radius:9px;padding:22px;cursor:pointer}.drop:hover{background:#eef8fc}.drop input{display:none}.drop b{color:var(--blue2)}label{display:block;font-size:13px;font-weight:600;margin:14px 0 5px}input,textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fbfcfd}textarea{min-height:75px;resize:vertical}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.secondary{background:#e8f6fc;color:var(--blue2);border:1px solid #bfe6f5}.badge{display:inline-block;border-radius:20px;padding:4px 10px;font-size:12px;font-weight:700}.pending{background:#fff6e2;color:var(--warn)}.approved{background:#e6f6ee;color:var(--ok)}.rejected{background:#fdecea;color:var(--err)}.case{border:1px solid var(--line);border-radius:9px;padding:14px;margin:9px 0;cursor:pointer;background:#fff}.case.selected{border-color:var(--cyan);background:#f7fbfe}.case-top{display:flex;justify-content:space-between;gap:8px;align-items:center}.case small{color:var(--muted)}.case h3{margin:5px 0;color:var(--blue);font-size:16px}.cols{display:grid;grid-template-columns:.78fr 1.22fr;gap:18px}.notice{border-radius:9px;padding:13px 15px;margin-top:15px;font-size:14px;line-height:1.5}.notice.pending{border:1px solid #f0d9a0}.notice.approved{border:1px solid #bfe6ce}.notice.rejected{border:1px solid #f0b3ab}.report{background:#fbfcfd;border:1px solid var(--line);border-radius:9px;padding:15px;white-space:pre-wrap;max-height:520px;overflow:auto;font:13px/1.55 ui-monospace,SFMono-Regular,Consolas,monospace}.method{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{border:1px solid var(--line);border-radius:9px;background:#fbfcfd;padding:15px}.step i{display:flex;width:32px;height:32px;border-radius:8px;background:#e8f1fb;color:var(--blue2);align-items:center;justify-content:center;font-style:normal;font-weight:700}.step h3{color:var(--blue);font-size:15px}.step p{color:var(--muted);font-size:13px;line-height:1.5}footer{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:12px;margin:25px 0;flex-wrap:wrap}@media(max-width:700px){.grid,.cols{grid-template-columns:1fr}.method{grid-template-columns:1fr 1fr}nav{margin-left:0}.intro h1{font-size:25px}}</style></head><body><header><div class="head"><div class="title"><span>✓</span><div><b>Análise técnica</b><small>AVALIAÇÃO DE USO DE MARCA FSC</small></div></div><nav><button id="newTab" class="active">Nova análise</button><button id="caseTab">Protocolos</button><button id="methodTab">Método</button><button id="roleBtn">Perfil: solicitante</button></nav></div></header><main><div class="intro"><div><div class="eyebrow">FLUXO COM VALIDAÇÃO HUMANA · SIMULAÇÃO</div><h1>Pré-análise de uso de marca FSC</h1><p>A resposta é preparada pela IA, revisada por um técnico e somente então liberada ao solicitante. Nenhum e-mail é enviado nesta demonstração.</p></div><div class="profile"><b id="profileLabel">Perfil solicitante</b><span>ambiente de teste</span></div></div><section id="newView"><div class="stats"><div class="stat"><strong>V3-0</strong><span>Norma aplicada</span></div><div class="stat"><strong>Manual</strong><span>Modo de execução</span></div><div class="stat"><strong>Protocolo</strong><span>Resposta não imediata</span></div></div><div class="card" id="requestCard"><h2>Solicitar análise</h2><p style="color:var(--muted);font-size:14px">Envie a arte final; o sistema criará um protocolo e uma resposta preliminar.</p><label class="drop"><input id="file" type="file" accept=".pdf,.png,.jpg,.jpeg,.webp,.txt"><b id="fileName">Selecionar arquivo final</b><br><small style="color:var(--muted)">PDF, PNG, JPEG, WEBP ou TXT</small></label><div class="grid"><div><label>Largura da logo (mm)<input id="width" placeholder="Ex.: 12"></label></div><div><label>Altura da logo (mm)<input id="height" placeholder="Ex.: 8"></label></div></div><label>Instrução da análise<textarea id="instruction">Analisar a arte conforme a base normativa V3-0.</textarea></label><div class="actions"><button id="submit">Enviar para análise</button><button class="secondary" onclick="show('cases')">Acompanhar protocolos</button></div></div><div class="card" id="techCard" style="display:none"><h2>Fila de revisão técnica</h2><p style="color:var(--muted);font-size:14px">O técnico revisa cada resposta e decide se ela pode ser liberada.</p><button onclick="show('cases')">Abrir protocolos pendentes</button></div></section><section id="casesView" style="display:none"><div class="cols"><div class="card"><h2 id="casesTitle">Meus protocolos</h2><p style="color:var(--muted);font-size:14px">Acompanhe o status e selecione um protocolo.</p><div id="caseList"></div></div><div class="card" id="caseDetail"><div style="color:var(--muted);text-align:center;padding:40px">Selecione um protocolo para visualizar.</div></div></div></section><section id="methodView" style="display:none"><div class="card"><h2>Fluxo de validação</h2><div class="method"><div class="step"><i>01</i><h3>Solicitar</h3><p>O usuário envia o arquivo final e recebe um protocolo.</p></div><div class="step"><i>02</i><h3>Analisar</h3><p>A IA prepara a pré-análise e o relatório técnico.</p></div><div class="step"><i>03</i><h3>Revisar</h3><p>O técnico verifica a resposta e aprova ou rejeita.</p></div><div class="step"><i>04</i><h3>Liberar</h3><p>A resposta simulada aparece ao solicitante somente após aprovação.</p></div></div></div><div class="notice approved"><b>Modo atual:</b> simulação local, sem envio ou troca de e-mails. Os protocolos são armazenados no navegador.</div></section><footer><span>Pré-análise técnica de uso de marca FSC</span><span>Resposta liberada somente após validação humana</span></footer></main><script>let role='requester',selected=null,cases=JSON.parse(localStorage.getItem('fsc-demo-cases')||'[]');const $=id=>document.getElementById(id),save=()=>localStorage.setItem('fsc-demo-cases',JSON.stringify(cases));$('file').onchange=e=>{if(e.target.files[0])$('fileName').textContent=e.target.files[0].name};$('roleBtn').onclick=()=>{role=role==='requester'?'technician':'requester';$('roleBtn').textContent='Perfil: '+(role==='technician'?'técnico':'solicitante');$('profileLabel').textContent=role==='technician'?'Perfil técnico':'Perfil solicitante';$('requestCard').style.display=role==='requester'?'block':'none';$('techCard').style.display=role==='technician'?'block':'none';renderCases()};$('submit').onclick=()=>{const file=$('file').files[0];if(!file){alert('Selecione o arquivo final.');return}const d=new Date(),date=d.toISOString().slice(0,10).replaceAll('-',''),protocol='FSC-'+date+'-'+Math.random().toString(36).slice(2,7).toUpperCase(),item={protocol,filename:file.name,status:'pending_review',createdAt:new Date().toISOString(),report:'RESULTADO PRELIMINAR DA IA\n\nArquivo: '+file.name+'\nNorma: FSC-STD-50-001 V3-0\nTamanho informado da logo: '+($('width').value||'não informado')+' × '+($('height').value||'não informado')+' mm\n\nA análise técnica foi preparada e aguarda validação humana.\n\nEste é um resultado simulado para demonstração do fluxo.'};cases.unshift(item);save();selected=item;show('cases');alert('Protocolo criado: '+protocol)};function show(which){['new','cases','method'].forEach(x=>$(x+'View').style.display=x===which?'block':'none');['newTab','caseTab','methodTab'].forEach((id,i)=>$(id).classList.toggle('active',['new','cases','method'][i]===which));if(which==='cases')renderCases()}$('newTab').onclick=()=>show('new');$('caseTab').onclick=()=>show('cases');$('methodTab').onclick=()=>show('method');function badge(c){return '<span class="badge '+(c.status==='pending_review'?'pending':c.status==='approved'?'approved':'rejected')+'">'+(c.status==='pending_review'?'Aguardando revisão':c.status==='approved'?'Aprovado pelo técnico':'Rejeitado pelo técnico')+'</span>'}function renderCases(){const visible=cases;$('casesTitle').textContent=role==='technician'?'Fila de protocolos':'Meus protocolos';$('caseList').innerHTML=visible.length?visible.map(c=>`<div class="case ${selected&&selected.protocol===c.protocol?'selected':''}" onclick="selectCase('${c.protocol}')"><div class="case-top"><b>${c.protocol}</b>${badge(c)}</div><h3>${c.filename}</h3><small>${new Date(c.createdAt).toLocaleString('pt-BR')}</small></div>`).join(''):'<div style="padding:25px;color:var(--muted);text-align:center">Nenhum protocolo disponível.</div>';renderDetail()}window.selectCase=p=>{selected=cases.find(c=>c.protocol===p);renderCases()};function renderDetail(){if(!selected){$('caseDetail').innerHTML='<div style="color:var(--muted);text-align:center;padding:40px">Selecione um protocolo para visualizar.</div>';return}let controls=role==='technician'&&selected.status==='pending_review'?'<div class="actions"><button style="background:var(--ok)" onclick="decide(\'approved\')">✓ Aprovar e liberar resposta</button><button style="background:var(--err)" onclick="decide(\'rejected\')">× Rejeitar</button></div>':'';let notice=selected.status==='pending_review'?'<div class="notice pending">A resposta está aguardando validação humana. Ela ainda não foi liberada ao solicitante.</div>':selected.status==='approved'?'<div class="notice approved"><b>Resposta simulada liberada.</b> O técnico aprovou a resposta preparada pela IA.</div>':'<div class="notice rejected"><b>Resposta não liberada.</b> O técnico solicitou revisão adicional.</div>';let report=role==='technician'||selected.status==='approved'?'<pre class="report">'+selected.report+'</pre>':'';$('caseDetail').innerHTML='<div class="case-top"><div><small>PROTOCOLO</small><h2 style="color:var(--blue);margin:4px 0">'+selected.protocol+'</h2><small>'+selected.filename+'</small></div>'+badge(selected)+'</div>'+notice+controls+report}window.decide=status=>{selected.status=status;cases=cases.map(c=>c.protocol===selected.protocol?selected:c);save();renderCases()};renderCases();</script></body></html>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Produção parada é dinheiro parado. Faça a pré-análise técnica da sua arte antes do envio para aprovação e evite devoluções, retrabalho e atrasos. Parecer em minutos." />
+    <title>ScopeMark · Produção parada é dinheiro parado</title>
+    <meta name="theme-color" content="#0e2c24" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root { --ink:#11362c; --forest:#0e2c24; --mint:#b8e6b5; --line:#dce8df; --paper:#f6faf7; --soft:#eaf5e8; --muted:#698177; }
+      * { box-sizing:border-box; } body { margin:0; color:var(--ink); font-family:Manrope,Arial,sans-serif; background:var(--paper); } a { color:inherit; }
+      .wrap { width:min(1160px,calc(100% - 40px)); margin:0 auto; } .mono { font-family:"DM Mono",monospace; font-size:10px; letter-spacing:.13em; } 
+      header { padding:24px 0; color:#fff; background:var(--forest); } .nav { display:flex; align-items:center; justify-content:space-between; gap:20px; } .brand { display:flex; align-items:center; gap:10px; font-size:15px; font-weight:800; letter-spacing:-.04em; } .links { display:flex; align-items:center; gap:22px; } .nav a { color:#ddede3; text-decoration:none; font-size:13px; } .nav .button { padding:10px 15px; border:1px solid #9ab7a9; border-radius:11px; color:#fff; font-weight:700; }
+      .hero { color:#fff; overflow:hidden; padding:88px 0 0; background:radial-gradient(circle at 85% 10%,#276d55 0,transparent 28%),linear-gradient(125deg,#123f34 0%,#0e2c24 64%); } .hero-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:55px; align-items:center; } .eyebrow { display:flex; align-items:center; gap:8px; color:#c6e8bf; } .dot { width:6px; height:6px; border-radius:50%; background:var(--mint); } h1 { max-width:700px; margin:22px 0; font-size:clamp(40px,6vw,72px); letter-spacing:-.075em; line-height:.98; } .hero p { max-width:620px; color:#bfd4c8; font-size:17px; line-height:1.75; } .actions { display:flex; flex-wrap:wrap; gap:12px; margin:30px 0 44px; } .primary { background:var(--mint); color:#163b30; padding:14px 18px; border-radius:11px; text-decoration:none; font-size:14px; font-weight:800; } .secondary { border:1px solid #739486; color:#fff; padding:13px 18px; border-radius:11px; text-decoration:none; font-size:14px; font-weight:700; }
+      .matrix { margin-bottom:-1px; border:1px solid rgba(202,235,203,.58); border-radius:20px 20px 0 0; padding:22px; background:rgba(14,47,37,.62); backdrop-filter:blur(8px); } .matrix-head { display:flex; justify-content:space-between; align-items:start; padding-bottom:16px; border-bottom:1px solid rgba(255,255,255,.16); } .matrix h2 { margin:7px 0 0; font-size:16px; font-weight:600; } .pill { border:1px solid #87aa98; color:#d4e9dc; border-radius:20px; padding:5px 8px; font:10px "DM Mono",monospace; } .lineitem { display:grid; grid-template-columns:30px 1fr auto; align-items:center; gap:12px; min-height:58px; border-bottom:1px solid rgba(255,255,255,.12); font-size:13px; } .lineitem:last-child{ border:0; }.number { color:#a7c2b5;font:10px "DM Mono",monospace;}.state{color:#c2e4bc;font-size:11px}.pending{color:#b5c6bd}
+      section { padding:84px 0; } .section-label { color:#4e816a; }.intro { display:flex; justify-content:space-between; align-items:end; gap:30px; margin-bottom:28px; }.intro h2 { max-width:620px; margin:10px 0 0; font-size:32px; letter-spacing:-.055em; line-height:1.1; }.intro p { max-width:380px; margin:0; color:var(--muted); font-size:14px; line-height:1.7; }.grid { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; }.card { min-height:205px; padding:24px; border:1px solid var(--line); border-radius:16px; background:#fff; }.icon { display:grid; width:32px;height:32px;place-items:center;border-radius:9px;background:var(--soft);color:#31745b;font-weight:800;}.card h3{margin:20px 0 8px;font-size:16px;letter-spacing:-.04em}.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}.band { background:#e9f4eb; border-top:1px solid #d8e9dc; border-bottom:1px solid #d8e9dc;}.checks { display:grid; grid-template-columns:repeat(2,1fr); gap:2px; border:1px solid #d7e7da; border-radius:18px; overflow:hidden; background:#d7e7da;}.check { padding:24px; background:#f6faf7; }.check span { display:inline-block; color:#327358; font:bold 11px "DM Mono",monospace;}.check h3 { margin:10px 0 8px; font-size:16px;letter-spacing:-.04em}.check p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}.disclaimer { display:grid; grid-template-columns:auto 1fr; gap:16px; max-width:790px; margin:28px auto 0; padding:18px; border:1px solid #d7e7da; border-radius:13px; color:#55736a; background:#fbfdfb;font-size:12px;line-height:1.65}.disclaimer b{color:#275344}.cta { padding:74px 0; color:#fff; background:#123f34; }.cta-inner { display:flex; justify-content:space-between; align-items:center; gap:30px; }.cta h2{max-width:620px;margin:11px 0 0;font-size:34px;letter-spacing:-.055em;line-height:1.1}.cta .primary{white-space:nowrap}.cta .mono{color:#b8e6b5}footer{padding:25px 0;background:#0e2c24;color:#9bb4a8;font-size:11px}footer .wrap{display:flex;justify-content:space-between;gap:20px}.footer-link{color:#d9eadf;text-decoration:none}@media(max-width:760px){.wrap{width:min(100% - 32px,1160px)}.links a:not(.button){display:none}.hero{padding-top:62px}.hero-grid{grid-template-columns:1fr;gap:25px}.grid{grid-template-columns:1fr}.intro{display:block}.intro p{margin-top:18px}.checks{grid-template-columns:1fr}.cta-inner{align-items:start;flex-direction:column}.matrix{margin-top:15px}.lineitem{font-size:12px}.cta h2{font-size:29px}footer .wrap{flex-direction:column}}
+      html { scroll-behavior:smooth; } [hidden] { display:none !important; }
+      .toolbar { display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; margin-bottom:15px; } .roles { display:inline-flex; padding:4px; border:1px solid var(--line); border-radius:13px; background:#fff; } .roles button { border:0; border-radius:9px; padding:9px 16px; background:none; color:var(--muted); font:700 13px Manrope,Arial,sans-serif; cursor:pointer; } .roles button[aria-pressed="true"] { background:var(--forest); color:#fff; } .link-btn { border:0; background:none; color:var(--muted); font:500 12px Manrope,Arial,sans-serif; text-decoration:underline; cursor:pointer; } .clear,.clear span { display:flex; align-items:center; gap:10px; flex-wrap:wrap; color:var(--muted); font-size:12px; } .link-btn.danger { color:#9a3b2c; font-weight:700; }
+      .toolbar-left { display:flex; align-items:center; gap:12px; flex-wrap:wrap; } .as { display:flex; align-items:center; gap:8px; color:var(--muted); font-size:12px; font-weight:600; } .as select { padding:8px 10px; border:1px solid var(--line); border-radius:10px; background:#fff; color:var(--ink); font:600 13px Manrope,Arial,sans-serif; } #filterWrap { margin-top:12px; }
+      .demo-grid { display:grid; grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr); gap:15px; align-items:start; } .panel { padding:24px; border:1px solid var(--line); border-radius:16px; background:#fff; } .panel-head { display:flex; justify-content:space-between; align-items:start; gap:12px; } .panel h3 { margin:8px 0 0; font-size:18px; letter-spacing:-.04em; } .count { min-width:30px; padding:4px 9px; border-radius:20px; background:var(--soft); color:#31745b; font:500 12px "DM Mono",monospace; text-align:center; }
+      .usage { margin-top:16px; padding:12px 14px; border-radius:12px; background:var(--soft); color:#2b6a50; font-size:12px; } .usage-top { display:flex; justify-content:space-between; gap:6px 12px; flex-wrap:wrap; } .meter { display:block; height:5px; margin-top:9px; border-radius:5px; background:#d3e8d3; overflow:hidden; } .meter i { display:block; height:100%; border-radius:5px; background:#31745b; } .meter.over i { background:#b07d1a; }
+      .drop { position:relative; display:flex; align-items:center; gap:14px; margin-top:18px; padding:18px; border:1px dashed #9fcca6; border-radius:13px; background:var(--paper); cursor:pointer; } .drop:hover,.drop.drag { border-color:#5fa978; background:var(--soft); } .drop:focus-within { outline:2px solid #8fcf8a; outline-offset:2px; } .drop input { position:absolute; width:1px; height:1px; opacity:0; } .drop-icon { display:grid; flex:none; width:38px; height:38px; place-items:center; border-radius:11px; background:var(--soft); color:#31745b; font-weight:800; } .drop b { display:block; font-size:14px; overflow-wrap:anywhere; } .drop small { display:block; margin-top:3px; color:var(--muted); font-size:12px; }
+      .fields { display:grid; grid-template-columns:1fr 1fr; gap:0 12px; } .field { display:block; margin-top:14px; color:#3d5a4f; font-size:12px; font-weight:700; } .field input:not([type="checkbox"]),.field select,.field textarea { display:block; width:100%; margin-top:6px; padding:11px 12px; border:1px solid var(--line); border-radius:11px; background:var(--paper); color:var(--ink); font:500 14px Manrope,Arial,sans-serif; } .field textarea { min-height:84px; resize:vertical; } .field :focus { border-color:#8fcf8a; outline:2px solid #8fcf8a; outline-offset:0; background:#fff; } .field [aria-invalid="true"] { border-color:#d59a8c; } .field input:disabled { opacity:.5; } .opt { display:flex; align-items:center; gap:10px; margin-top:16px; font-size:13px; font-weight:700; cursor:pointer; } .opt input { width:17px; height:17px; accent-color:var(--ink); } .opt span { color:var(--muted); font-weight:500; }
+      .btn { border:0; border-radius:11px; padding:13px 18px; background:var(--ink); color:#fff; font:800 14px Manrope,Arial,sans-serif; cursor:pointer; } .btn:hover { background:#1d4b3d; } .btn:disabled { opacity:.6; cursor:progress; } .btn.ghost { border:1px solid #c9dccf; background:#fff; color:var(--ink); } .btn.ghost:hover { background:var(--paper); } .btn.sm { padding:10px 14px; font-size:13px; } .form-foot { display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-top:20px; } .cost-note { margin:0; color:var(--muted); font-size:12px; line-height:1.5; } .msg { margin:0; color:#2b6a50; font-size:13px; line-height:1.55; } .msg.err { color:#9a3b2c; } .form-msg:not(:empty) { margin-top:12px; }
+      .engine-run { display:grid; gap:8px; margin:18px 0 0; padding:14px 16px; border-radius:12px; background:var(--forest); color:#7f9d90; font:500 11px "DM Mono",monospace; letter-spacing:.05em; list-style:none; } .engine-run li::before { content:"○"; margin-right:9px; } .engine-run li.now { color:#fff; } .engine-run li.now::before { content:"◐"; color:var(--mint); } .engine-run li.done { color:#d4e9dc; } .engine-run li.done::before { content:"●"; color:var(--mint); }
+      .tally { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:18px; } .tally div { padding:14px; border:1px solid var(--line); border-radius:12px; background:var(--paper); } .tally strong { display:block; font-size:24px; letter-spacing:-.04em; font-variant-numeric:tabular-nums; } .tally span { color:var(--muted); font-size:11px; } .hint { margin:12px 0 0; color:var(--muted); font-size:12px; line-height:1.6; }
+      .wallet { margin-top:16px; padding:18px; border-radius:14px; background:var(--forest); color:#fff; } .wallet .mono { color:var(--mint); } .wallet strong { display:block; margin-top:6px; font-size:30px; letter-spacing:-.05em; font-variant-numeric:tabular-nums; } .topups { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; } .topups button { padding:8px 12px; border:1px solid #739486; border-radius:10px; background:none; color:#fff; font:700 13px Manrope,Arial,sans-serif; cursor:pointer; } .topups button:hover { background:rgba(184,230,181,.14); } .wallet p { margin:12px 0 0; color:#bfd4c8; font-size:12px; line-height:1.6; }
+      .rows { margin-top:18px; } .rows h4 { margin:0 0 4px; font-size:13px; } .row { display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid var(--line); font-size:12px; } .row span:last-child { flex:none; font-variant-numeric:tabular-nums; white-space:nowrap; } .plus { color:#2b6a50; } .minus { color:#8f3d2b; }
+      .case { margin-top:10px; border:1px solid var(--line); border-radius:13px; background:#fff; overflow:hidden; } .case.open { border-color:#a9d3ae; box-shadow:0 0 0 3px var(--soft); } .case-head { display:grid; grid-template-columns:1fr auto; gap:5px 12px; width:100%; padding:14px 16px; border:0; background:none; color:inherit; font:inherit; text-align:left; cursor:pointer; } .case-head:hover { background:var(--paper); } .case-id { color:#4e816a; font:500 11px "DM Mono",monospace; letter-spacing:.06em; } .case-head strong { grid-column:1/-1; font-size:15px; letter-spacing:-.03em; overflow-wrap:anywhere; } .case-head small { grid-column:1/-1; color:var(--muted); font-size:12px; } .case-body { padding:2px 16px 18px; border-top:1px solid var(--line); }
+      .badge,.st { padding:4px 9px; border-radius:20px; font:500 10px "DM Mono",monospace; letter-spacing:.05em; white-space:nowrap; } .badge { justify-self:end; } .st-warn { background:#f6eed6; color:#7d5c12; } .is-emitted,.st-ok { background:#e3f2e2; color:#2b6a50; } .is-example,.st-info { background:#eaf0ed; color:#4f6b60; } .st-sim { border:1px dashed #b9cbc2; color:var(--muted); } .st-need { background:#f6e4df; color:#8f3d2b; } .st-fail { background:#efd2ca; color:#76261a; }
+      .facts { display:grid; grid-template-columns:auto 1fr; gap:6px 14px; margin:14px 0 0; font-size:12px; } .facts dt { color:var(--muted); } .facts dd { margin:0; overflow-wrap:anywhere; white-space:pre-wrap; }
+      .crit { display:grid; grid-template-columns:24px 1fr auto; align-items:center; gap:4px 10px; padding:12px 0; border-bottom:1px solid var(--line); font-size:13px; font-weight:700; } .crit-n { color:#7f998d; font:10px "DM Mono",monospace; } .crit p { grid-column:2/-1; margin:0; color:var(--muted); font-size:12px; font-weight:500; line-height:1.6; white-space:pre-wrap; } .summary { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:14px; padding:13px 15px; border-radius:11px; background:var(--forest); color:#fff; font-size:13px; font-weight:700; } .summary .mono { color:var(--mint); }
+      .report { margin-top:14px; border:1px solid var(--line); border-radius:13px; overflow:hidden; background:#fff; } .report-head { display:flex; justify-content:space-between; align-items:center; gap:14px; padding:16px; background:var(--forest); color:#fff; } .report-brand { display:flex; align-items:center; gap:10px; font-size:14px; font-weight:800; letter-spacing:-.04em; line-height:1.25; } .report-brand small { display:block; color:#9fbbae; font:400 9px "DM Mono",monospace; letter-spacing:.13em; } .report-meta { color:#c6e8bf; font:500 10px "DM Mono",monospace; letter-spacing:.06em; line-height:1.7; text-align:right; } .report-body { padding:2px 16px 16px; } .report-foot { padding:12px 16px; border-top:1px solid var(--line); background:var(--paper); color:var(--muted); font-size:11px; line-height:1.6; }
+      .case-actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; } .empty { margin-top:12px; padding:34px 18px; border:1px dashed var(--line); border-radius:13px; color:var(--muted); font-size:13px; line-height:1.6; text-align:center; }
+      .engine { color:#fff; background:linear-gradient(125deg,#123f34 0%,#0e2c24 70%); } .engine .section-label { color:var(--mint); } .engine .intro p { color:#bfd4c8; } .ai-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; } .ai { padding:22px; border:1px solid rgba(202,235,203,.26); border-radius:16px; background:rgba(255,255,255,.04); } .ai .mono { color:var(--mint); } .ai h3 { margin:14px 0 8px; font-size:16px; letter-spacing:-.04em; } .ai p { margin:0; color:#bfd4c8; font-size:13px; line-height:1.65; }
+      .flow { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-top:22px; } .flow span { padding:7px 11px; border:1px solid #739486; border-radius:20px; color:#d4e9dc; font:10px "DM Mono",monospace; letter-spacing:.1em; } .flow i { color:#739486; font-style:normal; } .govern { display:grid; grid-template-columns:auto 1fr; gap:16px; align-items:center; margin-top:22px; padding:18px 20px; border:1px solid rgba(184,230,181,.3); border-radius:14px; background:rgba(184,230,181,.08); color:#d4e9dc; font-size:13px; line-height:1.65; } .govern b { color:#fff; } .govern .icon { background:var(--mint); color:var(--forest); }
+      .plans { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; } .plan { display:flex; flex-direction:column; padding:26px; border:1px solid var(--line); border-radius:16px; background:#fff; } .plan.featured { border-color:var(--forest); box-shadow:0 0 0 1px var(--forest); } .plan-top { display:flex; justify-content:space-between; align-items:center; gap:10px; min-height:24px; } .plan-top .pill { border-color:var(--forest); background:var(--forest); color:var(--mint); } .quota { color:#31745b; } .plan h3 { margin:12px 0 4px; font-size:22px; letter-spacing:-.05em; } .plan .lead { margin:0; color:var(--muted); font-size:13px; } .price { margin:22px 0 6px; font-size:28px; font-weight:800; letter-spacing:-.05em; } .price small { margin-left:4px; color:var(--muted); font-size:13px; font-weight:600; letter-spacing:0; } .plan ul { display:grid; gap:9px; margin:18px 0 24px; padding:18px 0 0; border-top:1px solid var(--line); list-style:none; font-size:13px; } .plan li { display:grid; grid-template-columns:18px 1fr; gap:6px; color:#3d5a4f; line-height:1.5; } .plan li::before { content:"✓"; color:#31745b; font-weight:800; } .plan .btn { margin-top:auto; text-align:center; text-decoration:none; }
+      .addons { display:flex; flex-wrap:wrap; align-items:center; gap:10px 26px; margin-top:15px; padding:16px 20px; border:1px solid var(--line); border-radius:14px; background:#fff; font-size:13px; } .addons b { font-variant-numeric:tabular-nums; }
+      .calc { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:15px; margin-top:15px; } .calc .roles { margin-top:16px; } .calc-out { padding:24px; border-radius:16px; background:var(--forest); color:#fff; } .calc-out .mono { color:var(--mint); } .calc-out .row { border-color:rgba(255,255,255,.14); font-size:13px; } .calc-out .row span:first-child { color:#bfd4c8; } .total { display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-top:16px; font-size:14px; font-weight:700; } .total strong { font-size:32px; letter-spacing:-.05em; font-variant-numeric:tabular-nums; } .calc-note { margin:12px 0 0; color:#bfd4c8; font-size:12px; line-height:1.6; }
+      @media(max-width:1000px){.ai-grid{grid-template-columns:1fr 1fr}} @media(max-width:860px){.demo-grid,.plans,.calc{grid-template-columns:1fr}} @media(max-width:560px){.ai-grid,.govern{grid-template-columns:1fr}} @media(max-width:480px){.fields{grid-template-columns:1fr}.panel{padding:18px}.tally strong{font-size:20px}.summary,.report-head{flex-direction:column;align-items:start}.report-meta{text-align:left}}
+      @media print { @page { margin:12mm; } body.printing { background:#fff; } .printing *:not(:has(.print-target)):not(.print-target):not(.print-target *) { display:none !important; } .printing *:has(.print-target) { display:block !important; width:auto !important; margin:0 !important; padding:0 !important; border:0 !important; background:none !important; box-shadow:none !important; } .print-target { margin:0; } .print-target * { -webkit-print-color-adjust:exact; print-color-adjust:exact; } }
+      .grupo { margin-bottom:26px; } .grupo-head { display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:12px; } .grupo-head p { margin:0; color:var(--muted); font-size:13px; } .plans.quatro { grid-template-columns:repeat(4,1fr); } .plan .por { color:var(--muted); font:500 11px "DM Mono",monospace; letter-spacing:.06em; }
+      .cert { display:grid; gap:4px; margin-top:12px; padding:12px 14px; border:1px solid #bfe0c3; border-radius:11px; background:var(--soft); font-size:12px; color:#2b6a50; } .cert b { color:var(--ink); } .opts { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; } .opts label { display:inline-flex; align-items:center; gap:7px; padding:8px 11px; border:1px solid var(--line); border-radius:10px; background:var(--paper); font-size:12px; font-weight:600; cursor:pointer; } .opts label:has(input:checked) { border-color:#5fa978; background:var(--soft); } .opts input { flex:none; width:16px; height:16px; margin:0; accent-color:var(--ink); } .com-botao { display:flex; gap:8px; } .com-botao input { flex:1; } .com-botao .btn { margin-top:6px; }
+      .calc-out .row.melhor span { color:var(--mint); font-weight:700; } .calc-out .row b { font-variant-numeric:tabular-nums; }
+      .hero h1 { font-size:clamp(38px,5.2vw,64px); } .lineitem .ajustar { color:#f2c879; } .opt { align-items:flex-start; } .opt input { margin-top:1px; } .opt .opt-txt { color:var(--ink); font-weight:700; } .opt-txt b { display:block; } .opt-txt small { display:block; margin-top:2px; color:var(--muted); font-size:12px; font-weight:500; } .tally span { display:block; line-height:1.4; }
+      .brand { color:#fff; text-decoration:none; } .brand .logo { display:block; height:32px; width:auto; } .logo .ac { fill:var(--mint); } footer .wrap { align-items:center; } footer .brand .logo { height:22px; } .footer-links { display:flex; flex-wrap:wrap; gap:8px 20px; }
+      .report-brand { flex-direction:column; align-items:flex-start; gap:6px; } .report-brand .logo { display:block; height:22px; width:auto; color:#fff; }
+      @media(max-width:760px){footer .wrap{align-items:flex-start}} @media(max-width:480px){.brand .logo{height:26px}}
+      @media(max-width:1000px){.plans.quatro{grid-template-columns:1fr 1fr}} @media(max-width:640px){.plans.quatro{grid-template-columns:1fr}} @media(max-width:560px){.flow i{display:none}}
+    </style>
+  </head>
+  <body>
+    <header><div class="wrap nav"><a class="brand" href="#" aria-label="ScopeMark, início"><svg class="logo" viewBox="-420 -1000 9755 1690" role="img" aria-label="ScopeMark"><path d="M-420 -1000H-120V-930H-350V-700H-420ZM9335 -1000H9035V-930H9265V-700H9335ZM-420 300H-120V230H-350V0H-420ZM9335 300H9035V230H9265V0H9335Z" fill="currentColor"/><path d="M401 12Q317 12 244 2Q171 -8 117 -33Q62 -58 31 -103Q0 -148 0 -217Q0 -219 0 -222Q0 -225 1 -228H200Q199 -224 199 -220Q199 -216 199 -211Q199 -180 222 -163Q245 -145 288 -138Q330 -131 386 -131Q410 -131 434 -132Q459 -134 482 -137Q505 -141 523 -148Q541 -155 552 -165Q563 -176 563 -192Q563 -213 540 -226Q517 -238 478 -246Q439 -253 390 -259Q342 -265 289 -273Q237 -282 189 -296Q140 -311 101 -335Q62 -359 39 -397Q16 -435 16 -489Q16 -544 43 -583Q71 -623 121 -649Q171 -675 239 -687Q307 -700 387 -700Q468 -700 535 -687Q601 -674 649 -649Q697 -623 722 -585Q748 -546 748 -494V-480H551V-488Q551 -509 533 -525Q515 -542 480 -551Q446 -561 396 -561Q337 -561 299 -554Q261 -546 243 -533Q225 -521 225 -505Q225 -485 248 -473Q271 -462 311 -455Q350 -448 398 -442Q447 -436 499 -428Q551 -420 600 -406Q649 -392 688 -368Q727 -345 750 -308Q773 -272 773 -219Q773 -136 725 -85Q677 -34 593 -11Q509 12 401 12ZM1364 12Q1220 12 1124 -28Q1027 -69 980 -148Q932 -227 932 -344Q932 -515 1042 -607Q1153 -700 1365 -700Q1483 -700 1573 -664Q1663 -629 1713 -564Q1764 -500 1764 -412H1565Q1565 -455 1540 -485Q1514 -516 1469 -532Q1423 -549 1361 -549Q1290 -549 1241 -524Q1191 -500 1166 -457Q1141 -414 1141 -357V-332Q1141 -275 1166 -232Q1191 -188 1240 -164Q1289 -139 1359 -139Q1425 -139 1472 -155Q1520 -170 1545 -200Q1571 -230 1571 -272H1764Q1764 -187 1716 -123Q1667 -59 1577 -23Q1488 12 1364 12ZM2385 12Q2246 12 2145 -30Q2043 -73 1989 -152Q1934 -232 1934 -344Q1934 -456 1989 -536Q2043 -615 2145 -658Q2246 -700 2385 -700Q2525 -700 2626 -658Q2726 -615 2781 -536Q2836 -456 2836 -344Q2836 -232 2781 -152Q2726 -73 2626 -30Q2525 12 2385 12ZM2385 -139Q2439 -139 2483 -152Q2528 -165 2560 -190Q2592 -215 2610 -252Q2627 -288 2627 -333V-357Q2627 -401 2610 -437Q2592 -473 2560 -498Q2528 -523 2483 -536Q2439 -549 2385 -549Q2331 -549 2287 -536Q2242 -523 2210 -498Q2178 -473 2161 -437Q2143 -401 2143 -357V-333Q2143 -288 2161 -252Q2178 -215 2210 -190Q2242 -165 2287 -152Q2331 -139 2385 -139ZM3036 0V-688H3567Q3634 -688 3685 -658Q3736 -628 3764 -575Q3793 -523 3793 -454Q3793 -385 3764 -331Q3735 -278 3684 -248Q3632 -219 3565 -219H3240V0ZM3240 -370H3508Q3554 -370 3577 -391Q3600 -413 3600 -453Q3600 -480 3590 -499Q3579 -517 3559 -527Q3538 -537 3508 -537H3240ZM3957 0V-688H4674V-537H4161V-421H4610V-275H4161V-151H4682V0ZM4880 0V-688H5199L5317 -389Q5324 -371 5334 -343Q5343 -315 5353 -285Q5363 -256 5370 -233H5377Q5384 -254 5394 -282Q5403 -310 5413 -339Q5423 -367 5431 -389L5549 -688H5859V0H5655V-355Q5655 -376 5656 -402Q5656 -428 5657 -453Q5658 -478 5659 -496H5651Q5645 -477 5636 -451Q5627 -425 5618 -399Q5610 -374 5602 -355L5458 0H5271L5127 -355Q5117 -381 5107 -408Q5098 -435 5090 -458Q5083 -482 5078 -496H5070Q5071 -482 5071 -459Q5072 -436 5072 -409Q5073 -382 5073 -355V0ZM6019 0 6357 -688H6583L6921 0H6701L6649 -110H6280L6229 0ZM6348 -259H6581L6518 -399Q6514 -408 6507 -426Q6500 -443 6493 -462Q6485 -482 6479 -498Q6472 -515 6469 -523H6462Q6454 -505 6445 -481Q6435 -457 6426 -435Q6417 -413 6411 -399ZM7081 0V-688H7653Q7729 -688 7778 -657Q7827 -626 7852 -575Q7876 -525 7876 -465Q7876 -400 7845 -347Q7814 -293 7752 -262L7893 0H7663L7549 -229H7285V0ZM7285 -379H7587Q7624 -379 7646 -401Q7668 -423 7668 -460Q7668 -484 7658 -502Q7648 -519 7630 -528Q7612 -537 7587 -537H7285ZM8073 0V-688H8277V-354L8651 -688H8908L8594 -404L8915 0H8663L8444 -282L8277 -147V0Z" fill="currentColor"/><rect x="-420" y="520" width="1863" height="170" fill="currentColor"/><rect class="ac" x="1553" y="520" width="1863" height="170" fill="#b8e6b5"/><rect x="3526" y="520" width="1863" height="170" fill="currentColor"/><rect class="ac" x="5499" y="520" width="1863" height="170" fill="#b8e6b5"/><rect x="7472" y="520" width="1863" height="170" fill="currentColor"/></svg></a><div class="links"><a href="#metodo">Como funciona</a><a href="#motor">O que conferimos</a><a href="#pacotes">Planos</a><a href="#consulta" class="button">Testar grátis</a></div></div></header>
+    <main>
+      <section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow mono"><span class="dot"></span>PRÉ-ANÁLISE TÉCNICA DA SUA ARTE</div><h1>Produção parada é dinheiro parado.</h1><p>Cada arte devolvida na aprovação é mais uma rodada de espera, e a sua produção fica parada até ela voltar. Faça a pré-análise técnica antes do envio: em minutos, você sabe o que ajustar.</p><div class="actions"><a class="primary" href="#consulta">Testar grátis com uma arte</a><a class="secondary" href="#pacotes">Ver planos</a></div></div><div class="matrix"><div class="matrix-head"><div><div class="mono" style="color:#adc8ba">EXEMPLO DE PARECER</div><h2>Sua arte, item por item</h2></div><span class="pill">V2-1 · V3-0</span></div><div class="lineitem"><span class="number">01</span><span>Logotipo e código de licença</span><span class="state">Ok</span></div><div class="lineitem"><span class="number">02</span><span>Tamanho mínimo do rótulo</span><span class="state ajustar">Ajustar</span></div><div class="lineitem"><span class="number">03</span><span>Produto no seu certificado</span><span class="pending">Conferir</span></div><div class="lineitem"><span class="number">04</span><span>Uso na embalagem</span><span class="state">Ok</span></div></div></div></section>
+      <section id="metodo"><div class="wrap"><div class="intro"><div><div class="mono section-label">COMO FUNCIONA</div><h2>Três passos entre a sua arte e um parecer claro.</h2></div><p>Você não precisa saber a norma de cor: a ScopeMark separa o que está certo, o que ajustar e o que depende de algum documento.</p></div><div class="grid"><article class="card"><div class="icon">01</div><h3>Você envia a arte</h3><p>Informe o código de licença, escolha o produto do seu certificado, diga onde a arte vai ser usada e envie o arquivo final.</p></article><article class="card"><div class="icon">02</div><h3>A ScopeMark confere</h3><p>Cada item da norma é conferido na sua arte, pelas duas versões em vigor: marca, rótulo, tamanho, código, produto e uso.</p></article><article class="card"><div class="icon">03</div><h3>Você recebe o parecer</h3><p>Em minutos, você sabe se a arte está pronta para a certificadora ou o que ajustar, com a cláusula da norma e o rótulo recomendado.</p></article></div></div></section>
+      <section id="motor" class="engine"><div class="wrap">
+        <div class="intro"><div><div class="mono section-label">O QUE CONFERIMOS · COMO A IA TRABALHA</div><h2>O que a certificadora vai olhar, conferido antes.</h2></div><p>Cada conclusão do parecer mostra de onde veio: do seu certificado, da medição da arte ou da norma.</p></div>
+        <div class="ai-grid">
+          <article class="ai"><div class="mono">01 · SEU CERTIFICADO</div><h3>Certificado e produtos</h3><p>Consultamos o seu código de licença na base pública de certificados e conferimos a validade, a situação do certificado e se o produto está no escopo.</p></article>
+          <article class="ai"><div class="mono">02 · SUA ARTE</div><h3>Leitura e medição</h3><p>Lemos todas as páginas, ampliamos cada selo e medimos o rótulo em milímetros. Os QR codes da arte também são lidos.</p></article>
+          <article class="ai"><div class="mono">03 · OUTROS SELOS</div><h3>Selos e alegações</h3><p>Apontamos outros selos, alegações ambientais e acordos de rotulagem que podem gerar problema com a certificadora.</p></article>
+          <article class="ai"><div class="mono">04 · A NORMA</div><h3>As duas versões da norma</h3><p>Conferimos cada item pela norma de uso da marca, nas versões V2-1 e V3-0, as duas em vigor na transição, e explicamos cada ajuste.</p></article>
+        </div>
+        <div class="flow" aria-label="Etapas da análise"><span>SEU CÓDIGO</span><i>→</i><span>CERTIFICADO</span><i>→</i><span>LEITURA</span><i>→</i><span>MEDIÇÃO</span><i>→</i><span>NORMA V2-1 · V3-0</span><i>→</i><span>SEU PARECER</span></div>
+        <div class="govern"><span class="icon">✓</span><div><b>Resposta direta para você.</b> O parecer chega assim que a análise termina, sem fila de aprovação. Na sua empresa, o gestor acompanha as consultas da equipe. E a equipe ScopeMark mantém as regras atualizadas com as normas e publicações oficiais.</div></div>
+      </div></section>
+      <section id="consulta"><div class="wrap">
+        <div class="intro"><div><div class="mono section-label">EXPERIMENTE · DEMONSTRAÇÃO</div><h2>Veja como é receber um parecer.</h2></div><p>Faça uma consulta de exemplo, do jeito que você faria na plataforma. Teste como pessoa física, como alguém da equipe de uma empresa ou como o gestor dela. A leitura é simulada e nada sai do seu navegador.</p></div>
+        <div class="toolbar"><div class="toolbar-left"><div class="roles" id="roleSwitch" role="group" aria-label="Acesso"><button type="button" data-role="pf" aria-pressed="true">Pessoa física</button><button type="button" data-role="member" aria-pressed="false">Equipe</button><button type="button" data-role="manager" aria-pressed="false">Gestor</button></div><label class="as" id="asWrap" hidden>Consultando como<select id="asMember"></select></label></div><div class="clear"><button type="button" class="link-btn" id="clearAll">Reiniciar demonstração</button><span id="clearAsk" hidden>Apagar as consultas de teste e voltar aos dados de exemplo?<button type="button" class="link-btn danger" id="clearYes">Reiniciar</button><button type="button" class="link-btn" id="clearNo">Cancelar</button></span></div></div>
+        <div class="demo-grid">
+          <form class="panel" id="requestForm" novalidate>
+            <div class="mono section-label">NOVA CONSULTA</div><h3>Confira a sua arte</h3>
+            <div class="usage" id="usage"></div>
+            <label class="field">Código de licença<span class="com-botao"><input id="code" placeholder="FSC-C000000" autocomplete="off" /><button type="button" class="btn ghost sm" id="consultar">Consultar</button></span></label>
+            <div id="certBox"></div>
+            <label class="field">Produto do seu certificado<select id="product" disabled><option value="">Consulte o certificado primeiro</option></select></label>
+            <div class="field">Onde a arte vai ser usada<div class="opts" id="uses"></div></div>
+            <label class="drop" id="drop"><input id="file" type="file" accept=".pdf,.png,.jpg,.jpeg"><span class="drop-icon" aria-hidden="true">↑</span><span><b id="fileName">Escolha a arte final</b><small id="fileMeta">Arraste o arquivo ou clique · PDF, PNG ou JPG · prefira o PDF final</small></span></label>
+            <div class="fields">
+              <label class="field">Largura do rótulo (mm)<input id="width" inputmode="decimal" placeholder="Opcional no PDF" /></label>
+              <label class="field">Altura do rótulo (mm)<input id="height" inputmode="decimal" placeholder="Opcional no PDF" /></label>
+            </div>
+            <label class="field">Sua dúvida sobre a arte (opcional)<textarea id="notes" placeholder="Ex.: posso usar o rótulo em uma cor só?"></textarea></label>
+            <label class="opt"><input type="checkbox" id="priority" /><span class="opt-txt"><b>Análise prioritária</b><small>Sua análise passa na frente da fila · meia análise a mais</small></span></label>
+            <ol class="engine-run" id="engineRun" hidden></ol>
+            <div class="form-foot"><button class="btn" type="submit" id="submitBtn">Analisar</button><p class="cost-note" id="costNote"></p></div>
+            <p class="msg form-msg" id="formMsg" role="status" aria-live="polite"></p>
+          </form>
+          <div class="panel" id="managerPanel" hidden>
+            <div class="mono section-label">GESTÃO DA EMPRESA · PLANO PROFISSIONAL</div><h3>Embalagens Aurora</h3>
+            <div class="tally" id="mgrTally"></div>
+            <p class="hint" id="mgrHint"></p>
+            <div class="wallet"><div class="mono">CRÉDITOS PRÉ-PAGOS</div><strong id="mgrCredits">0 análises</strong><div class="topups" id="topups"></div><p>Quando a cota do mês acaba, as análises saem dos créditos: R$ 10 cada no plano Profissional. Você paga por Pix ou boleto; aqui a recarga é simulada.</p></div>
+            <div class="rows"><h4>Extrato</h4><div id="mgrLedger"></div></div>
+            <div class="rows"><h4>Equipe</h4><div id="mgrTeam"></div></div>
+          </div>
+          <div class="panel">
+            <div class="panel-head"><div><div class="mono section-label" id="casesLabel">PARECERES</div><h3 id="casesTitle">Minhas consultas</h3></div><span class="count" id="caseCount">0</span></div>
+            <label class="as" id="filterWrap" hidden>Filtrar por pessoa<select id="filter"><option value="">Toda a equipe</option></select></label>
+            <div id="caseList"></div>
+          </div>
+        </div>
+      </div></section>
+      <section id="limites" class="band"><div class="wrap"><div class="intro"><div><div class="mono section-label">O QUE VOCÊ PRECISA SABER</div><h2>A ScopeMark prepara a sua arte. Quem aprova é a certificadora.</h2></div><p>O parecer diminui o risco de devolução e o retrabalho, mas a decisão oficial continua com o organismo certificador da sua empresa.</p></div><div class="checks"><article class="check"><span>VOCÊ GANHA</span><h3>Cada item conferido</h3><p>Marca, rótulo, código, produto, tamanho e uso, com o que ajustar e a cláusula da norma de cada ajuste.</p></article><article class="check"><span>VOCÊ GANHA</span><h3>Um registro do que foi conferido</h3><p>O parecer guarda o certificado consultado, os dados lidos da arte e as medições, prontos para mostrar à certificadora.</p></article><article class="check"><span>NÃO SUBSTITUI</span><h3>A aprovação oficial</h3><p>Quem aprova o uso do selo é a certificadora da sua empresa, ou quem emitiu a sua licença, conforme o caso.</p></article><article class="check"><span>NÃO APROVA NO ESCURO</span><h3>Nada é dado como certo sem prova</h3><p>Se faltar um documento ou uma informação, o parecer diz o que conferir, em vez de dar a arte como aprovada.</p></article></div><div class="disclaimer"><span class="icon" style="background:#e4f2e5">!</span><div><b>Aviso sobre marcas.</b> A ScopeMark não é afiliada, patrocinada nem aprovada pelo FSC. Só quem tem certificado ou licença FSC pode usar as marcas FSC, com os arquivos oficiais obtidos no portal de marcas do FSC.</div></div></div></section>
+      <section id="pacotes"><div class="wrap">
+        <div class="intro"><div><div class="mono section-label">PLANOS</div><h2>Escolha pelo número de artes que você confere por mês.</h2></div><p>Comece com 3 análises grátis, sem cartão. Se você consulta sozinho, um plano de pessoa física basta. Para equipes, o saldo é da empresa e o gestor acompanha as consultas de todos e compra créditos quando precisar.</p></div>
+        <div class="grupo"><div class="grupo-head"><span class="mono section-label">PESSOA FÍSICA</span><p>Para quem consulta sozinho: você faz e vê as suas análises.</p></div><div class="plans" id="plansPf"></div></div>
+        <div class="grupo"><div class="grupo-head"><span class="mono section-label">EMPRESAS</span><p>Para equipes: um saldo para todos, com gestor, extrato e créditos pré-pagos.</p></div><div class="plans quatro" id="plansBiz"></div></div>
+        <div class="addons" id="addons"></div>
+        <div class="calc" id="calculadora">
+          <div class="panel">
+            <div class="mono section-label">CALCULADORA DE CUSTOS</div><h3>Quanto a sua equipe pagaria por mês</h3>
+            <div class="fields">
+              <label class="field">Pessoas na sua equipe<input id="cUsers" type="number" min="1" value="8" inputmode="numeric" /></label>
+              <label class="field">Artes conferidas por mês<input id="cConsults" type="number" min="0" value="80" inputmode="numeric" /></label>
+              <label class="field">Prioritárias por mês<input id="cPriority" type="number" min="0" value="10" inputmode="numeric" /></label>
+            </div>
+            <p class="hint">A conta inclui a mensalidade, os usuários além dos que o plano inclui e os créditos para o que passar da cota. A análise prioritária vale meia análise a mais.</p>
+          </div>
+          <div class="calc-out" aria-live="polite"><div class="mono">TOTAL ESTIMADO POR MÊS</div><div id="calcRows"></div><p class="calc-note" id="calcNote"></p></div>
+        </div>
+      </div></section>
+      <section class="cta"><div class="wrap cta-inner"><div><div class="mono">PRONTO PARA COMEÇAR?</div><h2>Faça a pré-análise da sua próxima arte antes do envio para aprovação.</h2></div><a class="primary" href="https://analiselogo.com.br/#/criar-conta">Começar com 3 análises grátis</a></div></section>
+    </main>
+    <footer><div class="wrap"><a class="brand" href="#" aria-label="ScopeMark, voltar ao início"><svg class="logo" viewBox="-420 -1000 9755 1690" role="img" aria-label="ScopeMark"><path d="M-420 -1000H-120V-930H-350V-700H-420ZM9335 -1000H9035V-930H9265V-700H9335ZM-420 300H-120V230H-350V0H-420ZM9335 300H9035V230H9265V0H9335Z" fill="currentColor"/><path d="M401 12Q317 12 244 2Q171 -8 117 -33Q62 -58 31 -103Q0 -148 0 -217Q0 -219 0 -222Q0 -225 1 -228H200Q199 -224 199 -220Q199 -216 199 -211Q199 -180 222 -163Q245 -145 288 -138Q330 -131 386 -131Q410 -131 434 -132Q459 -134 482 -137Q505 -141 523 -148Q541 -155 552 -165Q563 -176 563 -192Q563 -213 540 -226Q517 -238 478 -246Q439 -253 390 -259Q342 -265 289 -273Q237 -282 189 -296Q140 -311 101 -335Q62 -359 39 -397Q16 -435 16 -489Q16 -544 43 -583Q71 -623 121 -649Q171 -675 239 -687Q307 -700 387 -700Q468 -700 535 -687Q601 -674 649 -649Q697 -623 722 -585Q748 -546 748 -494V-480H551V-488Q551 -509 533 -525Q515 -542 480 -551Q446 -561 396 -561Q337 -561 299 -554Q261 -546 243 -533Q225 -521 225 -505Q225 -485 248 -473Q271 -462 311 -455Q350 -448 398 -442Q447 -436 499 -428Q551 -420 600 -406Q649 -392 688 -368Q727 -345 750 -308Q773 -272 773 -219Q773 -136 725 -85Q677 -34 593 -11Q509 12 401 12ZM1364 12Q1220 12 1124 -28Q1027 -69 980 -148Q932 -227 932 -344Q932 -515 1042 -607Q1153 -700 1365 -700Q1483 -700 1573 -664Q1663 -629 1713 -564Q1764 -500 1764 -412H1565Q1565 -455 1540 -485Q1514 -516 1469 -532Q1423 -549 1361 -549Q1290 -549 1241 -524Q1191 -500 1166 -457Q1141 -414 1141 -357V-332Q1141 -275 1166 -232Q1191 -188 1240 -164Q1289 -139 1359 -139Q1425 -139 1472 -155Q1520 -170 1545 -200Q1571 -230 1571 -272H1764Q1764 -187 1716 -123Q1667 -59 1577 -23Q1488 12 1364 12ZM2385 12Q2246 12 2145 -30Q2043 -73 1989 -152Q1934 -232 1934 -344Q1934 -456 1989 -536Q2043 -615 2145 -658Q2246 -700 2385 -700Q2525 -700 2626 -658Q2726 -615 2781 -536Q2836 -456 2836 -344Q2836 -232 2781 -152Q2726 -73 2626 -30Q2525 12 2385 12ZM2385 -139Q2439 -139 2483 -152Q2528 -165 2560 -190Q2592 -215 2610 -252Q2627 -288 2627 -333V-357Q2627 -401 2610 -437Q2592 -473 2560 -498Q2528 -523 2483 -536Q2439 -549 2385 -549Q2331 -549 2287 -536Q2242 -523 2210 -498Q2178 -473 2161 -437Q2143 -401 2143 -357V-333Q2143 -288 2161 -252Q2178 -215 2210 -190Q2242 -165 2287 -152Q2331 -139 2385 -139ZM3036 0V-688H3567Q3634 -688 3685 -658Q3736 -628 3764 -575Q3793 -523 3793 -454Q3793 -385 3764 -331Q3735 -278 3684 -248Q3632 -219 3565 -219H3240V0ZM3240 -370H3508Q3554 -370 3577 -391Q3600 -413 3600 -453Q3600 -480 3590 -499Q3579 -517 3559 -527Q3538 -537 3508 -537H3240ZM3957 0V-688H4674V-537H4161V-421H4610V-275H4161V-151H4682V0ZM4880 0V-688H5199L5317 -389Q5324 -371 5334 -343Q5343 -315 5353 -285Q5363 -256 5370 -233H5377Q5384 -254 5394 -282Q5403 -310 5413 -339Q5423 -367 5431 -389L5549 -688H5859V0H5655V-355Q5655 -376 5656 -402Q5656 -428 5657 -453Q5658 -478 5659 -496H5651Q5645 -477 5636 -451Q5627 -425 5618 -399Q5610 -374 5602 -355L5458 0H5271L5127 -355Q5117 -381 5107 -408Q5098 -435 5090 -458Q5083 -482 5078 -496H5070Q5071 -482 5071 -459Q5072 -436 5072 -409Q5073 -382 5073 -355V0ZM6019 0 6357 -688H6583L6921 0H6701L6649 -110H6280L6229 0ZM6348 -259H6581L6518 -399Q6514 -408 6507 -426Q6500 -443 6493 -462Q6485 -482 6479 -498Q6472 -515 6469 -523H6462Q6454 -505 6445 -481Q6435 -457 6426 -435Q6417 -413 6411 -399ZM7081 0V-688H7653Q7729 -688 7778 -657Q7827 -626 7852 -575Q7876 -525 7876 -465Q7876 -400 7845 -347Q7814 -293 7752 -262L7893 0H7663L7549 -229H7285V0ZM7285 -379H7587Q7624 -379 7646 -401Q7668 -423 7668 -460Q7668 -484 7658 -502Q7648 -519 7630 -528Q7612 -537 7587 -537H7285ZM8073 0V-688H8277V-354L8651 -688H8908L8594 -404L8915 0H8663L8444 -282L8277 -147V0Z" fill="currentColor"/><rect x="-420" y="520" width="1863" height="170" fill="currentColor"/><rect class="ac" x="1553" y="520" width="1863" height="170" fill="#b8e6b5"/><rect x="3526" y="520" width="1863" height="170" fill="currentColor"/><rect class="ac" x="5499" y="520" width="1863" height="170" fill="#b8e6b5"/><rect x="7472" y="520" width="1863" height="170" fill="currentColor"/></svg></a><span>© ScopeMark · Pré-análise técnica de artes · FSC® é marca registrada do Forest Stewardship Council®</span><span class="footer-links"><a class="footer-link" href="https://analiselogo.com.br/#/termos">Termos, privacidade e reembolso</a><a class="footer-link" href="https://analiselogo.com.br/#/entrar">Entrar na plataforma</a></span></div></footer>
+    <script>
+      (() => {
+        // Planos e adicionais da plataforma (servidor/scope.js do ScopeMark). O usuário adicional é provisório.
+        const PLANOS = {
+          teste: { nome: 'Teste grátis', preco: 0, analises: 3, tipo: 'unico', usuarios: 1, publico: 'pf' },
+          avulso: { nome: 'Avulso', preco: 179, analises: 10, tipo: 'avulso', usuarios: 1, publico: 'pf' },
+          essencial: { nome: 'Essencial', preco: 290, analises: 25, tipo: 'mensal', usuarios: 2, excedente: 12, publico: 'empresa' },
+          profissional: { nome: 'Profissional', preco: 690, analises: 75, tipo: 'mensal', usuarios: 5, excedente: 10, destaque: true, publico: 'empresa' },
+          grafica: { nome: 'Gráfica', preco: 1590, analises: 200, tipo: 'mensal', usuarios: 0, excedente: 8, publico: 'empresa' },
+          enterprise: { nome: 'Enterprise', preco: null, analises: null, tipo: 'mensal', usuarios: 0, publico: 'empresa' }
+        };
+        const ADICIONAIS = { usuario: 39, prioridade: 0.5 };
+        // A plataforma fica no domínio analiselogo.com.br até a ScopeMark ter domínio próprio
+        const PLATAFORMA = 'https://analiselogo.com.br';
+        const CONTRATAR = `${PLATAFORMA}/#/criar-conta`;
+        const COMPANY = 'Embalagens Aurora';
+        const TEAM = [{ name: 'Carla Mendes', area: 'Gestora' }, { name: 'Ana Souza', area: 'Marketing' }, { name: 'Bruno Lima', area: 'Embalagens' }];
+        const PRODUTOS = ['P5.1 Embalagens de papelão ondulado', 'P5.2 Caixas de papel cartão', 'P7.1 Impressos e material promocional'];
+        const USOS = [['Embalagem do produto', false], ['Rótulo ou etiqueta do produto', false], ['Manual ou encarte do produto', false], ['Material promocional (site, catálogo, feira)', true]];
+        const KEY = 'scopemark-demo-v4';
+        const STATE = { ok: 'Verificado', info: 'Informado', warn: 'Ressalva', need: 'Evidência requerida', sim: 'Simulado' };
+        const SITUACAO = { pronto: 'Pronta para enviar à certificadora', conferir: 'Conferir pontos antes de enviar', ajustar: 'Ajustar antes de enviar' };
+        const STEPS = ['Consultando o seu certificado', 'Lendo todas as páginas da arte', 'Medindo o rótulo em milímetros', 'Localizando marcas, selos e QR codes', 'Conferindo cada item pelas duas versões da norma', 'Preparando o seu parecer'];
+        const LOGO = document.querySelector('.brand .logo').outerHTML;
+        const $ = id => document.getElementById(id);
+        const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+        const when = iso => new Date(iso).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' });
+        const brl = n => (n === null || n === undefined ? 'Sob consulta' : n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }));
+        const nn = n => String(Math.round(n * 10) / 10).replace('.', ',');
+        const analises = n => `${nn(n)} ${n === 1 ? 'análise' : 'análises'}`;
+        const num = v => { const n = parseFloat(String(v).replace(',', '.')); return n > 0 ? n : null; };
+        const mm = n => n.toLocaleString('pt-BR', { maximumFractionDigits: 1 });
+        const bytes = n => n < 1048576 ? Math.max(1, Math.round(n / 1024)) + ' KB' : (n / 1048576).toLocaleString('pt-BR', { maximumFractionDigits: 1 }) + ' MB';
+        const kind = f => (/\.([a-z0-9]+)$/i.exec(f.name)?.[1] || 'arquivo').toUpperCase();
+        const count = n => `${n} ${n === 1 ? 'consulta' : 'consultas'}`;
+        const dayOf = d => `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`;
+        const newId = (d, list) => { let id; do id = `SM-${dayOf(d)}-${Math.random().toString(36).slice(2, 6).toUpperCase().padEnd(4, '0')}`; while (list.some(c => c.id === id)); return id; };
+        const codeOk = code => /^(FSC[®\s-]*)?[CN]\d{6}$/.test(code.toUpperCase().replace(/\s+/g, ' '));
+
+        // Leitura simulada: só diz o que foi informado ou falta; nunca declara a arte conforme sozinha
+        function assess(c) {
+          const k = (name, state, note) => ({ name, state, note });
+          const code = c.code.toUpperCase();
+          const usos = c.uses.length ? c.uses.join(', ') : '';
+          return [
+            k('Leitura da arte e integridade da marca', 'sim', `Arquivo ${c.file.name} (${c.file.kind}, ${bytes(c.file.size)}). Na versão completa, ampliamos cada selo da sua arte e conferimos proporção, área de proteção, cores e legibilidade. Nesta demonstração, essa leitura é simulada.`),
+            !code ? k('Logotipo e código de licença', 'need', 'Informe o código de licença: sem ele, não dá para conferir o seu certificado.')
+              : codeOk(code) ? k('Logotipo e código de licença', 'info', `Certificado ${code} consultado (exemplo). Na versão completa, conferimos se o código impresso no logotipo é o mesmo do seu certificado.`)
+                : k('Logotipo e código de licença', 'warn', `Confira o código "${code}": o código de licença tem C ou N seguido de 6 dígitos.`),
+            c.width && c.height ? k('Tamanho mínimo do rótulo', 'info', `Você informou ${mm(c.width)} × ${mm(c.height)} mm. Na versão completa, medimos o rótulo no próprio PDF, com erro abaixo de 1%, e comparamos com o tamanho mínimo da norma.`)
+              : k('Tamanho mínimo do rótulo', c.file.kind === 'PDF' ? 'sim' : 'need', c.file.kind === 'PDF' ? 'No PDF, medimos o rótulo para você (simulado nesta demonstração).' : 'Imagem PNG ou JPG não tem medida real: informe a largura e a altura do rótulo.'),
+            c.product && usos ? k('Escopo do certificado e uso', 'info', `${c.product} · ${usos}. Na versão completa, conferimos se o produto está no seu certificado e se a marca escolhida serve para esse uso.`)
+              : k('Escopo do certificado e uso', 'need', `Falta informar: ${[!c.product && 'o produto do seu certificado', !usos && 'onde a arte vai ser usada'].filter(Boolean).join(' e ')}.`)
+          ];
+        }
+        const situacao = list => { const s = list.map(k => k.state); return s.includes('warn') || s.includes('need') ? 'conferir' : 'pronto'; };
+
+        function seed() {
+          const now = Date.now(), hour = 3600e3, cases = [];
+          const add = (author, hoursAgo, f) => {
+            const d = new Date(now - hoursAgo * hour);
+            const c = { id: newId(d, cases), account: 'biz', author, example: true, priority: false, peso: 1, createdAt: d.toISOString(), notes: '', uses: [], ...f };
+            c.criteria = assess(c);
+            cases.push(c);
+          };
+          add('Ana Souza', 3, { file: { name: 'caixa-cereal-500g.pdf', kind: 'PDF', size: 1843200 }, code: 'FSC-C000000', product: PRODUTOS[1], uses: [USOS[0][0]], width: 14, height: 9 });
+          add('Bruno Lima', 26, { file: { name: 'rotulo-sacola-kraft.png', kind: 'PNG', size: 640000 }, code: 'FSC-C000000', product: PRODUTOS[0], uses: [USOS[1][0]], width: null, height: null });
+          add('Ana Souza', 50, { file: { name: 'banner-sustentabilidade.pdf', kind: 'PDF', size: 312000 }, code: '', product: '', uses: [USOS[3][0]], width: null, height: null });
+          return { cases, pf: { plano: 'avulso', usadas: 0 }, biz: { plano: 'profissional', usadasAntes: 70, extras: 5, ledger: [{ at: new Date(now - 72 * hour).toISOString(), label: 'Créditos pré-pagos · Pix confirmado', analises: 5, valor: 50 }] } };
+        }
+
+        let role = 'pf', member = TEAM[1].name, filter = '', openId = null, busy = false, cert = null, db = null;
+        try { db = JSON.parse(localStorage.getItem(KEY)); } catch (e) {}
+        const valid = d => d && Array.isArray(d.cases) && d.pf && d.biz && Array.isArray(d.biz.ledger) && d.cases.every(c => c && c.id && c.file && Array.isArray(c.criteria) && c.criteria.every(k => STATE[k.state]));
+        if (!valid(db)) db = seed();
+        const save = () => { try { localStorage.setItem(KEY, JSON.stringify(db)); } catch (e) {} };
+
+        const ofAccount = a => db.cases.filter(c => c.account === a);
+        const accountOf = () => role === 'pf' ? 'pf' : 'biz';
+        // Saldo como na plataforma: a cota do período e depois os créditos
+        function conta(a) {
+          if (a === 'pf') { const p = PLANOS.avulso; const usadas = ofAccount('pf').reduce((s, c) => s + c.peso, 0); return { plano: p, cota: p.analises, usadas, extras: 0, saldo: Math.max(0, p.analises - usadas) }; }
+          const p = PLANOS.profissional, gasto = ofAccount('biz').filter(c => !c.example).reduce((s, c) => s + c.peso, 0) + ofAccount('biz').filter(c => c.example).length;
+          const usadas = Math.min(p.analises, db.biz.usadasAntes + gasto), doCredito = Math.max(0, db.biz.usadasAntes + gasto - p.analises);
+          return { plano: p, cota: p.analises, usadas, extras: Math.max(0, db.biz.extras - doCredito), saldo: Math.max(0, p.analises - usadas) + Math.max(0, db.biz.extras - doCredito), doCredito };
+        }
+
+        function report(c) {
+          const id = esc(c.id), size = c.width && c.height ? `${mm(c.width)} × ${mm(c.height)} mm` : '';
+          const facts = [['Solicitante', c.account === 'biz' ? `${c.author} · ${COMPANY}` : 'Pessoa física'], ['Arquivo', c.file.name], ['Código', c.code], ['Produto', c.product], ['Uso', c.uses.join(', ')], ['Rótulo', size], ['Prioridade', c.priority ? 'Sim' : 'Não'], ['Pergunta', c.notes]]
+            .map(([k, v]) => `<dt>${k}</dt><dd>${esc(v || '—')}</dd>`).join('');
+          const rows = c.criteria.map((k, i) => `<div class="crit"><span class="crit-n">0${i + 1}</span><span>${esc(k.name)}</span><span class="st st-${k.state}">${STATE[k.state]}</span><p>${esc(k.note)}</p></div>`).join('');
+          return `<div class="report" id="rep-${id}"><div class="report-head"><div class="report-brand">${LOGO}<small>PARECER TÉCNICO · PRÉ-ANÁLISE</small></div><div class="report-meta">${id}<br>EMITIDO ${when(c.createdAt)}<br>NORMA V2-1 · V3-0</div></div>`
+            + `<div class="report-body"><dl class="facts">${facts}</dl>${rows}<div class="summary"><span class="mono">SITUAÇÃO</span><span>${SITUACAO[situacao(c.criteria)]}</span></div></div>`
+            + '<div class="report-foot">Parecer gerado com IA pela ScopeMark. Na versão completa, cada item é conferido pelas duas versões da norma, com a cláusula de cada ajuste. Quem aprova o uso do selo é sempre a certificadora da sua empresa. Demonstração com leitura simulada.</div></div>';
+        }
+
+        function caseHtml(c) {
+          const id = esc(c.id), open = c.id === openId;
+          const badge = c.example ? '<span class="badge is-example">Exemplo</span>' : `<span class="badge ${situacao(c.criteria) === 'pronto' ? 'is-emitted' : 'st-warn'}">${situacao(c.criteria) === 'pronto' ? 'Pronta para enviar' : 'Conferir pontos'}</span>`;
+          const head = `<button type="button" class="case-head" data-open="${id}" aria-expanded="${open}"><span class="case-id">${id}</span>${badge}<strong>${esc(c.file.name)}</strong><small>${c.account === 'biz' ? esc(c.author) : 'Pessoa física'} · ${when(c.createdAt)}${c.priority ? ' · prioritária' : ''}</small></button>`;
+          if (!open) return `<article class="case">${head}</article>`;
+          return `<article class="case open">${head}<div class="case-body">${report(c)}<div class="case-actions"><button type="button" class="btn ghost sm" data-act="print" data-id="${id}">Imprimir / salvar PDF</button></div></div></article>`;
+        }
+
+        function renderUsage() {
+          const a = accountOf(), k = conta(a);
+          const left = a === 'biz' ? `${COMPANY} · plano ${k.plano.nome}` : `Plano ${k.plano.nome} · válido por 6 meses`;
+          const right = a === 'biz' ? `Créditos da empresa: <b>${analises(k.extras)}</b>` : `Saldo: <b>${analises(k.saldo)}</b>`;
+          $('usage').innerHTML = `<div class="usage-top"><span>${left} · <b>${nn(k.usadas)}/${k.cota}</b> da cota</span><span>${right}</span></div><span class="meter${k.usadas >= k.cota ? ' over' : ''}"><i style="width:${Math.min(100, k.usadas / k.cota * 100)}%"></i></span>`;
+        }
+        const peso = () => 1 + ($('priority').checked ? ADICIONAIS.prioridade : 0);
+        function costNote() {
+          if (role === 'manager') return;
+          const a = accountOf(), k = conta(a), p = peso();
+          const daCota = Math.min(p, Math.max(0, k.cota - k.usadas));
+          $('costNote').textContent = `Esta consulta: ${analises(p)}${a === 'biz' && p > daCota ? `, ${analises(p - daCota)} dos créditos` : ''}.`;
+          $('submitBtn').textContent = `Analisar (${p === 1 ? '1 análise' : '1 análise e meia'})`;
+        }
+
+        function renderManager() {
+          const list = ofAccount('biz'), k = conta('biz');
+          const noMes = list.filter(c => !c.example);
+          const tiles = [[`${nn(k.usadas)}/${k.cota}`, 'Cota do mês usada'], [analises(k.extras), 'Créditos disponíveis'], [nn(k.doCredito), 'Análises pagas com créditos'], [noMes.filter(c => c.priority).length, 'Análises prioritárias']];
+          $('mgrTally').innerHTML = tiles.map(([v, l]) => `<div><strong>${v}</strong><span>${l}</span></div>`).join('');
+          $('mgrHint').textContent = `Exemplo: a empresa já usou ${db.biz.usadasAntes} análises neste mês. Depois de ${k.cota}, cada análise sai dos créditos pré-pagos.`;
+          $('mgrCredits').textContent = analises(k.extras);
+          $('mgrLedger').innerHTML = db.biz.ledger.slice(0, 6).map(e => `<div class="row"><span>${when(e.at)} · ${esc(e.label)}</span><span class="${e.analises < 0 ? 'minus' : 'plus'}">${e.analises < 0 ? '−' : '+'}${nn(Math.abs(e.analises))}${e.valor ? ` · ${brl(e.valor)}` : ''}</span></div>`).join('');
+          $('mgrTeam').innerHTML = TEAM.map(t => `<div class="row"><span><b>${t.name}</b> · ${t.area}</span><span>${count(list.filter(c => c.author === t.name).length)}</span></div>`).join('')
+            + `<p class="hint">Sua equipe usa ${TEAM.length} dos ${PLANOS.profissional.usuarios} usuários do plano. Usuário adicional: ${brl(ADICIONAIS.usuario)} por mês. Quem já tem conta na ScopeMark recebe um convite e entra se aceitar.</p>`;
+        }
+
+        function render() {
+          const manager = role === 'manager';
+          $('requestForm').hidden = manager;
+          $('managerPanel').hidden = !manager;
+          $('asWrap').hidden = role !== 'member';
+          $('filterWrap').hidden = !manager;
+          $('casesLabel').textContent = role === 'pf' ? 'CONTA PESSOA FÍSICA' : `${COMPANY.toUpperCase()} · EMPRESA`;
+          $('casesTitle').textContent = manager ? 'Consultas da equipe' : 'Minhas consultas';
+          const list = role === 'pf' ? ofAccount('pf') : ofAccount('biz').filter(c => manager ? !filter || c.author === filter : c.author === member);
+          $('caseCount').textContent = list.length;
+          $('caseList').innerHTML = list.length ? list.map(caseHtml).join('')
+            : `<div class="empty">${manager ? 'Nenhuma consulta desta pessoa no mês.' : 'Você ainda não tem consultas. Envie uma arte para receber o primeiro parecer.'}</div>`;
+          if (manager) renderManager(); else { renderUsage(); costNote(); }
+        }
+
+        function printReport(id) {
+          const rep = $('rep-' + id);
+          document.body.classList.add('printing');
+          rep.classList.add('print-target');
+          window.addEventListener('afterprint', () => { document.body.classList.remove('printing'); rep.classList.remove('print-target'); }, { once: true });
+          window.print();
+        }
+
+        document.querySelectorAll('#roleSwitch button').forEach(b => b.addEventListener('click', () => {
+          role = b.dataset.role;
+          document.querySelectorAll('#roleSwitch button').forEach(x => x.setAttribute('aria-pressed', x === b));
+          $('formMsg').textContent = '';
+          render();
+        }));
+        $('asMember').innerHTML = TEAM.map(t => `<option>${t.name}</option>`).join('');
+        $('asMember').value = member;
+        $('asMember').addEventListener('change', e => { member = e.target.value; render(); });
+        $('filter').insertAdjacentHTML('beforeend', TEAM.map(t => `<option>${t.name}</option>`).join(''));
+        $('filter').addEventListener('change', e => { filter = e.target.value; render(); });
+        $('priority').addEventListener('change', costNote);
+        $('uses').innerHTML = USOS.map(([n]) => `<label><input type="checkbox" value="${esc(n)}">${esc(n)}</label>`).join('');
+
+        // Consulta ao certificado (simulada): na plataforma, a busca na base pública leva cerca de 30 s
+        $('consultar').addEventListener('click', () => {
+          const code = $('code').value.trim();
+          const msg = $('formMsg');
+          if (!codeOk(code)) { cert = null; $('certBox').innerHTML = ''; msg.className = 'msg form-msg err'; msg.textContent = 'Use o formato FSC-C000000.'; return; }
+          msg.textContent = '';
+          $('certBox').innerHTML = '<div class="cert">Consultando o seu certificado…</div>';
+          setTimeout(() => {
+            cert = { code: code.toUpperCase(), org: role === 'pf' ? 'Gráfica de exemplo Ltda.' : COMPANY, validade: new Date(Date.now() + 400 * 86400e3).toLocaleDateString('pt-BR') };
+            $('certBox').innerHTML = `<div class="cert"><span><b>${esc(cert.org)}</b> · certificado válido até ${cert.validade} (exemplo)</span><span>${PRODUTOS.length} produtos no escopo · o certificado oficial vai anexado ao seu parecer</span></div>`;
+            $('product').disabled = false;
+            $('product').innerHTML = `<option value="">Escolha um produto do certificado</option>${PRODUTOS.map(p => `<option>${esc(p)}</option>`).join('')}`;
+          }, 700);
+        });
+
+        $('caseList').addEventListener('click', e => {
+          const head = e.target.closest('[data-open]');
+          if (head) { openId = openId === head.dataset.open ? null : head.dataset.open; render(); return; }
+          const btn = e.target.closest('[data-act="print"]');
+          if (btn) printReport(btn.dataset.id);
+        });
+
+        const precoCredito = PLANOS.profissional.excedente;
+        $('topups').innerHTML = [10, 25, 50].map(n => `<button type="button" data-topup="${n}">+ ${n} · ${brl(n * precoCredito)}</button>`).join('');
+        $('managerPanel').addEventListener('click', e => {
+          const btn = e.target.closest('[data-topup]');
+          if (!btn) return;
+          const n = Number(btn.dataset.topup);
+          db.biz.extras += n;
+          db.biz.ledger.unshift({ at: new Date().toISOString(), label: 'Créditos pré-pagos · recarga simulada', analises: n, valor: n * precoCredito });
+          save();
+          render();
+        });
+
+        const file = $('file'), drop = $('drop');
+        const showFile = () => {
+          const f = file.files[0];
+          $('fileName').textContent = f ? f.name : 'Escolha a arte final';
+          $('fileMeta').textContent = f ? `${kind(f)} · ${bytes(f.size)} · clique para trocar` : 'Arraste o arquivo ou clique · PDF, PNG ou JPG · prefira o PDF final';
+        };
+        file.addEventListener('change', showFile);
+        ['dragenter', 'dragover'].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.add('drag'); }));
+        ['dragleave', 'drop'].forEach(t => drop.addEventListener(t, () => drop.classList.remove('drag')));
+        drop.addEventListener('drop', e => {
+          e.preventDefault();
+          if (e.dataTransfer.files.length) { file.files = e.dataTransfer.files; showFile(); }
+        });
+
+        $('requestForm').addEventListener('submit', e => {
+          e.preventDefault();
+          if (busy) return;
+          const form = e.target, f = file.files[0], w = $('width'), h = $('height'), msg = $('formMsg'), run = $('engineRun');
+          const fail = (text, el) => { msg.className = 'msg form-msg err'; msg.textContent = text; if (el) { el.setAttribute('aria-invalid', 'true'); el.focus(); } };
+          form.querySelectorAll('[aria-invalid]').forEach(el => el.removeAttribute('aria-invalid'));
+          if (!f) return fail('Selecione o arquivo final da arte.', file);
+          if (!/\.(pdf|png|jpe?g)$/i.test(f.name)) return fail('Formato não aceito. Envie PDF, PNG ou JPG.', file);
+          for (const el of [w, h]) if (el.value.trim() && !num(el.value)) return fail('Informe as medidas em milímetros, com números maiores que zero.', el);
+          const a = accountOf(), k = conta(a), p = peso();
+          if (k.saldo < p) return fail(a === 'biz' ? 'O saldo de análises da empresa acabou. Peça ao gestor para comprar créditos.' : 'Seu saldo de análises acabou. Contrate outro pacote Avulso ou um plano.');
+          const d = new Date(), id = newId(d, db.cases);
+          const c = { id, account: a, author: a === 'biz' ? member : '', example: false, priority: $('priority').checked, peso: p, createdAt: d.toISOString(),
+            file: { name: f.name, kind: kind(f), size: f.size }, code: cert && cert.code === $('code').value.trim().toUpperCase() ? cert.code : $('code').value.trim(), product: $('product').value,
+            uses: [...$('uses').querySelectorAll('input:checked')].map(x => x.value), width: num(w.value), height: num(h.value), notes: $('notes').value.trim() };
+          c.criteria = assess(c);
+
+          busy = true;
+          $('submitBtn').disabled = true;
+          msg.textContent = '';
+          run.innerHTML = STEPS.map(s => `<li>${s}</li>`).join('');
+          run.hidden = false;
+          let step = 0;
+          const tick = () => {
+            [...run.children].forEach((li, j) => { li.className = j < step ? 'done' : j === step ? 'now' : ''; });
+            if (step++ < STEPS.length) { setTimeout(tick, c.priority ? 220 : 380); return; }
+            c.createdAt = new Date().toISOString();
+            const antes = conta(a);
+            db.cases.unshift(c);
+            if (a === 'biz') {
+              const daCota = Math.min(p, Math.max(0, antes.cota - antes.usadas));
+              db.biz.ledger.unshift({ at: c.createdAt, label: `Consulta ${id} · ${member}${c.priority ? ' · prioritária' : ''}`, analises: -p });
+              if (p > daCota) db.biz.ledger[0].label += ` · ${nn(p - daCota)} dos créditos`;
+            }
+            save();
+            openId = id;
+            form.reset();
+            showFile();
+            cert = null;
+            $('certBox').innerHTML = '';
+            $('product').disabled = true;
+            $('product').innerHTML = '<option value="">Consulte o certificado primeiro</option>';
+            run.hidden = true;
+            busy = false;
+            $('submitBtn').disabled = false;
+            msg.className = 'msg form-msg';
+            msg.textContent = `Pronto: o parecer ${id} está na sua lista.`;
+            render();
+          };
+          tick();
+        });
+
+        const askClear = show => { $('clearAll').hidden = show; $('clearAsk').hidden = !show; };
+        $('clearAll').addEventListener('click', () => askClear(true));
+        $('clearNo').addEventListener('click', () => askClear(false));
+        $('clearYes').addEventListener('click', () => {
+          db = seed();
+          openId = null;
+          save();
+          askClear(false);
+          render();
+        });
+
+        // Pacotes e calculadora, a partir dos planos da plataforma
+        const plano = (id, p) => {
+          const porAnalise = p.preco && p.analises ? `${brl(p.preco / p.analises)} por análise` : '';
+          const itens = id === 'teste' ? ['3 análises completas, uma vez só', 'Parecer com o que ajustar', 'Sem cartão de crédito']
+            : id === 'avulso' ? ['10 análises para usar em 6 meses', 'Parecer e relatório em PDF', '1 usuário']
+              : id === 'enterprise' ? ['Volume sob contrato', 'Várias unidades e gestores', 'Integração e suporte dedicado']
+                : [`${p.analises} análises por mês`, p.usuarios ? `${p.usuarios} usuário${p.usuarios > 1 ? 's' : ''}` : 'Usuários ilimitados', 'O gestor acompanha as análises da equipe', `Análise extra por ${brl(p.excedente)}, com créditos pré-pagos`];
+          const periodo = p.tipo === 'mensal' && p.preco ? '<small>/mês</small>' : p.tipo === 'avulso' ? '<small>uma vez</small>' : '';
+          return `<article class="plan${p.destaque ? ' featured' : ''}"><div class="plan-top"><span class="mono quota">${p.publico === 'pf' ? 'PESSOA FÍSICA' : 'EMPRESA'}</span>${p.destaque ? '<span class="pill">MAIS ESCOLHIDO</span>' : ''}</div>
+            <h3>${esc(p.nome)}</h3><div class="price">${p.preco === 0 ? 'Grátis' : brl(p.preco)}${periodo}</div><div class="por">${esc(porAnalise)}</div>
+            <ul>${itens.map(x => `<li>${esc(x)}</li>`).join('')}</ul><a class="btn${p.destaque || id === 'teste' ? '' : ' ghost'}" href="${CONTRATAR}${id === 'teste' ? '' : `?plano=${id}`}">${id === 'teste' ? 'Começar grátis' : id === 'enterprise' ? 'Falar com a equipe' : 'Contratar'}</a></article>`;
+        };
+        $('plansPf').innerHTML = Object.entries(PLANOS).filter(([, p]) => p.publico === 'pf').map(([id, p]) => plano(id, p)).join('');
+        $('plansBiz').innerHTML = Object.entries(PLANOS).filter(([, p]) => p.publico === 'empresa').map(([id, p]) => plano(id, p)).join('');
+        $('addons').innerHTML = `<span class="mono section-label">ADICIONAIS</span><span>Análise além da cota <b>${brl(PLANOS.grafica.excedente)} a ${brl(PLANOS.essencial.excedente)}</b>, conforme o plano</span><span>Usuário adicional <b>${brl(ADICIONAIS.usuario)}</b> por mês</span><span>Análise prioritária <b>meia análise</b> a mais</span><span>Conferir a versão corrigida em até 7 dias <b>meia análise</b></span>`;
+
+        function calc() {
+          const int = (id, min) => Math.max(min, parseInt($(id).value, 10) || 0);
+          const users = int('cUsers', 1), consults = int('cConsults', 0), prio = Math.min(consults, int('cPriority', 0));
+          const consumo = consults + prio * ADICIONAIS.prioridade;
+          const linhas = Object.values(PLANOS).filter(p => p.publico === 'empresa').map(p => {
+            if (p.preco === null) return { p, total: null };
+            const extraUsers = p.usuarios ? Math.max(0, users - p.usuarios) : 0, alem = Math.max(0, consumo - p.analises);
+            return { p, extraUsers, alem, total: p.preco + extraUsers * ADICIONAIS.usuario + alem * p.excedente };
+          });
+          const menor = Math.min(...linhas.filter(l => l.total !== null).map(l => l.total));
+          $('calcRows').innerHTML = linhas.map(l => l.total === null ? `<div class="row"><span>${l.p.nome}</span><span>Sob consulta</span></div>`
+            : `<div class="row${l.total === menor ? ' melhor' : ''}"><span>${l.p.nome}${l.total === menor ? ' · menor custo' : ''}</span><b>${brl(l.total)}</b></div>`).join('');
+          const best = linhas.find(l => l.total === menor);
+          $('calcNote').textContent = best ? `Para a sua equipe, o ${best.p.nome} sai mais em conta: ${brl(best.p.preco)} de mensalidade${best.extraUsers ? `, ${best.extraUsers} usuário${best.extraUsers > 1 ? 's' : ''} ${best.extraUsers > 1 ? 'adicionais' : 'adicional'}` : ''}${best.alem ? ` e ${nn(best.alem)} análises em créditos` : ''}. Se só uma pessoa consulta, o Avulso custa ${brl(PLANOS.avulso.preco)} por 10 análises.` : '';
+        }
+        ['cUsers', 'cConsults', 'cPriority'].forEach(id => $(id).addEventListener('input', calc));
+
+        calc();
+        render();
+      })();
+    </script>
+  </body>
+</html>
