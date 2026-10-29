@@ -12,4 +12,4 @@ Esta pasta contém somente a **vitrine estática** da ScopeMark para GitHub Page
 
 Os planos, o excedente de cada plano e os adicionais seguem `servidor/scope.js` da plataforma e ficam no objeto `PLANOS`, no início do script de `index.html`. O valor do usuário adicional (R$ 39 por mês) é provisório.
 
-Os botões "Contratar" e "Acessar ScopeMark" conduzem ao ambiente completo hospedado separadamente. Para publicar, este repositório utiliza o workflow `.github/workflows/deploy-pages.yml`, disparado após cada envio para a branch `main`.
+Os botões "Contratar", "Começar" e "Entrar na plataforma" e o link dos termos levam à plataforma, hoje em `https://analiselogo.com.br` (constante `PLATAFORMA` no script de `index.html`), até a ScopeMark ter domínio próprio. Para publicar, este repositório utiliza o workflow `.github/workflows/deploy-pages.yml`, disparado após cada envio para a branch `main`.
